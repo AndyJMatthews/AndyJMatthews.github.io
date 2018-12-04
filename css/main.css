@@ -1,9 +1,22 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
-
+body {
+    font-size:10px;   
+}
+h1 {
+    font-size:20px;    
+}
+h3 {
+    font-size:12px;
+}
+h5 {font-size:11px;}
+ @media(min-width:768px){
+     body {font-size:14px;}
+     h1{ font-size:30px;}    
+     h3 { font-size:20px;}    
+     h5 {font-size:14px;}
+}
 
 
 
