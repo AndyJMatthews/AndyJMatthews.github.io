@@ -110,7 +110,7 @@
                 $scope.$watch("wins", function(){
                     var data = [
                       ['Wins', $scope.wins],
-                      ['Over Time Wins', $scope.otw],
+                      ['Over Time Losses', $scope.otw],
                       ['Losses', $scope.losses]
                     ];
                     Highcharts.chart($scope.id, {
