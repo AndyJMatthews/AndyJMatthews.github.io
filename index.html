@@ -25,16 +25,19 @@
       <div class="container">
        <div class="row">
            <div class="col-xs-12 col-sm-6">
-                           <img src="https://www-league.nhlstatic.com/images/logos/league-light/133-com-xl.svg" alt="" style="height:40px; margin:10px;"> 
+               <img src="https://www-league.nhlstatic.com/images/logos/league-light/133-com-xl.svg" alt="" style="height:40px; margin:10px;"> 
 
            </div>
-           <div class="col-xs-12 col-sm-3 col-sm-offset-3">
-               <div class="form-group"style="margin:10px;" >  
-                <select ng-model="selectedTeam" ng-change="changeTeam(selectedTeam)" class="form-control">    
-                   <option value="https://statsapi.web.nhl.com/api/v1/teams/{{team.id}}?expand=team.roster&season=20182019" ng-repeat="team in teamsData.teams">{{team.name}}</option>
-                </select>                
+            <div class="col-xs-12 col-sm-3 col-sm-offset-3">
+               
+               
+               
+                <div class="form-group"style="margin:10px;" >                     
+                    <select ng-model="selectedTeam" ng-change="changeTeam(selectedTeam)" class="form-control">    
+                       <option value="https://statsapi.web.nhl.com/api/v1/teams/{{team.id}}?expand=team.roster&season=20182019" ng-repeat="team in teamsData.teams | orderBy:'name' ">{{team.name}}</option>
+                    </select>                
+                </div>
             </div>
-           </div>
        </div>
         
       </div>
@@ -43,47 +46,113 @@
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-              <div class="col-sm-2 col-xs-4">
-                   <div style="padding:10px;">
-                       <img ng-src="https://www-league.nhlstatic.com/nhl.com/builds/site-core/a2d98717aeb7d8dfe2694701e13bd3922887b1f2_1542226749/images/logos/team/current/team-{{players.teams[0].id}}-dark.svg" alt="" class="img-responsive center-block" style="height:120px;">
-                       
-                   </div>
-                </div>
-                <div class="col-sm-10 col-xs-8">
-                       <h1>{{players.teams[0].name}}</h1>
-                       <h3>{{players.teams[0].venue.name}} - {{players.teams[0].venue.city}}</h3>
-                </div>
-                <div class="clearfix hidden-xs"></div>
-                <div class="col-sm-2 text-center hidden-xs">
-                    <h5>
-                      EST {{players.teams[0].firstYearOfPlay}}  
-                   </h5>
-                </div>
-                 <div class="col-sm-10 hidden-xs">
-                <h5><strong>{{players.teams[0].conference.name}} - {{players.teams[0].division.name}}</strong></h5>
-                 </div>               
-                <div class="clearfix"></div>
-                <div class="col-xs-12">
-                    <hr>
-                </div>
+             <div class="col-xs-12">
+                 <div class="panel panel-default">
+                     <div class="panel-body">
+                         <div class="row">
+                            <div class="col-sm-2 col-xs-4 text-center">
+                                <div style="padding:10px;">
+                                   <img ng-src="https://www-league.nhlstatic.com/nhl.com/builds/site-core/a2d98717aeb7d8dfe2694701e13bd3922887b1f2_1542226749/images/logos/team/current/team-{{players.teams[0].id}}-dark.svg" alt="" class="img-responsive center-block teamlogo" style="">
+
+                                </div>
+                                <h5>
+                                  EST {{players.teams[0].firstYearOfPlay}}  
+                               </h5>
+                            </div>
+                            <div class="col-sm-6 col-xs-8">
+                                <h1>{{players.teams[0].name}}</h1>
+                                <h3>{{players.teams[0].venue.name}} - {{players.teams[0].venue.city}}</h3> 
+                                <a ng-href="{{teamStatsData.teams[0].officialSiteUrl}}" class="btn btn-default" target="_blank"
+                                >Official Website</a>
+
+                            </div>
+                            <div class="clearfix visible-xs"></div>
+                            
+                            
+                            <div class="col-sm-4 col-xs-8 text-center">
+                                <teamstats id="stats" wins="teamStatsData.teams[0].record.leagueRecord.wins" otw="teamStatsData.teams[0].record.leagueRecord.ot" losses="teamStatsData.teams[0].record.leagueRecord.losses" class="center-block"></teamstats>   
+                                <ul class="list-unstyled list-inline">
+                                    <li><span class="legendBoxes wins"></span> W: {{teamStatsData.teams[0].record.leagueRecord.wins}}</li>
+                                    <li><span class="legendBoxes otw"></span>OTW:{{teamStatsData.teams[0].record.leagueRecord.ot}}</li>
+                                    <li><span class="legendBoxes los"></span>L:{{teamStatsData.teams[0].record.leagueRecord.losses}}</li>
+                                </ul>
+                            </div>
+                            
+                            
+                                   <div class="col-xs-4 col-md-2">
+                                        <div class="well well-sm text-center mgn-btm">                                  
+                                           NHL <br>Overall
+                                           <div class="clearfix"></div>
+                                           <h1 class="zeroMargins">{{teamStatsData.teams[0].record.leagueRank | ordinal}}</h1>
+                                        </div>
+                                    </div> 
+                                    <div class="col-xs-4 col-md-2">
+                                        <div class="well well-sm text-center mgn-btm">  
+                                                      {{players.teams[0].conference.name}} <br>                    
+                                           Conference
+                                           <div class="clearfix"></div>
+                                           <h1 class="zeroMargins">{{teamStatsData.teams[0].record.conferenceRank | ordinal}}</h1>
+                                        </div>
+                                    </div> 
+                                    <div class="col-xs-4 col-md-2">
+                                        <div class="well well-sm text-center mgn-btm"> 
+                                          {{players.teams[0].division.name}}<br>                                 
+                                           Division
+                                           <div class="clearfix"></div>
+                                           <h1 class="zeroMargins">{{teamStatsData.teams[0].record.divisionRank | ordinal}}</h1>
+                                        </div>
+                                    </div> 
+                                    <div class="clearfix visible-xs"></div>
+                                    
+                                    <div class="col-xs-4 col-md-2">
+                                        <div class="well well-sm text-center mgn-btm"> 
+                                              Goals<br>                                 
+                                           Scored 
+                                           <div class="clearfix"></div>
+                                           <h1 class="zeroMargins">{{teamStatsData.teams[0].record.goalsScored}}</h1>
+                                        </div>
+                                    </div> 
+                                    <div class="col-xs-4 col-md-2">
+                                        <div class="well well-sm text-center mgn-btm"> 
+                                              Goals<br>                                 
+                                           Conceeded 
+                                           <div class="clearfix"></div>
+                                           <h1 class="zeroMargins">{{teamStatsData.teams[0].record.goalsAgainst}}</h1>
+                                        </div>
+                                    </div> 
+                                    <div class="col-xs-4 col-md-2">
+                                        <div class="well well-sm text-center mgn-btm"> 
+                                              Team<br>Streak 
+                                           <div class="clearfix"></div>
+                                           <h1 class="zeroMargins">{{teamStatsData.teams[0].record.streak.streakCode}}</h1>
+                                        </div>
+                                    </div> 
+                                    
+                                    
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             
+             
+             
+            
             </div>
         <div>
             <div class="row">
                 <div class="col-sm-12">
             <ul class="nav nav-pills">
                <li>
-                   <a href="" ng-click="playerPositionGroup(' ')">All Players</a>
+                   <a href="" ng-click="playerPositionGroup(' ')" ng-class="playerPosition == ' ' ? 'active' : ''" class="active">All Players</a>
                </li>
-               
-               
                 <li>
-                    <a href ng-click="playerPositionGroup('Goalie')">Goalies</a>
+                    <a href ng-click="playerPositionGroup('Goalie')" ng-class="playerPosition == 'Goalie' ? 'active' : ''">Goalies</a>
                 </li>
                 <li>
-                    <a href ng-click="playerPositionGroup('Defenseman')">Defensemen</a>
+                    <a href ng-click="playerPositionGroup('Defenseman')" ng-class="playerPosition == 'Defenseman' ? 'active' : ''">Defensemen</a>
                 </li>
                 <li>
-                    <a href ng-click="playerPositionGroup('Forward')">Forwards</a>
+                    <a href ng-click="playerPositionGroup('Forward')"ng-class="playerPosition == 'Forward' ? 'active' : ''">Forwards</a>
                 </li>
             </ul>
                         </div>
@@ -140,7 +209,7 @@
         <div class="row">
             <div class="col-xs-12">
                <div class="table-responsive">
-                    <table class="table table-bordered table-condensed" ng-show="selectedPlayerData.people[0].primaryPosition.type != 'Goalie'">
+                    <table class="table table-bordered table-condensed ultra-condenced" ng-show="selectedPlayerData.people[0].primaryPosition.type != 'Goalie'">
                    <thead>
                        <tr>
                            <th>Season</th>
@@ -157,7 +226,10 @@
                         <tr ng-repeat="season in selectedPlayerData.people[0].stats[0].splits | limitTo:-8">
                             <td>{{season.season|limitTo:4}}/{{season.season|limitTo:4:4}}</td>
                             <td>{{season.team.name}}</td>
-                            <td>{{season.league.name}}</td>
+                            <td>
+                                <span ng-if="season.league.name == 'National Hockey League'">NHL</span>
+                                <span ng-if="season.league.name != 'National Hockey League'">{{season.league.name}}</span>
+                            </td>
                             <td>{{season.stat.games}}</td>
                             <td>{{season.stat.goals}}</td>
                             <td>{{season.stat.assists}}</td>
@@ -166,7 +238,7 @@
                         </tr>
                     </tbody>
                 </table>
-                           <table class="table table-bordered table-condensed" ng-show="selectedPlayerData.people[0].primaryPosition.type == 'Goalie'">
+                <table class="table table-bordered table-condensed ultra-condenced " ng-show="selectedPlayerData.people[0].primaryPosition.type == 'Goalie'">
                    <thead>
                        <tr>
                            <th>Season</th>
@@ -183,7 +255,10 @@
                         <tr ng-repeat="season in selectedPlayerData.people[0].stats[0].splits | limitTo:-8">
                             <td>{{season.season|limitTo:4}}/{{season.season|limitTo:4:4}}</td>
                             <td>{{season.team.name}}</td>
-                            <td>{{season.league.name}}</td>
+                            <td>
+                                <span ng-if="season.league.name == 'National Hockey League'">NHL</span>
+                                <span ng-if="season.league.name != 'National Hockey League'">{{season.league.name}}</span>
+                            </td>
                             <td>{{season.stat.games}}</td>
                             <td>{{season.stat.shutouts}}</td>
                             <td>{{season.stat.wins}}</td>
@@ -191,17 +266,13 @@
                             <td>{{season.stat.savePercentage}}</td>                            
                         </tr>
                     </tbody>
-                    
-                    
-                    
-                    
                 </table>
             </div>
-               </div>
-               
-                
-     
         </div>
+        <div class="col-xs-12">
+            
+        </div>
+    </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -214,18 +285,18 @@
 
 
 
-    </div> <!-- /container -->    <script
+    </div> <!-- /container -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script
   src="https://code.jquery.com/jquery-1.12.4.min.js"
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
   crossorigin="anonymous"></script>
+       
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/angular.js"></script> 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>       
+        
         <script src="js/main.js"></script> 
-        <script type="text/javascript">
-        $(document).ready(function(){
-              $('[data-toggle="tooltip"]').tooltip();
-        });
-        </script>      
+            
     </body>
 </html>
