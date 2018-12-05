@@ -9,7 +9,9 @@
         
         $scope.selectedTeam = 'https://statsapi.web.nhl.com/api/v1/teams/24?expand=team.roster&season=20182019';
         
-        $scope.selectedTeamStats = "http://statsapi.web.nhl.com/api/v1/teams/24?hydrate=record(teamRecords)&season=20182019";
+        $scope.selectedTeamStats = "https://statsapi.web.nhl.com/api/v1/teams/24?hydrate=record(teamRecords)&season=20182019";
+        
+        
         
         $http.get("https://statsapi.web.nhl.com/api/v1/teams").success(function(data){
             $scope.teamsData = data;            
@@ -33,12 +35,12 @@
         $http.get($scope.selectedTeamStats).success(function(data){
             $scope.teamStatsData = data;    
         }).error(function(){
-            alert("Team Stats not loading");
+            console.log("Team Stats not loading");
         });
         
         $scope.changeTeamStats = function(arg){
             console.log(arg);
-            $http.get("http://statsapi.web.nhl.com/api/v1/teams/"+arg+"?hydrate=record(teamRecords)&season=20182019").success(function(data){
+            $http.get("https://statsapi.web.nhl.com/api/v1/teams/"+arg+"?hydrate=record(teamRecords)&season=20182019").success(function(data){
                 console.log("got the team data....");
                 $scope.teamStatsData = data;              
         
