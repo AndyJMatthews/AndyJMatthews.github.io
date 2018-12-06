@@ -63,7 +63,15 @@ background: linear-gradient(0deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
     border-radius:0px;
 }
 
-
+.nav.nav-pills li a:hover{
+    background: rgb(76, 76, 76);
+background: -moz-linear-gradient(180deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+background: -webkit-linear-gradient(180deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+background: -o-linear-gradient(180deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+background: -ms-linear-gradient(180deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+background: linear-gradient(90deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+    border-radius:0px;
+}
 
 
 
