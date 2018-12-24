@@ -20,7 +20,7 @@
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
-    <body ng-controller="mainController">
+    <body ng-controller="mainController" class="team-{{players.teams[0].abbreviation}}">
 <nav class="navbar navbar-fixed-top" role="navigation">
       <div class="container">
        <div class="row">
@@ -70,8 +70,8 @@
                             
                             
                             <div class="col-sm-4 col-xs-8 text-center">
-                                <teamstats id="stats" wins="teamStatsData.teams[0].record.leagueRecord.wins" otw="teamStatsData.teams[0].record.leagueRecord.ot" losses="teamStatsData.teams[0].record.leagueRecord.losses" class="center-block"></teamstats>   
-                                <ul class="list-unstyled list-inline">
+                                <teamstats id="stats" wins="teamStatsData.teams[0].record.leagueRecord.wins" otw="teamStatsData.teams[0].record.leagueRecord.ot" losses="teamStatsData.teams[0].record.leagueRecord.losses" class="center-block team-{{players.teams[0].abbreviation}}" ng-class=""></teamstats>   
+                                <ul class="list-unstyled list-inline team-{{players.teams[0].abbreviation}}">
                                     <li><span class="legendBoxes wins"></span> W: {{teamStatsData.teams[0].record.leagueRecord.wins}}</li>
                                     <li><span class="legendBoxes otw"></span>OTL:{{teamStatsData.teams[0].record.leagueRecord.ot}}</li>
                                     <li><span class="legendBoxes los"></span>L:{{teamStatsData.teams[0].record.leagueRecord.losses}}</li>
@@ -164,10 +164,10 @@
                        <div class="row">
                            <div class="col-sm-3 col-xs-6" ng-repeat="skater in players.teams[0].roster.roster | filter:playerPosition | orderBy:'-position.type'">
                                 <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        {{skater.person.fullName}} <span class="badge pull-right">{{skater.jerseyNumber}}</span>
+                                    <div class="panel-heading color-1-border-btm">
+                                        {{skater.person.fullName}} <span class="badge pull-right color-1-bg">{{skater.jerseyNumber}}</span>
                                     </div>
-                                    <div class="panel-body">
+                                    <div class="panel-body color-2-border-top">
                                         <img src="" ng-src="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="img-thumbnail img-responsive center-block">
                                         <h5>{{skater.position.type}}</h5>   
                                         <a class="btn btn-sm btn-default" ng-click="getPlayer(skater.person.id)">More Info</a>                            

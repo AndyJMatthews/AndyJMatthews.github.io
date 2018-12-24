@@ -115,3 +115,1012 @@ background: linear-gradient(90deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
 .los {
     background:#000000;
 }
+/* Team Colours */
+/* Ducks */
+.team-ANA .color-1-bg {
+    background:#B5985A !important;
+}
+.team-ANA .color-1-border-btm {
+    border-bottom:10px solid #B5985A !important;
+}
+.team-ANA .color-2-bg {
+    background:#F95602 !important;
+}
+.team-ANA .color-2-border-top {
+    border-top:3px solid #F95602 !important;
+}
+
+.team-ANA path.highcharts-point.highcharts-color-0  {
+    fill:#B5985A !important;
+}
+.team-ANA path.highcharts-point.highcharts-color-1 {
+ fill:#F95602!important; 
+}
+.team-ANA path.highcharts-point.highcharts-color-2 {
+    fill:black!important;
+}
+.team-ANA .wins{
+    background:#B5985A;
+}
+.team-ANA .otw{
+    background:#F95602;
+}
+.team-ANA .los{
+    background:black;
+}
+/* Coyotes */
+.team-ARI .color-1-bg {
+    background:#8C2633 !important;
+}
+.team-ARI .color-1-border-btm {
+    border-bottom:10px solid #8C2633 !important;
+}
+.team-ARI .color-2-bg {
+    background:#E2D6B5 !important;
+}
+.team-ARI .color-2-border-top {
+    border-top:3px solid #E2D6B5 !important;
+}
+.team-ARI path.highcharts-point.highcharts-color-0  {
+    fill:#8C2633 !important;
+}
+.team-ARI path.highcharts-point.highcharts-color-1 {
+ fill:#E2D6B5!important; 
+}
+.team-ARI path.highcharts-point.highcharts-color-2 {
+    fill:black!important;
+}
+.team-ARI .wins{
+    background:#8C2633;
+}
+.team-ARI .otw{
+    background:#E2D6B5;
+}
+.team-ARI .los{
+    background:black;
+}
+/* Bruins */
+.team-BOS .color-1-bg {
+    background:#FCB514 !important;
+}
+.team-BOS .color-1-border-btm {
+    border-bottom:10px solid #FCB514 !important;
+}
+.team-BOS .color-2-bg {
+    background:black !important;
+}
+.team-BOS .color-2-border-top {
+    border-top:3px solid black !important;
+}
+.team-BOS path.highcharts-point.highcharts-color-0  {
+    fill:#FCB514 !important;
+}
+.team-BOS path.highcharts-point.highcharts-color-1 {
+    fill:#fff!important; 
+    stroke:#ccc;
+}
+.team-BOS path.highcharts-point.highcharts-color-2 {
+    fill:black!important;
+}
+.team-BOS .wins{
+    background:#FCB514;
+}
+.team-BOS .otw{
+    background:#fff;
+    border:1px solid #ccc;
+}
+.team-BOS .los{
+    background:black;
+}
+/* Buffalo */
+.team-BUF .color-1-bg {
+    background:#002654 !important;
+}
+.team-BUF .color-1-border-btm {
+    border-bottom:10px solid #002654 !important;
+}
+.team-BUF .color-2-bg {
+    background:#FCB514 !important;
+}
+.team-BUF .color-2-border-top {
+    border-top:3px solid #FCB514 !important;
+}
+.team-BUF path.highcharts-point.highcharts-color-0  {
+    fill:#002654 !important;
+}
+.team-BUF path.highcharts-point.highcharts-color-1 {
+ fill:#FCB514!important; 
+}
+.team-BUF path.highcharts-point.highcharts-color-2 {
+    fill:#fff!important;
+    stroke:#ccc;
+}
+.team-BUF .wins{
+    background:#002654;
+}
+.team-BUF .otw{
+    background:#FCB514;
+}
+.team-BUF .los{
+    background:#fff;
+    border:1px solid #ccc;    
+}
+/* Calgary */
+.team-CGY .color-1-bg {
+    background:#CE1126 !important;
+}
+.team-CGY .color-1-border-btm {
+    border-bottom:10px solid #CE1126 !important;
+}
+.team-CGY .color-2-bg {
+    background:#F3BC52 !important;
+}
+.team-CGY .color-2-border-top {
+    border-top:3px solid #F3BC52 !important;
+}
+.team-CGY path.highcharts-point.highcharts-color-0  {
+    fill:#CE1126 !important;
+}
+.team-CGY path.highcharts-point.highcharts-color-1 {
+ fill:#F3BC52!important; 
+}
+.team-CGY path.highcharts-point.highcharts-color-2 {
+    fill:#000!important;
+}
+.team-CGY .wins{
+    background:#CE1126;
+}
+.team-CGY .otw{
+    background:#F3BC52;
+}
+.team-CGY .los{
+    background:#000;
+}
+/* Canes */
+.team-CAR .color-1-bg {
+    background:#CE1126 !important;
+}
+.team-CAR .color-1-border-btm {
+    border-bottom:10px solid #CE1126 !important;
+}
+.team-CAR .color-2-bg {
+    background:#000 !important;
+}
+.team-CAR .color-2-border-top {
+    border-top:3px solid #000 !important;
+}
+.team-CAR path.highcharts-point.highcharts-color-0  {
+    fill:#CE1126 !important;
+}
+.team-CAR path.highcharts-point.highcharts-color-1 {
+ fill:#000!important; 
+}
+.team-CAR path.highcharts-point.highcharts-color-2 {
+    fill:#fff!important;
+    stroke:#ccc;
+}
+.team-CAR .wins{
+    background:#CE1126;
+}
+.team-CAR .otw{
+    background:#000;
+}
+.team-CAR .los{
+    background:#fff;
+}
+/* Blackhawks */
+.team-CHI .color-1-bg {
+    background:#CF0A2C !important;
+}
+.team-CHI .color-1-border-btm {
+    border-bottom:10px solid #CF0A2C !important;
+}
+.team-CHI .color-2-bg {
+    background:#000 !important;
+}
+.team-CHI .color-2-border-top {
+    border-top:3px solid #000 !important;
+}
+.team-CHI path.highcharts-point.highcharts-color-0  {
+    fill:#CF0A2C !important;
+}
+.team-CHI path.highcharts-point.highcharts-color-1 {
+ fill:#000!important; 
+}
+.team-CHI path.highcharts-point.highcharts-color-2 {
+    fill:#fff!important;
+    stroke:#ccc;
+}
+.team-CHI .wins{
+    background:#CF0A2C;
+    border:1px solid #CF0A2C;
+}
+.team-CHI .otw{
+    background:#000;
+    border:1px solid #000;
+}
+.team-CHI .los{
+    background:#fff;
+    border:1px solid #000;
+}
+/* Colorado */
+.team-COL .color-1-bg {
+    background:#236192 !important;
+}
+.team-COL .color-1-border-btm {
+    border-bottom:10px solid #236192 !important;
+}
+.team-COL .color-2-bg {
+    background:#6F263D !important;
+}
+.team-COL .color-2-border-top {
+    border-top:3px solid #6F263D !important;
+}
+.team-COL path.highcharts-point.highcharts-color-0  {
+    fill:#6F263D !important;
+}
+.team-COL path.highcharts-point.highcharts-color-1 {
+ fill:#236192!important; 
+}
+.team-COL path.highcharts-point.highcharts-color-2 {
+    fill:#fff!important;
+    stroke:#ccc;
+}
+.team-COL .wins{
+    background:#6F263D;
+}
+.team-COL .otw{
+    background:#236192;
+}
+.team-COL .los{
+    background:#fff;
+    border:1px solid #000;
+}
+/* Columbus */
+.team-CBJ .color-1-bg {
+    background:#002654 !important;
+}
+.team-CBJ .color-1-border-btm {
+    border-bottom:10px solid #002654 !important;
+}
+.team-CBJ .color-2-bg {
+    background:#CE1126 !important;
+}
+.team-CBJ .color-2-border-top {
+    border-top:3px solid #CE1126 !important;
+}
+.team-CBJ path.highcharts-point.highcharts-color-0  {
+    fill:#002654 !important;
+}
+.team-CBJ path.highcharts-point.highcharts-color-1 {
+ fill:#CE1126!important; 
+}
+.team-CBJ path.highcharts-point.highcharts-color-2 {
+    fill:#fff!important;
+    stroke:#ccc;
+}
+.team-CBJ .wins{
+    background:#002654;
+}
+.team-CBJ .otw{
+    background:#CE1126;
+}
+.team-CBJ .los{
+    background:#fff;
+    border:1px solid #000;
+}
+/* Dalas */
+.team-DAL .color-1-bg {
+    background:#006847 !important;
+}
+.team-DAL .color-1-border-btm {
+    border-bottom:10px solid #006847 !important;
+}
+.team-DAL .color-2-bg {
+    background:#000 !important;
+}
+.team-DAL .color-2-border-top {
+    border-top:3px solid #000 !important;
+}
+.team-DAL path.highcharts-point.highcharts-color-0  {
+    fill:#006847 !important;
+}
+.team-DAL path.highcharts-point.highcharts-color-1 {
+ fill:#000!important; 
+}
+.team-DAL path.highcharts-point.highcharts-color-2 {
+    fill:#fff!important;
+    stroke:#ccc;
+}
+.team-DAL .wins{
+    background:#006847;
+}
+.team-DAL .otw{
+    background:#000;
+}
+.team-DAL .los{
+    background:#fff;
+    border:1px solid #000;
+}
+/* Red Wings */
+.team-DET .color-1-bg {
+    background:#CE1126 !important;
+}
+.team-DET .color-1-border-btm {
+    border-bottom:10px solid #CE1126 !important;
+}
+.team-DET .color-2-bg {
+    background:#000 !important;
+}
+.team-DET .color-2-border-top {
+    border-top:3px solid #000 !important;
+}
+
+.team-DET path.highcharts-point.highcharts-color-0  {
+    fill:#CE1126 !important;
+}
+.team-DET path.highcharts-point.highcharts-color-1 {
+     fill:#fff!important;
+    stroke:#ccc;
+}
+.team-DET path.highcharts-point.highcharts-color-2 {
+    fill:#000!important; 
+
+}
+.team-DET .wins{
+    background:#CE1126;
+}
+.team-DET .otw{
+        background:#fff;
+    border:1px solid #000;  
+}
+.team-DET .los{
+  background:#000;
+}
+/* Edmonton */
+.team-EDM .color-1-bg {
+    background:#00205B !important;
+}
+.team-EDM .color-1-border-btm {
+    border-bottom:10px solid #00205B !important;
+}
+.team-EDM .color-2-bg {
+    background:#CF4520 !important;
+}
+.team-EDM .color-2-border-top {
+    border-top:3px solid #CF4520 !important;
+}
+.team-EDM path.highcharts-point.highcharts-color-0  {
+    fill:#00205B !important;
+}
+.team-EDM path.highcharts-point.highcharts-color-1 {
+ fill:#CF4520!important; 
+}
+.team-EDM path.highcharts-point.highcharts-color-2 {
+    fill:#fff!important;
+    stroke:#ccc;
+}
+.team-EDM .wins{
+    background:#00205B;
+}
+.team-EDM .otw{
+    background:#CF4520;
+}
+.team-EDM .los{
+    background:#fff;
+    border:1px solid #000;
+}
+/* Panthers */
+.team-FLA .color-1-bg {
+    background:#CE1126 !important;
+}
+.team-FLA .color-1-border-btm {
+    border-bottom:10px solid #CE1126 !important;
+}
+.team-FLA .color-2-bg {
+    background:#BF910C !important;
+}
+.team-FLA .color-2-border-top {
+    border-top:3px solid #BF910C !important;
+}
+.team-FLA path.highcharts-point.highcharts-color-0  {
+    fill:#CE1126 !important;
+}
+.team-FLA path.highcharts-point.highcharts-color-1 {
+ fill:#BF910C!important; 
+}
+.team-FLA path.highcharts-point.highcharts-color-2 {
+    fill:#475C6E!important;
+}
+.team-FLA .wins{
+    background:#CE1126;
+}
+.team-FLA .otw{
+    background:#BF910C;
+}
+.team-FLA .los{
+    background:#475C6E;
+}
+/* kings */
+.team-LAK .color-1-bg {
+    background:#000 !important;
+}
+.team-LAK .color-1-border-btm {
+    border-bottom:10px solid #000 !important;
+}
+.team-LAK .color-2-bg {
+    background:#ACAEA9 !important;
+}
+.team-LAK .color-2-border-top {
+    border-top:3px solid #ACAEA9 !important;
+}
+.team-LAK path.highcharts-point.highcharts-color-0  {
+    fill:#000 !important;
+}
+.team-LAK path.highcharts-point.highcharts-color-1 {
+     fill:#ACAEA9!important; 
+}
+.team-LAK path.highcharts-point.highcharts-color-2 {
+    fill:#fff!important;
+    stroke:#ccc;
+}
+.team-LAK .wins{
+    background:#000;
+}
+.team-LAK .otw{
+    background:#ACAEA9;
+}
+.team-LAK .los{
+    background:#fff;
+    border:1px solid #ccc;
+}
+/* Wild */
+.team-MIN .color-1-bg {
+    background:#024930 !important;
+}
+.team-MIN .color-1-border-btm {
+    border-bottom:10px solid #024930 !important;
+}
+.team-MIN .color-2-bg {
+    background:#E2D6B5 !important;
+}
+.team-MIN .color-2-border-top {
+    border-top:3px solid #E2D6B5 !important;
+}
+.team-MIN path.highcharts-point.highcharts-color-0  {
+    fill:#024930 !important;
+}
+.team-MIN path.highcharts-point.highcharts-color-1 {
+ fill:#E2D6B5!important; 
+}
+.team-MIN path.highcharts-point.highcharts-color-2 {
+    fill:#AF1E24!important;
+}
+.team-MIN .wins{
+    background:#024930;
+}
+.team-MIN .otw{
+    background:#E2D6B5;
+}
+.team-MIN .los{
+    background:#AF1E24;    
+}
+/* Habs */
+.team-MTL .color-1-bg {
+    background:#fff !important;
+}
+.team-MTL .color-1-border-btm {
+    border-bottom:10px solid #fff !important;
+}
+.team-MTL .color-2-bg {
+    background:#AF1E2D !important;
+}
+.team-MTL .color-2-border-top {
+    border-top:3px solid #AF1E2D !important;
+}
+.team-MTL path.highcharts-point.highcharts-color-0  {
+    fill:#AF1E2D !important;
+}
+.team-MTL path.highcharts-point.highcharts-color-1 {
+   fill:#fff!important;
+    stroke:#ccc;}
+.team-MTL path.highcharts-point.highcharts-color-2 {
+    fill:#192168!important;
+}
+.team-MTL .wins{
+    background:#AF1E2D;
+}
+.team-MTL .otw{
+        background:#fff;
+    border:1px solid #000;
+}
+.team-MTL .los{
+    background:#192168;
+}
+/* Preds */
+.team-NSH .color-1-bg {
+    background:#FFB81C !important;
+}
+.team-NSH .color-1-border-btm {
+    border-bottom:10px solid #FFB81C !important;
+}
+.team-NSH .color-2-bg {
+    background:#041E42 !important;
+}
+.team-NSH .color-2-border-top {
+    border-top:3px solid #041E42 !important;
+}
+.team-NSH path.highcharts-point.highcharts-color-0  {
+    fill:#FFB81C !important;
+}
+.team-NSH path.highcharts-point.highcharts-color-1 {
+   fill:#fff!important;
+    stroke:#ccc;}
+.team-NSH path.highcharts-point.highcharts-color-2 {
+    fill:#041E42!important;
+}
+.team-NSH .wins{
+    background:#FFB81C;
+}
+.team-NSH .otw{
+        background:#fff;
+    border:1px solid #000;
+}
+.team-NSH .los{
+    background:#041E42;
+}
+/* Devils */
+.team-NJD .color-1-bg {
+    background:#CE1126 !important;
+}
+.team-NJD .color-1-border-btm {
+    border-bottom:10px solid #CE1126 !important;
+}
+.team-NJD .color-2-bg {
+    background:#000 !important;
+}
+.team-NJD .color-2-border-top {
+    border-top:3px solid #000 !important;
+}
+.team-NJD path.highcharts-point.highcharts-color-0  {
+    fill:#CE1126 !important;
+}
+.team-NJD path.highcharts-point.highcharts-color-1 {
+   fill:#fff!important;
+    stroke:#ccc;}
+.team-NJD path.highcharts-point.highcharts-color-2 {
+    fill:#000!important;
+}
+.team-NJD .wins{
+    background:#CE1126;
+}
+.team-NJD .otw{
+        background:#fff;
+    border:1px solid #000;
+}
+.team-NJD .los{
+    background:#000;
+}
+/* Islanders */
+.team-NYI .color-1-bg {
+    background:#003893 !important;
+}
+.team-NYI .color-1-border-btm {
+    border-bottom:10px solid #003893 !important;
+}
+.team-NYI .color-2-bg {
+    background:#F95602 !important;
+}
+.team-NYI .color-2-border-top {
+    border-top:3px solid #F95602 !important;
+}
+.team-NYI path.highcharts-point.highcharts-color-0  {
+    fill:#003893 !important;
+}
+.team-NYI path.highcharts-point.highcharts-color-1 {
+   fill:#fff!important;
+    stroke:#ccc;}
+.team-NYI path.highcharts-point.highcharts-color-2 {
+    fill:#F95602!important;
+}
+.team-NYI .wins{
+    background:#003893;
+}
+.team-NYI .otw{
+        background:#fff;
+    border:1px solid #000;
+}
+.team-NYI .los{
+    background:#F95602;
+}
+/* Rangers */
+.team-NYR .color-1-bg {
+    background:#0038A8 !important;
+}
+.team-NYR .color-1-border-btm {
+    border-bottom:10px solid #0038A8 !important;
+}
+.team-NYR .color-2-bg {
+    background:#CE1126 !important;
+}
+.team-NYR .color-2-border-top {
+    border-top:3px solid #CE1126 !important;
+}
+.team-NYR path.highcharts-point.highcharts-color-0  {
+    fill:#0038A8 !important;
+}
+.team-NYR path.highcharts-point.highcharts-color-1 {
+   fill:#fff!important;
+    stroke:#ccc;}
+.team-NYR path.highcharts-point.highcharts-color-2 {
+    fill:#CE1126!important;
+}
+.team-NYR .wins{
+    background:#0038A8;
+}
+.team-NYR .otw{
+        background:#fff;
+    border:1px solid #000;
+}
+.team-NYR .los{
+    background:#CE1126;
+}
+/* Ottawa */
+.team-OTT .color-1-bg {
+    background:#CE1126 !important;
+}
+.team-OTT .color-1-border-btm {
+    border-bottom:10px solid #CE1126 !important;
+}
+.team-OTT .color-2-bg {
+    background:#BF910C !important;
+}
+.team-OTT .color-2-border-top {
+    border-top:3px solid #BF910C !important;
+}
+.team-OTT path.highcharts-point.highcharts-color-0  {
+    fill:#CE1126 !important;
+}
+.team-OTT path.highcharts-point.highcharts-color-1 {
+   fill:#000!important;
+    }
+.team-OTT path.highcharts-point.highcharts-color-2 {
+    fill:#BF910C!important;
+}
+.team-OTT .wins{
+    background:#CE1126;
+}
+.team-OTT .otw{
+        background:#000;
+}
+.team-OTT .los{
+    background:#BF910C;
+}
+/* Flyers */
+.team-PHI .color-1-bg {
+    background:#F74902 !important;
+}
+.team-PHI .color-1-border-btm {
+    border-bottom:10px solid #F74902 !important;
+}
+.team-PHI .color-2-bg {
+    background:#000 !important;
+}
+.team-PHI .color-2-border-top {
+    border-top:3px solid #000 !important;
+}
+.team-PHI path.highcharts-point.highcharts-color-0  {
+    fill:#F74902 !important;
+}
+.team-PHI path.highcharts-point.highcharts-color-1 {
+   fill:#fff!important;
+    stroke:#ccc;
+    }
+.team-PHI path.highcharts-point.highcharts-color-2 {
+    fill:#000!important;
+}
+.team-PHI .wins{
+    background:#F74902;
+}
+.team-PHI .otw{
+        background:#fff;
+    border:1px solid #ccc;
+}
+.team-PHI .los{
+    background:#000;
+}
+/* Penguins */
+.team-PIT .color-1-bg {
+    background:#000 !important;
+}
+.team-PIT .color-1-border-btm {
+    border-bottom:10px solid #000 !important;
+}
+.team-PIT .color-2-bg {
+    background:#FCB514 !important;
+}
+.team-PIT .color-2-border-top {
+    border-top:3px solid #FCB514 !important;
+}
+.team-PIT path.highcharts-point.highcharts-color-0  {
+    fill:#000 !important;
+}
+.team-PIT path.highcharts-point.highcharts-color-1 {
+   fill:#fff!important;
+    stroke:#ccc;
+    }
+.team-PIT path.highcharts-point.highcharts-color-2 {
+    fill:#FCB514!important;
+}
+.team-PIT .wins{
+    background:#000;
+}
+.team-PIT .otw{
+        background:#fff;
+    border:1px solid #ccc;
+}
+.team-PIT .los{
+    background:#FCB514;
+}
+/* Sharks */
+.team-SJS .color-1-bg {
+    background:#006D75 !important;
+}
+.team-SJS .color-1-border-btm {
+    border-bottom:10px solid #006D75 !important;
+}
+.team-SJS .color-2-bg {
+    background:#000 !important;
+}
+.team-SJS .color-2-border-top {
+    border-top:3px solid #000 !important;
+}
+.team-SJS path.highcharts-point.highcharts-color-0  {
+    fill:#006D75 !important;
+}
+.team-SJS path.highcharts-point.highcharts-color-1 {
+   fill:#fff!important;
+    stroke:#ccc;
+    }
+.team-SJS path.highcharts-point.highcharts-color-2 {
+    fill:#000!important;
+}
+.team-SJS .wins{
+    background:#000;
+}
+.team-SJS .otw{
+        background:#fff;
+    border:1px solid #ccc;
+}
+.team-SJS .los{
+    background:#000;
+}
+/* Blues */
+.team-STL .color-1-bg {
+    background:#002F87 !important;
+}
+.team-STL .color-1-border-btm {
+    border-bottom:10px solid #002F87 !important;
+}
+.team-STL .color-2-bg {
+    background:#FCB514 !important;
+}
+.team-STL .color-2-border-top {
+    border-top:3px solid #FCB514 !important;
+}
+.team-STL path.highcharts-point.highcharts-color-0  {
+    fill:#002F87 !important;
+}
+.team-STL path.highcharts-point.highcharts-color-1 {
+   fill:#fff!important;
+    stroke:#ccc;
+    }
+.team-STL path.highcharts-point.highcharts-color-2 {
+    fill:#FCB514!important;
+}
+.team-STL .wins{
+    background:#002F87;
+}
+.team-STL .otw{
+        background:#fff;
+    border:1px solid #ccc;
+}
+.team-STL .los{
+    background:#FCB514;
+}
+/* Lightning */
+.team-TBL .color-1-bg {
+    background:#002868 !important;
+}
+.team-TBL .color-1-border-btm {
+    border-bottom:10px solid #002868 !important;
+}
+.team-TBL .color-2-bg {
+    background:#000 !important;
+}
+.team-TBL .color-2-border-top {
+    border-top:3px solid #000 !important;
+}
+.team-TBL path.highcharts-point.highcharts-color-0  {
+    fill:#002868 !important;
+}
+.team-TBL path.highcharts-point.highcharts-color-1 {
+   fill:#fff!important;
+    stroke:#ccc;
+    }
+.team-TBL path.highcharts-point.highcharts-color-2 {
+    fill:#000!important;
+}
+.team-TBL .wins{
+    background:#002868;
+}
+.team-TBL .otw{
+        background:#fff;
+    border:1px solid #ccc;
+}
+.team-TBL .los{
+    background:#000;
+}
+/* Leafs */
+.team-TOR .color-1-bg {
+    background:#00205B !important;
+}
+.team-TOR .color-1-border-btm {
+    border-bottom:10px solid #00205B !important;
+}
+.team-TOR .color-2-bg {
+    background:#fff !important;
+}
+.team-TOR .color-2-border-top {
+    border-top:3px solid #fff !important;
+}
+.team-TOR path.highcharts-point.highcharts-color-0  {
+    fill:#00205B !important;
+}
+.team-TOR path.highcharts-point.highcharts-color-1 {
+   fill:#fff!important;
+    stroke:#ccc;
+    }
+.team-TOR path.highcharts-point.highcharts-color-2 {
+    fill:#000!important;
+}
+.team-TOR .wins{
+    background:#002868;
+}
+.team-TOR .otw{
+        background:#fff;
+    border:1px solid #ccc;
+}
+.team-TOR .los{
+    background:#000;
+}
+/* Canucks */
+.team-VAN .color-1-bg {
+    background:#001F5B !important;
+}
+.team-VAN .color-1-border-btm {
+    border-bottom:10px solid #001F5B !important;
+}
+.team-VAN .color-2-bg {
+    background:#087138 !important;
+}
+.team-VAN .color-2-border-top {
+    border-top:3px solid #087138 !important;
+}
+.team-VAN path.highcharts-point.highcharts-color-0  {
+    fill:#001F5B !important;
+}
+.team-VAN path.highcharts-point.highcharts-color-1 {
+   fill:#fff!important;
+    stroke:#ccc;
+    }
+.team-VAN path.highcharts-point.highcharts-color-2 {
+    fill:#087138!important;
+}
+.team-VAN .wins{
+    background:#001F5B;
+}
+.team-VAN .otw{
+        background:#fff;
+    border:1px solid #ccc;
+}
+.team-VAN .los{
+    background:#087138;
+}
+/* Vegas */
+.team-VGK .color-1-bg {
+    background:#85714D !important;
+}
+.team-VGK .color-1-border-btm {
+    border-bottom:10px solid #85714D !important;
+}
+.team-VGK .color-2-bg {
+    background:#333F47 !important;
+}
+.team-VGK .color-2-border-top {
+    border-top:3px solid #333F47 !important;
+}
+.team-VGK path.highcharts-point.highcharts-color-0  {
+    fill:#85714D !important;
+}
+.team-VGK path.highcharts-point.highcharts-color-1 {
+   fill:#333F47!important;
+    }
+.team-VGK path.highcharts-point.highcharts-color-2 {
+    fill:#000!important;
+}
+.team-VGK .wins{
+    background:#85714D;
+}
+.team-VGK .otw{
+        background:#333F47;
+}
+.team-VGK .los{
+    background:#000;
+}
+/* Caps */
+.team-WSH .color-1-bg {
+    background:#CE1939 !important;
+}
+.team-WSH .color-1-border-btm {
+    border-bottom:10px solid #CE1939 !important;
+}
+.team-WSH .color-2-bg {
+    background:#041E41 !important;
+}
+.team-WSH .color-2-border-top {
+    border-top:3px solid #041E41 !important;
+}
+.team-WSH path.highcharts-point.highcharts-color-0  {
+    fill:#CE1939 !important;
+}
+.team-WSH path.highcharts-point.highcharts-color-1 {
+   fill:#fff!important;
+    stroke:#ccc;
+    }
+.team-WSH path.highcharts-point.highcharts-color-2 {
+    fill:#041E41!important;
+}
+.team-WSH .wins{
+    background:#CE1939;
+}
+.team-WSH .otw{
+        background:#fff;
+    border:1px solid #ccc;
+}
+.team-WSH .los{
+    background:#041E41;
+}
+/* Jets */
+.team-WPG .color-1-bg {
+    background:#041E41 !important;
+}
+.team-WPG .color-1-border-btm {
+    border-bottom:10px solid #041E41 !important;
+}
+.team-WPG .color-2-bg {
+    background:#8E9090 !important;
+}
+.team-WPG .color-2-border-top {
+    border-top:3px solid #8E9090 !important;
+}
+.team-WPG path.highcharts-point.highcharts-color-0  {
+    fill:#041E41 !important;
+}
+.team-WPG path.highcharts-point.highcharts-color-1 {
+   fill:#fff!important;
+    stroke:#ccc;
+    }
+.team-WPG path.highcharts-point.highcharts-color-2 {
+    fill:#8E9090!important;
+}
+.team-WPG .wins{
+    background:#041E41;
+}
+.team-WPG .otw{
+        background:#fff;
+    border:1px solid #ccc;
+}
+.team-WPG .los{
+    background:#8E9090;
+}
