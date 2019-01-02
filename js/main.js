@@ -61,7 +61,6 @@
                 $scope.playerPosition = "";
                 $scope.teamID = $scope.players.teams[0].id;
                 $scope.changeTeamStats($scope.teamID);
-                $scope.chart();
                 
 		      }).error(function(){
 			 alert("aint Loaing");
@@ -82,21 +81,78 @@
         // players
         $scope.selectedPlayer = "";
         $scope.theirGoals = [];
-        
-        $scope.getGoals = function(selectedPlayerData){
+        $scope.theirAssists = [];
+        $scope.theirTotals = [];
+        $scope.theirSeasons =[];
+        $scope.getGoals = function(selectedPlayerData){            
+            angular.forEach(selectedPlayerData.people[0].stats[0].splits, function (value, key) {
+                $scope.theirSeasons.push(value.season);
+                $scope.theirGoals.push(value.stat.goals);
+                $scope.theirAssists.push(value.stat.assists);
+                $scope.theirTotals.push(value.stat.points);
+            });
             
-        };        
+            
+            
+            Highcharts.chart(player, {
+                    title: {
+                        text:selectedPlayerData.people[0].fullName+ " Season By Season Points Production"
+                    },
+                plotOptions:{
+                    series: {
+                        pointStart: 1985
+                    }                    
+                },
+                        series:[{
+                            name: 'Goals',
+                            data: $scope.theirGoals
+                        },{
+                            name: 'assists',
+                            data: $scope.theirAssists
+                        },{
+                            name: 'total',
+                            data: $scope.theirTotals
+                        }]
+            });
+            
+        };
+        $('#myModal').on('hidden.bs.modal', function (e) {
+            $scope.theirGoals = [];
+            $scope.theirAssists = [];
+            $scope.theirTotals = [];
+            $scope.theirSeasons =[];
+        });   
+        
+        
         $scope.getPlayer = function(selectedPlayer){
             $http.get("https://statsapi.web.nhl.com/api/v1/people/" + selectedPlayer + "?expand=person.stats&stats=yearByYear").success(function(data){
                 $scope.selectedPlayerData = data;
                 $scope.getGoals($scope.selectedPlayerData);
-                $('#myModal').modal('show');                
-                
+                $('#myModal').modal('show');
             }).error(function(){
                alert("unable to locate player data"); 
             });            
         }        
 	}]); 
+    app.directive("playerPoints", function(){        
+        return{
+            restrict : "E",
+            scope:{
+                id:"@",                
+                name:"="
+                
+            },
+            controller : ["$scope", function($scope){
+                $scope.$watch("name", function(){
+                    
+                    //console.log(data);
+                    
+                    
+                });
+            }                
+            ]
+        }
+    });
     app.directive("teamstats", function() {
         return {
             restrict : "E",
@@ -122,6 +178,9 @@
                             height:200,
                             width:200
                            
+                        },
+                        credits: {
+                            enabled: false 
                         },
                         legend: {
                             align: 'center',
