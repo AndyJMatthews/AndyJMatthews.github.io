@@ -84,35 +84,41 @@
         $scope.theirAssists = [];
         $scope.theirTotals = [];
         $scope.theirSeasons =[];
+        $scope.theirLeagues = [];
+        
+        
         $scope.getGoals = function(selectedPlayerData){            
             angular.forEach(selectedPlayerData.people[0].stats[0].splits, function (value, key) {
                 $scope.theirSeasons.push(value.season);
                 $scope.theirGoals.push(value.stat.goals);
+                $scope.theirLeagues.push(value.league.name); 
                 $scope.theirAssists.push(value.stat.assists);
                 $scope.theirTotals.push(value.stat.points);
             });
-            
-            
+            console.log($scope.theirLeagues);
+        
             
             Highcharts.chart(player, {
-                    title: {
-                        text:selectedPlayerData.people[0].fullName+ " Season By Season Points Production"
-                    },
-                plotOptions:{
-                    series: {
-                        pointStart: 1985
-                    }                    
+                title: {
+                    text:selectedPlayerData.people[0].fullName+ " Season By Season Points Production"
                 },
-                        series:[{
-                            name: 'Goals',
-                            data: $scope.theirGoals
-                        },{
-                            name: 'assists',
-                            data: $scope.theirAssists
-                        },{
-                            name: 'total',
-                            data: $scope.theirTotals
-                        }]
+                chart:{
+                    width:568
+                },
+                xAxis: {
+                    categories: $scope.theirSeasons                    
+                },
+                series:[{
+                    name: 'Goals',
+                    data: $scope.theirGoals
+                        
+                },{
+                    name: 'assists',
+                    data: $scope.theirAssists
+                },{
+                    name: 'total',
+                    data: $scope.theirTotals
+                }]
             });
             
         };
