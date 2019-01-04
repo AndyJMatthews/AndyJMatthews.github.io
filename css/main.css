@@ -1,1126 +1,2206 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* Team Colours Mixin */
+/* Ducks */
+.team-ANA .color-0-bg {
+  background: #B5985A !important; }
+
+.team-ANA .color-0-border-btm {
+  border-bottom: 10px solid #B5985A !important; }
+
+.team-ANA .color-1-bg {
+  background: #F95602 !important; }
+
+.team-ANA .color-1-border-btm {
+  border-bottom: 10px solid #F95602 !important; }
+
+.team-ANA .color-2-bg {
+  background: black !important; }
+
+.team-ANA .color-2-border-btm {
+  border-bottom: 10px solid black !important; }
+
+.team-ANA .color-2-border-top {
+  border-top: 3px solid black !important; }
+
+.team-ANA path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #B5985A !important; }
+
+.team-ANA path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #F95602 !important; }
+
+.team-ANA path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: black !important; }
+
+.team-ANA .highcharts-color-0 path {
+  stroke: #B5985A !important;
+  stroke-width: 2; }
+
+.team-ANA .highcharts-color-1 path {
+  stroke: #F95602 !important;
+  stroke-width: 2; }
+
+.team-ANA .highcharts-color-2 path {
+  stroke: black !important;
+  stroke-width: 2; }
+
+.team-ANA .wins {
+  background: #B5985A !important;
+  border: 1px solid #ccc; }
+
+.team-ANA .otw {
+  background: #F95602 !important;
+  border: 1px solid #ccc; }
+
+.team-ANA .los {
+  background: black !important;
+  border: 1px solid #ccc; }
+
+.team-ANA .highcharts-legend-item.highcharts-color-0 path {
+  fill: #B5985A !important; }
+
+.team-ANA .highcharts-legend-item.highcharts-color-1 path {
+  fill: #F95602 !important; }
+
+.team-ANA .highcharts-legend-item.highcharts-color-2 path {
+  fill: black !important; }
+
+/* Coyotes */
+.team-ARI .color-0-bg {
+  background: black !important; }
+
+.team-ARI .color-0-border-btm {
+  border-bottom: 10px solid black !important; }
+
+.team-ARI .color-1-bg {
+  background: #8C2633 !important; }
+
+.team-ARI .color-1-border-btm {
+  border-bottom: 10px solid #8C2633 !important; }
+
+.team-ARI .color-2-bg {
+  background: #E2D6B5 !important; }
+
+.team-ARI .color-2-border-btm {
+  border-bottom: 10px solid #E2D6B5 !important; }
+
+.team-ARI .color-2-border-top {
+  border-top: 3px solid #E2D6B5 !important; }
+
+.team-ARI path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: black !important; }
+
+.team-ARI path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #8C2633 !important; }
+
+.team-ARI path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #E2D6B5 !important; }
+
+.team-ARI .highcharts-color-0 path {
+  stroke: black !important;
+  stroke-width: 2; }
+
+.team-ARI .highcharts-color-1 path {
+  stroke: #8C2633 !important;
+  stroke-width: 2; }
+
+.team-ARI .highcharts-color-2 path {
+  stroke: #E2D6B5 !important;
+  stroke-width: 2; }
+
+.team-ARI .wins {
+  background: black !important;
+  border: 1px solid #ccc; }
+
+.team-ARI .otw {
+  background: #8C2633 !important;
+  border: 1px solid #ccc; }
+
+.team-ARI .los {
+  background: #E2D6B5 !important;
+  border: 1px solid #ccc; }
+
+.team-ARI .highcharts-legend-item.highcharts-color-0 path {
+  fill: black !important; }
+
+.team-ARI .highcharts-legend-item.highcharts-color-1 path {
+  fill: #8C2633 !important; }
+
+.team-ARI .highcharts-legend-item.highcharts-color-2 path {
+  fill: #E2D6B5 !important; }
+
+/* Bruins */
+.team-BOS .color-0-bg {
+  background: #cfcfcf !important; }
+
+.team-BOS .color-0-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-BOS .color-1-bg {
+  background: #FCB514 !important; }
+
+.team-BOS .color-1-border-btm {
+  border-bottom: 10px solid #FCB514 !important; }
+
+.team-BOS .color-2-bg {
+  background: black !important; }
+
+.team-BOS .color-2-border-btm {
+  border-bottom: 10px solid black !important; }
+
+.team-BOS .color-2-border-top {
+  border-top: 3px solid black !important; }
+
+.team-BOS path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-BOS path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #FCB514 !important; }
+
+.team-BOS path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: black !important; }
+
+.team-BOS .highcharts-color-0 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-BOS .highcharts-color-1 path {
+  stroke: #FCB514 !important;
+  stroke-width: 2; }
+
+.team-BOS .highcharts-color-2 path {
+  stroke: black !important;
+  stroke-width: 2; }
+
+.team-BOS .wins {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-BOS .otw {
+  background: #FCB514 !important;
+  border: 1px solid #ccc; }
+
+.team-BOS .los {
+  background: black !important;
+  border: 1px solid #ccc; }
+
+.team-BOS .highcharts-legend-item.highcharts-color-0 path {
+  fill: #cfcfcf !important; }
+
+.team-BOS .highcharts-legend-item.highcharts-color-1 path {
+  fill: #FCB514 !important; }
+
+.team-BOS .highcharts-legend-item.highcharts-color-2 path {
+  fill: black !important; }
+
+/* Buffalo */
+.team-BUF .color-0-bg {
+  background: #cfcfcf !important; }
+
+.team-BUF .color-0-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-BUF .color-1-bg {
+  background: #002654 !important; }
+
+.team-BUF .color-1-border-btm {
+  border-bottom: 10px solid #002654 !important; }
+
+.team-BUF .color-2-bg {
+  background: #FCB514 !important; }
+
+.team-BUF .color-2-border-btm {
+  border-bottom: 10px solid #FCB514 !important; }
+
+.team-BUF .color-2-border-top {
+  border-top: 3px solid #FCB514 !important; }
+
+.team-BUF path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-BUF path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #002654 !important; }
+
+.team-BUF path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #FCB514 !important; }
+
+.team-BUF .highcharts-color-0 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-BUF .highcharts-color-1 path {
+  stroke: #002654 !important;
+  stroke-width: 2; }
+
+.team-BUF .highcharts-color-2 path {
+  stroke: #FCB514 !important;
+  stroke-width: 2; }
+
+.team-BUF .wins {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-BUF .otw {
+  background: #002654 !important;
+  border: 1px solid #ccc; }
+
+.team-BUF .los {
+  background: #FCB514 !important;
+  border: 1px solid #ccc; }
+
+.team-BUF .highcharts-legend-item.highcharts-color-0 path {
+  fill: #cfcfcf !important; }
+
+.team-BUF .highcharts-legend-item.highcharts-color-1 path {
+  fill: #002654 !important; }
+
+.team-BUF .highcharts-legend-item.highcharts-color-2 path {
+  fill: #FCB514 !important; }
+
+/* Calgary */
+.team-CGY .color-0-bg {
+  background: #F3BC52 !important; }
+
+.team-CGY .color-0-border-btm {
+  border-bottom: 10px solid #F3BC52 !important; }
+
+.team-CGY .color-1-bg {
+  background: #CE1126 !important; }
+
+.team-CGY .color-1-border-btm {
+  border-bottom: 10px solid #CE1126 !important; }
+
+.team-CGY .color-2-bg {
+  background: #000 !important; }
+
+.team-CGY .color-2-border-btm {
+  border-bottom: 10px solid #000 !important; }
+
+.team-CGY .color-2-border-top {
+  border-top: 3px solid #000 !important; }
+
+.team-CGY path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #F3BC52 !important; }
+
+.team-CGY path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #CE1126 !important; }
+
+.team-CGY path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #000 !important; }
+
+.team-CGY .highcharts-color-0 path {
+  stroke: #F3BC52 !important;
+  stroke-width: 2; }
+
+.team-CGY .highcharts-color-1 path {
+  stroke: #CE1126 !important;
+  stroke-width: 2; }
+
+.team-CGY .highcharts-color-2 path {
+  stroke: #000 !important;
+  stroke-width: 2; }
+
+.team-CGY .wins {
+  background: #F3BC52 !important;
+  border: 1px solid #ccc; }
+
+.team-CGY .otw {
+  background: #CE1126 !important;
+  border: 1px solid #ccc; }
+
+.team-CGY .los {
+  background: #000 !important;
+  border: 1px solid #ccc; }
+
+.team-CGY .highcharts-legend-item.highcharts-color-0 path {
+  fill: #F3BC52 !important; }
+
+.team-CGY .highcharts-legend-item.highcharts-color-1 path {
+  fill: #CE1126 !important; }
+
+.team-CGY .highcharts-legend-item.highcharts-color-2 path {
+  fill: #000 !important; }
+
+/* Canes */
+.team-CAR .color-0-bg {
+  background: #cfcfcf !important; }
+
+.team-CAR .color-0-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-CAR .color-1-bg {
+  background: #CE1126 !important; }
+
+.team-CAR .color-1-border-btm {
+  border-bottom: 10px solid #CE1126 !important; }
+
+.team-CAR .color-2-bg {
+  background: #000 !important; }
+
+.team-CAR .color-2-border-btm {
+  border-bottom: 10px solid #000 !important; }
+
+.team-CAR .color-2-border-top {
+  border-top: 3px solid #000 !important; }
+
+.team-CAR path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-CAR path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #CE1126 !important; }
+
+.team-CAR path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #000 !important; }
+
+.team-CAR .highcharts-color-0 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-CAR .highcharts-color-1 path {
+  stroke: #CE1126 !important;
+  stroke-width: 2; }
+
+.team-CAR .highcharts-color-2 path {
+  stroke: #000 !important;
+  stroke-width: 2; }
+
+.team-CAR .wins {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-CAR .otw {
+  background: #CE1126 !important;
+  border: 1px solid #ccc; }
+
+.team-CAR .los {
+  background: #000 !important;
+  border: 1px solid #ccc; }
+
+.team-CAR .highcharts-legend-item.highcharts-color-0 path {
+  fill: #cfcfcf !important; }
+
+.team-CAR .highcharts-legend-item.highcharts-color-1 path {
+  fill: #CE1126 !important; }
+
+.team-CAR .highcharts-legend-item.highcharts-color-2 path {
+  fill: #000 !important; }
+
+/* Blackhawks */
+.team-CHI .color-0-bg {
+  background: #cfcfcf !important; }
+
+.team-CHI .color-0-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-CHI .color-1-bg {
+  background: #CF0A2C !important; }
+
+.team-CHI .color-1-border-btm {
+  border-bottom: 10px solid #CF0A2C !important; }
+
+.team-CHI .color-2-bg {
+  background: #000 !important; }
+
+.team-CHI .color-2-border-btm {
+  border-bottom: 10px solid #000 !important; }
+
+.team-CHI .color-2-border-top {
+  border-top: 3px solid #000 !important; }
+
+.team-CHI path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-CHI path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #CF0A2C !important; }
+
+.team-CHI path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #000 !important; }
+
+.team-CHI .highcharts-color-0 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-CHI .highcharts-color-1 path {
+  stroke: #CF0A2C !important;
+  stroke-width: 2; }
+
+.team-CHI .highcharts-color-2 path {
+  stroke: #000 !important;
+  stroke-width: 2; }
+
+.team-CHI .wins {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-CHI .otw {
+  background: #CF0A2C !important;
+  border: 1px solid #ccc; }
+
+.team-CHI .los {
+  background: #000 !important;
+  border: 1px solid #ccc; }
+
+.team-CHI .highcharts-legend-item.highcharts-color-0 path {
+  fill: #cfcfcf !important; }
+
+.team-CHI .highcharts-legend-item.highcharts-color-1 path {
+  fill: #CF0A2C !important; }
+
+.team-CHI .highcharts-legend-item.highcharts-color-2 path {
+  fill: #000 !important; }
+
+/* Colorado */
+.team-COL .color-0-bg {
+  background: #6F263D !important; }
+
+.team-COL .color-0-border-btm {
+  border-bottom: 10px solid #6F263D !important; }
+
+.team-COL .color-1-bg {
+  background: #236192 !important; }
+
+.team-COL .color-1-border-btm {
+  border-bottom: 10px solid #236192 !important; }
+
+.team-COL .color-2-bg {
+  background: #cfcfcf !important; }
+
+.team-COL .color-2-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-COL .color-2-border-top {
+  border-top: 3px solid #cfcfcf !important; }
+
+.team-COL path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #6F263D !important; }
+
+.team-COL path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #236192 !important; }
+
+.team-COL path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-COL .highcharts-color-0 path {
+  stroke: #6F263D !important;
+  stroke-width: 2; }
+
+.team-COL .highcharts-color-1 path {
+  stroke: #236192 !important;
+  stroke-width: 2; }
+
+.team-COL .highcharts-color-2 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-COL .wins {
+  background: #6F263D !important;
+  border: 1px solid #ccc; }
+
+.team-COL .otw {
+  background: #236192 !important;
+  border: 1px solid #ccc; }
+
+.team-COL .los {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-COL .highcharts-legend-item.highcharts-color-0 path {
+  fill: #6F263D !important; }
+
+.team-COL .highcharts-legend-item.highcharts-color-1 path {
+  fill: #236192 !important; }
+
+.team-COL .highcharts-legend-item.highcharts-color-2 path {
+  fill: #cfcfcf !important; }
+
+/* Columbus */
+.team-CBJ .color-0-bg {
+  background: #cfcfcf !important; }
+
+.team-CBJ .color-0-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-CBJ .color-1-bg {
+  background: #002654 !important; }
+
+.team-CBJ .color-1-border-btm {
+  border-bottom: 10px solid #002654 !important; }
+
+.team-CBJ .color-2-bg {
+  background: #CE1126 !important; }
+
+.team-CBJ .color-2-border-btm {
+  border-bottom: 10px solid #CE1126 !important; }
+
+.team-CBJ .color-2-border-top {
+  border-top: 3px solid #CE1126 !important; }
+
+.team-CBJ path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-CBJ path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #002654 !important; }
+
+.team-CBJ path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #CE1126 !important; }
+
+.team-CBJ .highcharts-color-0 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-CBJ .highcharts-color-1 path {
+  stroke: #002654 !important;
+  stroke-width: 2; }
+
+.team-CBJ .highcharts-color-2 path {
+  stroke: #CE1126 !important;
+  stroke-width: 2; }
+
+.team-CBJ .wins {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-CBJ .otw {
+  background: #002654 !important;
+  border: 1px solid #ccc; }
+
+.team-CBJ .los {
+  background: #CE1126 !important;
+  border: 1px solid #ccc; }
+
+.team-CBJ .highcharts-legend-item.highcharts-color-0 path {
+  fill: #cfcfcf !important; }
+
+.team-CBJ .highcharts-legend-item.highcharts-color-1 path {
+  fill: #002654 !important; }
+
+.team-CBJ .highcharts-legend-item.highcharts-color-2 path {
+  fill: #CE1126 !important; }
+
+/* Dalas */
+.team-DAL .color-0-bg {
+  background: #000 !important; }
+
+.team-DAL .color-0-border-btm {
+  border-bottom: 10px solid #000 !important; }
+
+.team-DAL .color-1-bg {
+  background: #006847 !important; }
+
+.team-DAL .color-1-border-btm {
+  border-bottom: 10px solid #006847 !important; }
+
+.team-DAL .color-2-bg {
+  background: #cfcfcf !important; }
+
+.team-DAL .color-2-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-DAL .color-2-border-top {
+  border-top: 3px solid #cfcfcf !important; }
+
+.team-DAL path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #000 !important; }
+
+.team-DAL path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #006847 !important; }
+
+.team-DAL path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-DAL .highcharts-color-0 path {
+  stroke: #000 !important;
+  stroke-width: 2; }
+
+.team-DAL .highcharts-color-1 path {
+  stroke: #006847 !important;
+  stroke-width: 2; }
+
+.team-DAL .highcharts-color-2 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-DAL .wins {
+  background: #000 !important;
+  border: 1px solid #ccc; }
+
+.team-DAL .otw {
+  background: #006847 !important;
+  border: 1px solid #ccc; }
+
+.team-DAL .los {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-DAL .highcharts-legend-item.highcharts-color-0 path {
+  fill: #000 !important; }
+
+.team-DAL .highcharts-legend-item.highcharts-color-1 path {
+  fill: #006847 !important; }
+
+.team-DAL .highcharts-legend-item.highcharts-color-2 path {
+  fill: #cfcfcf !important; }
+
+/* Red Wings */
+.team-DET .color-0-bg {
+  background: #000 !important; }
+
+.team-DET .color-0-border-btm {
+  border-bottom: 10px solid #000 !important; }
+
+.team-DET .color-1-bg {
+  background: #CE1126 !important; }
+
+.team-DET .color-1-border-btm {
+  border-bottom: 10px solid #CE1126 !important; }
+
+.team-DET .color-2-bg {
+  background: #cfcfcf !important; }
+
+.team-DET .color-2-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-DET .color-2-border-top {
+  border-top: 3px solid #cfcfcf !important; }
+
+.team-DET path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #000 !important; }
+
+.team-DET path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #CE1126 !important; }
+
+.team-DET path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-DET .highcharts-color-0 path {
+  stroke: #000 !important;
+  stroke-width: 2; }
+
+.team-DET .highcharts-color-1 path {
+  stroke: #CE1126 !important;
+  stroke-width: 2; }
+
+.team-DET .highcharts-color-2 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-DET .wins {
+  background: #000 !important;
+  border: 1px solid #ccc; }
+
+.team-DET .otw {
+  background: #CE1126 !important;
+  border: 1px solid #ccc; }
+
+.team-DET .los {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-DET .highcharts-legend-item.highcharts-color-0 path {
+  fill: #000 !important; }
+
+.team-DET .highcharts-legend-item.highcharts-color-1 path {
+  fill: #CE1126 !important; }
+
+.team-DET .highcharts-legend-item.highcharts-color-2 path {
+  fill: #cfcfcf !important; }
+
+/* Edmonton */
+.team-EDM .color-0-bg {
+  background: #00205B !important; }
+
+.team-EDM .color-0-border-btm {
+  border-bottom: 10px solid #00205B !important; }
+
+.team-EDM .color-1-bg {
+  background: #CF4520 !important; }
+
+.team-EDM .color-1-border-btm {
+  border-bottom: 10px solid #CF4520 !important; }
+
+.team-EDM .color-2-bg {
+  background: #cfcfcf !important; }
+
+.team-EDM .color-2-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-EDM .color-2-border-top {
+  border-top: 3px solid #cfcfcf !important; }
+
+.team-EDM path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #00205B !important; }
+
+.team-EDM path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #CF4520 !important; }
+
+.team-EDM path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-EDM .highcharts-color-0 path {
+  stroke: #00205B !important;
+  stroke-width: 2; }
+
+.team-EDM .highcharts-color-1 path {
+  stroke: #CF4520 !important;
+  stroke-width: 2; }
+
+.team-EDM .highcharts-color-2 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-EDM .wins {
+  background: #00205B !important;
+  border: 1px solid #ccc; }
+
+.team-EDM .otw {
+  background: #CF4520 !important;
+  border: 1px solid #ccc; }
+
+.team-EDM .los {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-EDM .highcharts-legend-item.highcharts-color-0 path {
+  fill: #00205B !important; }
+
+.team-EDM .highcharts-legend-item.highcharts-color-1 path {
+  fill: #CF4520 !important; }
+
+.team-EDM .highcharts-legend-item.highcharts-color-2 path {
+  fill: #cfcfcf !important; }
+
+/* Panthers */
+.team-FLA .color-0-bg {
+  background: #BF910C !important; }
+
+.team-FLA .color-0-border-btm {
+  border-bottom: 10px solid #BF910C !important; }
+
+.team-FLA .color-1-bg {
+  background: #CE1126 !important; }
+
+.team-FLA .color-1-border-btm {
+  border-bottom: 10px solid #CE1126 !important; }
+
+.team-FLA .color-2-bg {
+  background: #475C6E !important; }
+
+.team-FLA .color-2-border-btm {
+  border-bottom: 10px solid #475C6E !important; }
+
+.team-FLA .color-2-border-top {
+  border-top: 3px solid #475C6E !important; }
+
+.team-FLA path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #BF910C !important; }
+
+.team-FLA path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #CE1126 !important; }
+
+.team-FLA path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #475C6E !important; }
+
+.team-FLA .highcharts-color-0 path {
+  stroke: #BF910C !important;
+  stroke-width: 2; }
+
+.team-FLA .highcharts-color-1 path {
+  stroke: #CE1126 !important;
+  stroke-width: 2; }
+
+.team-FLA .highcharts-color-2 path {
+  stroke: #475C6E !important;
+  stroke-width: 2; }
+
+.team-FLA .wins {
+  background: #BF910C !important;
+  border: 1px solid #ccc; }
+
+.team-FLA .otw {
+  background: #CE1126 !important;
+  border: 1px solid #ccc; }
+
+.team-FLA .los {
+  background: #475C6E !important;
+  border: 1px solid #ccc; }
+
+.team-FLA .highcharts-legend-item.highcharts-color-0 path {
+  fill: #BF910C !important; }
+
+.team-FLA .highcharts-legend-item.highcharts-color-1 path {
+  fill: #CE1126 !important; }
+
+.team-FLA .highcharts-legend-item.highcharts-color-2 path {
+  fill: #475C6E !important; }
+
+/* kings */
+.team-LAK .color-0-bg {
+  background: #000 !important; }
+
+.team-LAK .color-0-border-btm {
+  border-bottom: 10px solid #000 !important; }
+
+.team-LAK .color-1-bg {
+  background: #CFCFCF !important; }
+
+.team-LAK .color-1-border-btm {
+  border-bottom: 10px solid #CFCFCF !important; }
+
+.team-LAK .color-2-bg {
+  background: #ACAEA9 !important; }
+
+.team-LAK .color-2-border-btm {
+  border-bottom: 10px solid #ACAEA9 !important; }
+
+.team-LAK .color-2-border-top {
+  border-top: 3px solid #ACAEA9 !important; }
+
+.team-LAK path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #000 !important; }
+
+.team-LAK path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #CFCFCF !important; }
+
+.team-LAK path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #ACAEA9 !important; }
+
+.team-LAK .highcharts-color-0 path {
+  stroke: #000 !important;
+  stroke-width: 2; }
+
+.team-LAK .highcharts-color-1 path {
+  stroke: #CFCFCF !important;
+  stroke-width: 2; }
+
+.team-LAK .highcharts-color-2 path {
+  stroke: #ACAEA9 !important;
+  stroke-width: 2; }
+
+.team-LAK .wins {
+  background: #000 !important;
+  border: 1px solid #ccc; }
+
+.team-LAK .otw {
+  background: #CFCFCF !important;
+  border: 1px solid #ccc; }
+
+.team-LAK .los {
+  background: #ACAEA9 !important;
+  border: 1px solid #ccc; }
+
+.team-LAK .highcharts-legend-item.highcharts-color-0 path {
+  fill: #000 !important; }
+
+.team-LAK .highcharts-legend-item.highcharts-color-1 path {
+  fill: #CFCFCF !important; }
+
+.team-LAK .highcharts-legend-item.highcharts-color-2 path {
+  fill: #ACAEA9 !important; }
+
+/* Wild */
+.team-MIN .color-0-bg {
+  background: #E2D6B5 !important; }
+
+.team-MIN .color-0-border-btm {
+  border-bottom: 10px solid #E2D6B5 !important; }
+
+.team-MIN .color-1-bg {
+  background: #024930 !important; }
+
+.team-MIN .color-1-border-btm {
+  border-bottom: 10px solid #024930 !important; }
+
+.team-MIN .color-2-bg {
+  background: #AF1E24 !important; }
+
+.team-MIN .color-2-border-btm {
+  border-bottom: 10px solid #AF1E24 !important; }
+
+.team-MIN .color-2-border-top {
+  border-top: 3px solid #AF1E24 !important; }
+
+.team-MIN path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #E2D6B5 !important; }
+
+.team-MIN path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #024930 !important; }
+
+.team-MIN path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #AF1E24 !important; }
+
+.team-MIN .highcharts-color-0 path {
+  stroke: #E2D6B5 !important;
+  stroke-width: 2; }
+
+.team-MIN .highcharts-color-1 path {
+  stroke: #024930 !important;
+  stroke-width: 2; }
+
+.team-MIN .highcharts-color-2 path {
+  stroke: #AF1E24 !important;
+  stroke-width: 2; }
+
+.team-MIN .wins {
+  background: #E2D6B5 !important;
+  border: 1px solid #ccc; }
+
+.team-MIN .otw {
+  background: #024930 !important;
+  border: 1px solid #ccc; }
+
+.team-MIN .los {
+  background: #AF1E24 !important;
+  border: 1px solid #ccc; }
+
+.team-MIN .highcharts-legend-item.highcharts-color-0 path {
+  fill: #E2D6B5 !important; }
+
+.team-MIN .highcharts-legend-item.highcharts-color-1 path {
+  fill: #024930 !important; }
+
+.team-MIN .highcharts-legend-item.highcharts-color-2 path {
+  fill: #AF1E24 !important; }
+
+/* Habs */
+.team-MTL .color-0-bg {
+  background: #CFCFCF !important; }
+
+.team-MTL .color-0-border-btm {
+  border-bottom: 10px solid #CFCFCF !important; }
+
+.team-MTL .color-1-bg {
+  background: #AF1E2D !important; }
+
+.team-MTL .color-1-border-btm {
+  border-bottom: 10px solid #AF1E2D !important; }
+
+.team-MTL .color-2-bg {
+  background: #192168 !important; }
+
+.team-MTL .color-2-border-btm {
+  border-bottom: 10px solid #192168 !important; }
+
+.team-MTL .color-2-border-top {
+  border-top: 3px solid #192168 !important; }
+
+.team-MTL path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #CFCFCF !important; }
+
+.team-MTL path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #AF1E2D !important; }
+
+.team-MTL path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #192168 !important; }
+
+.team-MTL .highcharts-color-0 path {
+  stroke: #CFCFCF !important;
+  stroke-width: 2; }
+
+.team-MTL .highcharts-color-1 path {
+  stroke: #AF1E2D !important;
+  stroke-width: 2; }
+
+.team-MTL .highcharts-color-2 path {
+  stroke: #192168 !important;
+  stroke-width: 2; }
+
+.team-MTL .wins {
+  background: #CFCFCF !important;
+  border: 1px solid #ccc; }
+
+.team-MTL .otw {
+  background: #AF1E2D !important;
+  border: 1px solid #ccc; }
+
+.team-MTL .los {
+  background: #192168 !important;
+  border: 1px solid #ccc; }
+
+.team-MTL .highcharts-legend-item.highcharts-color-0 path {
+  fill: #CFCFCF !important; }
+
+.team-MTL .highcharts-legend-item.highcharts-color-1 path {
+  fill: #AF1E2D !important; }
+
+.team-MTL .highcharts-legend-item.highcharts-color-2 path {
+  fill: #192168 !important; }
+
+/* Preds */
+.team-NSH .color-0-bg {
+  background: #041E42 !important; }
+
+.team-NSH .color-0-border-btm {
+  border-bottom: 10px solid #041E42 !important; }
+
+.team-NSH .color-1-bg {
+  background: #FFB81C !important; }
+
+.team-NSH .color-1-border-btm {
+  border-bottom: 10px solid #FFB81C !important; }
+
+.team-NSH .color-2-bg {
+  background: #CFCFCF !important; }
+
+.team-NSH .color-2-border-btm {
+  border-bottom: 10px solid #CFCFCF !important; }
+
+.team-NSH .color-2-border-top {
+  border-top: 3px solid #CFCFCF !important; }
+
+.team-NSH path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #041E42 !important; }
+
+.team-NSH path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #FFB81C !important; }
+
+.team-NSH path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #CFCFCF !important; }
+
+.team-NSH .highcharts-color-0 path {
+  stroke: #041E42 !important;
+  stroke-width: 2; }
+
+.team-NSH .highcharts-color-1 path {
+  stroke: #FFB81C !important;
+  stroke-width: 2; }
+
+.team-NSH .highcharts-color-2 path {
+  stroke: #CFCFCF !important;
+  stroke-width: 2; }
+
+.team-NSH .wins {
+  background: #041E42 !important;
+  border: 1px solid #ccc; }
+
+.team-NSH .otw {
+  background: #FFB81C !important;
+  border: 1px solid #ccc; }
+
+.team-NSH .los {
+  background: #CFCFCF !important;
+  border: 1px solid #ccc; }
+
+.team-NSH .highcharts-legend-item.highcharts-color-0 path {
+  fill: #041E42 !important; }
+
+.team-NSH .highcharts-legend-item.highcharts-color-1 path {
+  fill: #FFB81C !important; }
+
+.team-NSH .highcharts-legend-item.highcharts-color-2 path {
+  fill: #CFCFCF !important; }
+
+/* Devils */
+.team-NJD .color-0-bg {
+  background: #CE1126 !important; }
+
+.team-NJD .color-0-border-btm {
+  border-bottom: 10px solid #CE1126 !important; }
+
+.team-NJD .color-1-bg {
+  background: #000 !important; }
+
+.team-NJD .color-1-border-btm {
+  border-bottom: 10px solid #000 !important; }
+
+.team-NJD .color-2-bg {
+  background: #CFCFCF !important; }
+
+.team-NJD .color-2-border-btm {
+  border-bottom: 10px solid #CFCFCF !important; }
+
+.team-NJD .color-2-border-top {
+  border-top: 3px solid #CFCFCF !important; }
+
+.team-NJD path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #CE1126 !important; }
+
+.team-NJD path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #000 !important; }
+
+.team-NJD path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #CFCFCF !important; }
+
+.team-NJD .highcharts-color-0 path {
+  stroke: #CE1126 !important;
+  stroke-width: 2; }
+
+.team-NJD .highcharts-color-1 path {
+  stroke: #000 !important;
+  stroke-width: 2; }
+
+.team-NJD .highcharts-color-2 path {
+  stroke: #CFCFCF !important;
+  stroke-width: 2; }
+
+.team-NJD .wins {
+  background: #CE1126 !important;
+  border: 1px solid #ccc; }
+
+.team-NJD .otw {
+  background: #000 !important;
+  border: 1px solid #ccc; }
+
+.team-NJD .los {
+  background: #CFCFCF !important;
+  border: 1px solid #ccc; }
+
+.team-NJD .highcharts-legend-item.highcharts-color-0 path {
+  fill: #CE1126 !important; }
+
+.team-NJD .highcharts-legend-item.highcharts-color-1 path {
+  fill: #000 !important; }
+
+.team-NJD .highcharts-legend-item.highcharts-color-2 path {
+  fill: #CFCFCF !important; }
+
+/* Islanders */
+.team-NYI .color-0-bg {
+  background: #CFCFCF !important; }
+
+.team-NYI .color-0-border-btm {
+  border-bottom: 10px solid #CFCFCF !important; }
+
+.team-NYI .color-1-bg {
+  background: #003893 !important; }
+
+.team-NYI .color-1-border-btm {
+  border-bottom: 10px solid #003893 !important; }
+
+.team-NYI .color-2-bg {
+  background: #F95602 !important; }
+
+.team-NYI .color-2-border-btm {
+  border-bottom: 10px solid #F95602 !important; }
+
+.team-NYI .color-2-border-top {
+  border-top: 3px solid #F95602 !important; }
+
+.team-NYI path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #CFCFCF !important; }
+
+.team-NYI path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #003893 !important; }
+
+.team-NYI path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #F95602 !important; }
+
+.team-NYI .highcharts-color-0 path {
+  stroke: #CFCFCF !important;
+  stroke-width: 2; }
+
+.team-NYI .highcharts-color-1 path {
+  stroke: #003893 !important;
+  stroke-width: 2; }
+
+.team-NYI .highcharts-color-2 path {
+  stroke: #F95602 !important;
+  stroke-width: 2; }
+
+.team-NYI .wins {
+  background: #CFCFCF !important;
+  border: 1px solid #ccc; }
+
+.team-NYI .otw {
+  background: #003893 !important;
+  border: 1px solid #ccc; }
+
+.team-NYI .los {
+  background: #F95602 !important;
+  border: 1px solid #ccc; }
+
+.team-NYI .highcharts-legend-item.highcharts-color-0 path {
+  fill: #CFCFCF !important; }
+
+.team-NYI .highcharts-legend-item.highcharts-color-1 path {
+  fill: #003893 !important; }
+
+.team-NYI .highcharts-legend-item.highcharts-color-2 path {
+  fill: #F95602 !important; }
+
+/* Rangers */
+.team-NYR .color-0-bg {
+  background: #CFCFCF !important; }
+
+.team-NYR .color-0-border-btm {
+  border-bottom: 10px solid #CFCFCF !important; }
+
+.team-NYR .color-1-bg {
+  background: #0038A8 !important; }
+
+.team-NYR .color-1-border-btm {
+  border-bottom: 10px solid #0038A8 !important; }
+
+.team-NYR .color-2-bg {
+  background: #CE1126 !important; }
+
+.team-NYR .color-2-border-btm {
+  border-bottom: 10px solid #CE1126 !important; }
+
+.team-NYR .color-2-border-top {
+  border-top: 3px solid #CE1126 !important; }
+
+.team-NYR path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #CFCFCF !important; }
+
+.team-NYR path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #0038A8 !important; }
+
+.team-NYR path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #CE1126 !important; }
+
+.team-NYR .highcharts-color-0 path {
+  stroke: #CFCFCF !important;
+  stroke-width: 2; }
+
+.team-NYR .highcharts-color-1 path {
+  stroke: #0038A8 !important;
+  stroke-width: 2; }
+
+.team-NYR .highcharts-color-2 path {
+  stroke: #CE1126 !important;
+  stroke-width: 2; }
+
+.team-NYR .wins {
+  background: #CFCFCF !important;
+  border: 1px solid #ccc; }
+
+.team-NYR .otw {
+  background: #0038A8 !important;
+  border: 1px solid #ccc; }
+
+.team-NYR .los {
+  background: #CE1126 !important;
+  border: 1px solid #ccc; }
+
+.team-NYR .highcharts-legend-item.highcharts-color-0 path {
+  fill: #CFCFCF !important; }
+
+.team-NYR .highcharts-legend-item.highcharts-color-1 path {
+  fill: #0038A8 !important; }
+
+.team-NYR .highcharts-legend-item.highcharts-color-2 path {
+  fill: #CE1126 !important; }
+
+/* Ottawa */
+.team-OTT .color-0-bg {
+  background: #000 !important; }
+
+.team-OTT .color-0-border-btm {
+  border-bottom: 10px solid #000 !important; }
+
+.team-OTT .color-1-bg {
+  background: #CE1126 !important; }
+
+.team-OTT .color-1-border-btm {
+  border-bottom: 10px solid #CE1126 !important; }
+
+.team-OTT .color-2-bg {
+  background: #BF910C !important; }
+
+.team-OTT .color-2-border-btm {
+  border-bottom: 10px solid #BF910C !important; }
+
+.team-OTT .color-2-border-top {
+  border-top: 3px solid #BF910C !important; }
+
+.team-OTT path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #000 !important; }
+
+.team-OTT path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #CE1126 !important; }
+
+.team-OTT path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #BF910C !important; }
+
+.team-OTT .highcharts-color-0 path {
+  stroke: #000 !important;
+  stroke-width: 2; }
+
+.team-OTT .highcharts-color-1 path {
+  stroke: #CE1126 !important;
+  stroke-width: 2; }
+
+.team-OTT .highcharts-color-2 path {
+  stroke: #BF910C !important;
+  stroke-width: 2; }
+
+.team-OTT .wins {
+  background: #000 !important;
+  border: 1px solid #ccc; }
+
+.team-OTT .otw {
+  background: #CE1126 !important;
+  border: 1px solid #ccc; }
+
+.team-OTT .los {
+  background: #BF910C !important;
+  border: 1px solid #ccc; }
+
+.team-OTT .highcharts-legend-item.highcharts-color-0 path {
+  fill: #000 !important; }
+
+.team-OTT .highcharts-legend-item.highcharts-color-1 path {
+  fill: #CE1126 !important; }
+
+.team-OTT .highcharts-legend-item.highcharts-color-2 path {
+  fill: #BF910C !important; }
+
+/* Flyers */
+.team-PHI .color-0-bg {
+  background: #cfcfcf !important; }
+
+.team-PHI .color-0-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-PHI .color-1-bg {
+  background: #F74902 !important; }
+
+.team-PHI .color-1-border-btm {
+  border-bottom: 10px solid #F74902 !important; }
+
+.team-PHI .color-2-bg {
+  background: #000 !important; }
+
+.team-PHI .color-2-border-btm {
+  border-bottom: 10px solid #000 !important; }
+
+.team-PHI .color-2-border-top {
+  border-top: 3px solid #000 !important; }
+
+.team-PHI path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-PHI path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #F74902 !important; }
+
+.team-PHI path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #000 !important; }
+
+.team-PHI .highcharts-color-0 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-PHI .highcharts-color-1 path {
+  stroke: #F74902 !important;
+  stroke-width: 2; }
+
+.team-PHI .highcharts-color-2 path {
+  stroke: #000 !important;
+  stroke-width: 2; }
+
+.team-PHI .wins {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-PHI .otw {
+  background: #F74902 !important;
+  border: 1px solid #ccc; }
+
+.team-PHI .los {
+  background: #000 !important;
+  border: 1px solid #ccc; }
+
+.team-PHI .highcharts-legend-item.highcharts-color-0 path {
+  fill: #cfcfcf !important; }
+
+.team-PHI .highcharts-legend-item.highcharts-color-1 path {
+  fill: #F74902 !important; }
+
+.team-PHI .highcharts-legend-item.highcharts-color-2 path {
+  fill: #000 !important; }
+
+/* Penguins */
+.team-PIT .color-0-bg {
+  background: #cfcfcf !important; }
+
+.team-PIT .color-0-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-PIT .color-1-bg {
+  background: #FCB514 !important; }
+
+.team-PIT .color-1-border-btm {
+  border-bottom: 10px solid #FCB514 !important; }
+
+.team-PIT .color-2-bg {
+  background: #000 !important; }
+
+.team-PIT .color-2-border-btm {
+  border-bottom: 10px solid #000 !important; }
+
+.team-PIT .color-2-border-top {
+  border-top: 3px solid #000 !important; }
+
+.team-PIT path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-PIT path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #FCB514 !important; }
+
+.team-PIT path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #000 !important; }
+
+.team-PIT .highcharts-color-0 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-PIT .highcharts-color-1 path {
+  stroke: #FCB514 !important;
+  stroke-width: 2; }
+
+.team-PIT .highcharts-color-2 path {
+  stroke: #000 !important;
+  stroke-width: 2; }
+
+.team-PIT .wins {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-PIT .otw {
+  background: #FCB514 !important;
+  border: 1px solid #ccc; }
+
+.team-PIT .los {
+  background: #000 !important;
+  border: 1px solid #ccc; }
+
+.team-PIT .highcharts-legend-item.highcharts-color-0 path {
+  fill: #cfcfcf !important; }
+
+.team-PIT .highcharts-legend-item.highcharts-color-1 path {
+  fill: #FCB514 !important; }
+
+.team-PIT .highcharts-legend-item.highcharts-color-2 path {
+  fill: #000 !important; }
+
+/* Sharks */
+.team-SJS .color-0-bg {
+  background: #cfcfcf !important; }
+
+.team-SJS .color-0-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-SJS .color-1-bg {
+  background: #006D75 !important; }
+
+.team-SJS .color-1-border-btm {
+  border-bottom: 10px solid #006D75 !important; }
+
+.team-SJS .color-2-bg {
+  background: #000 !important; }
+
+.team-SJS .color-2-border-btm {
+  border-bottom: 10px solid #000 !important; }
+
+.team-SJS .color-2-border-top {
+  border-top: 3px solid #000 !important; }
+
+.team-SJS path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-SJS path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #006D75 !important; }
+
+.team-SJS path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #000 !important; }
+
+.team-SJS .highcharts-color-0 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-SJS .highcharts-color-1 path {
+  stroke: #006D75 !important;
+  stroke-width: 2; }
+
+.team-SJS .highcharts-color-2 path {
+  stroke: #000 !important;
+  stroke-width: 2; }
+
+.team-SJS .wins {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-SJS .otw {
+  background: #006D75 !important;
+  border: 1px solid #ccc; }
+
+.team-SJS .los {
+  background: #000 !important;
+  border: 1px solid #ccc; }
+
+.team-SJS .highcharts-legend-item.highcharts-color-0 path {
+  fill: #cfcfcf !important; }
+
+.team-SJS .highcharts-legend-item.highcharts-color-1 path {
+  fill: #006D75 !important; }
+
+.team-SJS .highcharts-legend-item.highcharts-color-2 path {
+  fill: #000 !important; }
+
+/* Blues */
+.team-STL .color-0-bg {
+  background: #cfcfcf !important; }
+
+.team-STL .color-0-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-STL .color-1-bg {
+  background: #002F87 !important; }
+
+.team-STL .color-1-border-btm {
+  border-bottom: 10px solid #002F87 !important; }
+
+.team-STL .color-2-bg {
+  background: #FCB514 !important; }
+
+.team-STL .color-2-border-btm {
+  border-bottom: 10px solid #FCB514 !important; }
+
+.team-STL .color-2-border-top {
+  border-top: 3px solid #FCB514 !important; }
+
+.team-STL path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-STL path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #002F87 !important; }
+
+.team-STL path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #FCB514 !important; }
+
+.team-STL .highcharts-color-0 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-STL .highcharts-color-1 path {
+  stroke: #002F87 !important;
+  stroke-width: 2; }
+
+.team-STL .highcharts-color-2 path {
+  stroke: #FCB514 !important;
+  stroke-width: 2; }
+
+.team-STL .wins {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-STL .otw {
+  background: #002F87 !important;
+  border: 1px solid #ccc; }
+
+.team-STL .los {
+  background: #FCB514 !important;
+  border: 1px solid #ccc; }
+
+.team-STL .highcharts-legend-item.highcharts-color-0 path {
+  fill: #cfcfcf !important; }
+
+.team-STL .highcharts-legend-item.highcharts-color-1 path {
+  fill: #002F87 !important; }
+
+.team-STL .highcharts-legend-item.highcharts-color-2 path {
+  fill: #FCB514 !important; }
+
+/* Lightning */
+.team-TBL .color-0-bg {
+  background: #cfcfcf !important; }
+
+.team-TBL .color-0-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-TBL .color-1-bg {
+  background: #002868 !important; }
+
+.team-TBL .color-1-border-btm {
+  border-bottom: 10px solid #002868 !important; }
+
+.team-TBL .color-2-bg {
+  background: #000 !important; }
+
+.team-TBL .color-2-border-btm {
+  border-bottom: 10px solid #000 !important; }
+
+.team-TBL .color-2-border-top {
+  border-top: 3px solid #000 !important; }
+
+.team-TBL path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-TBL path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #002868 !important; }
+
+.team-TBL path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #000 !important; }
+
+.team-TBL .highcharts-color-0 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-TBL .highcharts-color-1 path {
+  stroke: #002868 !important;
+  stroke-width: 2; }
+
+.team-TBL .highcharts-color-2 path {
+  stroke: #000 !important;
+  stroke-width: 2; }
+
+.team-TBL .wins {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-TBL .otw {
+  background: #002868 !important;
+  border: 1px solid #ccc; }
+
+.team-TBL .los {
+  background: #000 !important;
+  border: 1px solid #ccc; }
+
+.team-TBL .highcharts-legend-item.highcharts-color-0 path {
+  fill: #cfcfcf !important; }
+
+.team-TBL .highcharts-legend-item.highcharts-color-1 path {
+  fill: #002868 !important; }
+
+.team-TBL .highcharts-legend-item.highcharts-color-2 path {
+  fill: #000 !important; }
+
+/* Leafs */
+.team-TBL .color-0-bg {
+  background: #cfcfcf !important; }
+
+.team-TBL .color-0-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-TBL .color-1-bg {
+  background: #00205B !important; }
+
+.team-TBL .color-1-border-btm {
+  border-bottom: 10px solid #00205B !important; }
+
+.team-TBL .color-2-bg {
+  background: #000 !important; }
+
+.team-TBL .color-2-border-btm {
+  border-bottom: 10px solid #000 !important; }
+
+.team-TBL .color-2-border-top {
+  border-top: 3px solid #000 !important; }
+
+.team-TBL path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-TBL path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #00205B !important; }
+
+.team-TBL path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #000 !important; }
+
+.team-TBL .highcharts-color-0 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-TBL .highcharts-color-1 path {
+  stroke: #00205B !important;
+  stroke-width: 2; }
+
+.team-TBL .highcharts-color-2 path {
+  stroke: #000 !important;
+  stroke-width: 2; }
+
+.team-TBL .wins {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-TBL .otw {
+  background: #00205B !important;
+  border: 1px solid #ccc; }
+
+.team-TBL .los {
+  background: #000 !important;
+  border: 1px solid #ccc; }
+
+.team-TBL .highcharts-legend-item.highcharts-color-0 path {
+  fill: #cfcfcf !important; }
+
+.team-TBL .highcharts-legend-item.highcharts-color-1 path {
+  fill: #00205B !important; }
+
+.team-TBL .highcharts-legend-item.highcharts-color-2 path {
+  fill: #000 !important; }
+
+/* Canucks */
+.team-VAN .color-0-bg {
+  background: #cfcfcf !important; }
+
+.team-VAN .color-0-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-VAN .color-1-bg {
+  background: #001F5B !important; }
+
+.team-VAN .color-1-border-btm {
+  border-bottom: 10px solid #001F5B !important; }
+
+.team-VAN .color-2-bg {
+  background: #087138 !important; }
+
+.team-VAN .color-2-border-btm {
+  border-bottom: 10px solid #087138 !important; }
+
+.team-VAN .color-2-border-top {
+  border-top: 3px solid #087138 !important; }
+
+.team-VAN path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-VAN path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #001F5B !important; }
+
+.team-VAN path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #087138 !important; }
+
+.team-VAN .highcharts-color-0 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-VAN .highcharts-color-1 path {
+  stroke: #001F5B !important;
+  stroke-width: 2; }
+
+.team-VAN .highcharts-color-2 path {
+  stroke: #087138 !important;
+  stroke-width: 2; }
+
+.team-VAN .wins {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-VAN .otw {
+  background: #001F5B !important;
+  border: 1px solid #ccc; }
+
+.team-VAN .los {
+  background: #087138 !important;
+  border: 1px solid #ccc; }
+
+.team-VAN .highcharts-legend-item.highcharts-color-0 path {
+  fill: #cfcfcf !important; }
+
+.team-VAN .highcharts-legend-item.highcharts-color-1 path {
+  fill: #001F5B !important; }
+
+.team-VAN .highcharts-legend-item.highcharts-color-2 path {
+  fill: #087138 !important; }
+
+/* Vegas */
+.team-VGK .color-0-bg {
+  background: #85714D !important; }
+
+.team-VGK .color-0-border-btm {
+  border-bottom: 10px solid #85714D !important; }
+
+.team-VGK .color-1-bg {
+  background: #333F47 !important; }
+
+.team-VGK .color-1-border-btm {
+  border-bottom: 10px solid #333F47 !important; }
+
+.team-VGK .color-2-bg {
+  background: #000 !important; }
+
+.team-VGK .color-2-border-btm {
+  border-bottom: 10px solid #000 !important; }
+
+.team-VGK .color-2-border-top {
+  border-top: 3px solid #000 !important; }
+
+.team-VGK path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #85714D !important; }
+
+.team-VGK path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #333F47 !important; }
+
+.team-VGK path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #000 !important; }
+
+.team-VGK .highcharts-color-0 path {
+  stroke: #85714D !important;
+  stroke-width: 2; }
+
+.team-VGK .highcharts-color-1 path {
+  stroke: #333F47 !important;
+  stroke-width: 2; }
+
+.team-VGK .highcharts-color-2 path {
+  stroke: #000 !important;
+  stroke-width: 2; }
+
+.team-VGK .wins {
+  background: #85714D !important;
+  border: 1px solid #ccc; }
+
+.team-VGK .otw {
+  background: #333F47 !important;
+  border: 1px solid #ccc; }
+
+.team-VGK .los {
+  background: #000 !important;
+  border: 1px solid #ccc; }
+
+.team-VGK .highcharts-legend-item.highcharts-color-0 path {
+  fill: #85714D !important; }
+
+.team-VGK .highcharts-legend-item.highcharts-color-1 path {
+  fill: #333F47 !important; }
+
+.team-VGK .highcharts-legend-item.highcharts-color-2 path {
+  fill: #000 !important; }
+
+/* Caps */
+.team-WSH .color-0-bg {
+  background: #cfcfcf !important; }
+
+.team-WSH .color-0-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-WSH .color-1-bg {
+  background: #CE1939 !important; }
+
+.team-WSH .color-1-border-btm {
+  border-bottom: 10px solid #CE1939 !important; }
+
+.team-WSH .color-2-bg {
+  background: #041E41 !important; }
+
+.team-WSH .color-2-border-btm {
+  border-bottom: 10px solid #041E41 !important; }
+
+.team-WSH .color-2-border-top {
+  border-top: 3px solid #041E41 !important; }
+
+.team-WSH path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-WSH path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #CE1939 !important; }
+
+.team-WSH path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #041E41 !important; }
+
+.team-WSH .highcharts-color-0 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-WSH .highcharts-color-1 path {
+  stroke: #CE1939 !important;
+  stroke-width: 2; }
+
+.team-WSH .highcharts-color-2 path {
+  stroke: #041E41 !important;
+  stroke-width: 2; }
+
+.team-WSH .wins {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-WSH .otw {
+  background: #CE1939 !important;
+  border: 1px solid #ccc; }
+
+.team-WSH .los {
+  background: #041E41 !important;
+  border: 1px solid #ccc; }
+
+.team-WSH .highcharts-legend-item.highcharts-color-0 path {
+  fill: #cfcfcf !important; }
+
+.team-WSH .highcharts-legend-item.highcharts-color-1 path {
+  fill: #CE1939 !important; }
+
+.team-WSH .highcharts-legend-item.highcharts-color-2 path {
+  fill: #041E41 !important; }
+
+/* Jets */
+.team-WPG .color-0-bg {
+  background: #cfcfcf !important; }
+
+.team-WPG .color-0-border-btm {
+  border-bottom: 10px solid #cfcfcf !important; }
+
+.team-WPG .color-1-bg {
+  background: #8E9090 !important; }
+
+.team-WPG .color-1-border-btm {
+  border-bottom: 10px solid #8E9090 !important; }
+
+.team-WPG .color-2-bg {
+  background: #041E41 !important; }
+
+.team-WPG .color-2-border-btm {
+  border-bottom: 10px solid #041E41 !important; }
+
+.team-WPG .color-2-border-top {
+  border-top: 3px solid #041E41 !important; }
+
+.team-WPG path.highcharts-point.highcharts-color-0 {
+  stroke: #ccc;
+  fill: #cfcfcf !important; }
+
+.team-WPG path.highcharts-point.highcharts-color-1 {
+  stroke: #ccc;
+  fill: #8E9090 !important; }
+
+.team-WPG path.highcharts-point.highcharts-color-2 {
+  stroke: #ccc;
+  fill: #041E41 !important; }
+
+.team-WPG .highcharts-color-0 path {
+  stroke: #cfcfcf !important;
+  stroke-width: 2; }
+
+.team-WPG .highcharts-color-1 path {
+  stroke: #8E9090 !important;
+  stroke-width: 2; }
+
+.team-WPG .highcharts-color-2 path {
+  stroke: #041E41 !important;
+  stroke-width: 2; }
+
+.team-WPG .wins {
+  background: #cfcfcf !important;
+  border: 1px solid #ccc; }
+
+.team-WPG .otw {
+  background: #8E9090 !important;
+  border: 1px solid #ccc; }
+
+.team-WPG .los {
+  background: #041E41 !important;
+  border: 1px solid #ccc; }
+
+.team-WPG .highcharts-legend-item.highcharts-color-0 path {
+  fill: #cfcfcf !important; }
+
+.team-WPG .highcharts-legend-item.highcharts-color-1 path {
+  fill: #8E9090 !important; }
+
+.team-WPG .highcharts-legend-item.highcharts-color-2 path {
+  fill: #041E41 !important; }
+
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
-}
+  display: none !important; }
+
 body {
-    font-size:10px;  
-    margin-top:135px;
-    background:url(../img/real_cf.png) repeat left top;
-}
+  font-size: 10px;
+  margin-top: 135px;
+  background: url(../img/real_cf.png) repeat left top; }
+
 h1 {
-    font-size:20px;    
-}
+  font-size: 20px; }
+
 h3 {
-    font-size:12px;
-}
-h5 {font-size:11px;}
+  font-size: 12px; }
+
+h5 {
+  font-size: 11px; }
 
 .navbar {
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.75);
-    box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.75);
-    background: rgb(255, 255, 255);
-background: -moz-linear-gradient(90deg, rgb(255, 255, 255) 30%, rgb(232, 232, 232) 70%);
-background: -webkit-linear-gradient(90deg, rgb(255, 255, 255) 30%, rgb(232, 232, 232) 70%);
-background: -o-linear-gradient(90deg, rgb(255, 255, 255) 30%, rgb(232, 232, 232) 70%);
-background: -ms-linear-gradient(90deg, rgb(255, 255, 255) 30%, rgb(232, 232, 232) 70%);
-background: linear-gradient(180deg, rgb(255, 255, 255) 30%, rgb(232, 232, 232) 70%);
-}
- .teamlogo {    height:85px;    }
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+  background: white;
+  background: -moz-linear-gradient(90deg, white 30%, #e8e8e8 70%);
+  background: -webkit-linear-gradient(90deg, white 30%, #e8e8e8 70%);
+  background: -o-linear-gradient(90deg, white 30%, #e8e8e8 70%);
+  background: -ms-linear-gradient(90deg, white 30%, #e8e8e8 70%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, white), color-stop(70%, #e8e8e8));
+  background: -webkit-linear-gradient(top, white 30%, #e8e8e8 70%);
+  background: -o-linear-gradient(top, white 30%, #e8e8e8 70%);
+  background: linear-gradient(180deg, white 30%, #e8e8e8 70%); }
 
-
+.teamlogo {
+  height: 85px; }
 
 hr {
-    margin-top:5px;
-    margin-bottom:5px;
-}
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
 .nav.nav-pills {
-    width:100%;
-background: rgb(76, 76, 76);
-background: -moz-linear-gradient(90deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
-background: -webkit-linear-gradient(90deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
-background: -o-linear-gradient(90deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
-background: -ms-linear-gradient(90deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
-background: linear-gradient(180deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
-}
- .nav.nav-pills li {
-    width:25%;
-     margin:0px;
-}
+  width: 100%;
+  background: #4c4c4c;
+  background: -moz-linear-gradient(90deg, #4c4c4c 13%, black 70%);
+  background: -webkit-linear-gradient(90deg, #4c4c4c 13%, black 70%);
+  background: -o-linear-gradient(90deg, #4c4c4c 13%, black 70%);
+  background: -ms-linear-gradient(90deg, #4c4c4c 13%, black 70%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(13%, #4c4c4c), color-stop(70%, black));
+  background: -webkit-linear-gradient(top, #4c4c4c 13%, black 70%);
+  background: -o-linear-gradient(top, #4c4c4c 13%, black 70%);
+  background: linear-gradient(180deg, #4c4c4c 13%, black 70%); }
+
+.nav.nav-pills li {
+  width: 25%;
+  margin: 0px; }
+
 .nav.nav-pills li a {
-    text-align: center;
-    color:white;
-}
-.nav.nav-pills li a:focus, .nav.nav-pills li a.active{
-    background: rgb(76, 76, 76);
-background: -moz-linear-gradient(270deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
-background: -webkit-linear-gradient(270deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
-background: -o-linear-gradient(270deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
-background: -ms-linear-gradient(270deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
-background: linear-gradient(0deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
-    border-radius:0px;
-}
+  text-align: center;
+  color: white; }
 
-.nav.nav-pills li a:hover{
-    background: rgb(76, 76, 76);
-background: -moz-linear-gradient(180deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
-background: -webkit-linear-gradient(180deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
-background: -o-linear-gradient(180deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
-background: -ms-linear-gradient(180deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
-background: linear-gradient(90deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
-    border-radius:0px;
-}
+.nav.nav-pills li a:focus, .nav.nav-pills li a.active {
+  background: #4c4c4c;
+  background: -moz-linear-gradient(270deg, #4c4c4c 13%, black 70%);
+  background: -webkit-linear-gradient(270deg, #4c4c4c 13%, black 70%);
+  background: -o-linear-gradient(270deg, #4c4c4c 13%, black 70%);
+  background: -ms-linear-gradient(270deg, #4c4c4c 13%, black 70%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(13%, #4c4c4c), color-stop(70%, black));
+  background: -webkit-linear-gradient(bottom, #4c4c4c 13%, black 70%);
+  background: -o-linear-gradient(bottom, #4c4c4c 13%, black 70%);
+  background: linear-gradient(0deg, #4c4c4c 13%, black 70%);
+  border-radius: 0px; }
 
+.nav.nav-pills li a:hover {
+  background: #4c4c4c;
+  background: -moz-linear-gradient(180deg, #4c4c4c 13%, black 70%);
+  background: -webkit-linear-gradient(180deg, #4c4c4c 13%, black 70%);
+  background: -o-linear-gradient(180deg, #4c4c4c 13%, black 70%);
+  background: -ms-linear-gradient(180deg, #4c4c4c 13%, black 70%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(13%, #4c4c4c), color-stop(70%, black));
+  background: -webkit-linear-gradient(left, #4c4c4c 13%, black 70%);
+  background: -o-linear-gradient(left, #4c4c4c 13%, black 70%);
+  background: linear-gradient(90deg, #4c4c4c 13%, black 70%);
+  border-radius: 0px; }
 
+@media (min-width: 768px) {
+  body {
+    font-size: 14px;
+    margin-top: 80px; }
+  h1 {
+    font-size: 30px; }
+  h3 {
+    font-size: 20px; }
+  h5 {
+    font-size: 14px; }
+  .teamlogo {
+    height: 120px; }
+  .mgn-btm {
+    margin-bottom: 0px; } }
 
-
- @media(min-width:768px){
-     body {font-size:14px; margin-top:80px;}
-     h1{ font-size:30px;}    
-     h3 { font-size:20px;}    
-     h5 {font-size:14px;}
-     .teamlogo {    height:120px;    }
-     .mgn-btm {
-    margin-bottom:0px;
-}
-}
 .table-condensed.ultra-condenced td, .table-condensed.ultra-condenced th {
-    padding:3px;
-}
+  padding: 3px; }
+
 .highcharts-title {
-    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif !important;
-    text-align: center!important;
-    font-size: 11px!important;
-}
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  text-align: center !important;
+  font-size: 11px !important; }
+
 .zeroMargins {
-    margin:0px;
-}
+  margin: 0px; }
+
 .highcharts-container {
-    margin:0px auto;
-}
+  margin: 0px auto; }
+
 .legendBoxes {
-    display:inline-block;
-    width:10px; 
-    height: 10px;    
-    margin-right: 3px;
-}
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 3px; }
+
 .wins {
-    background:#cccccc;
-}
+  background: #cccccc; }
+
 .otw {
-    background:#4f4f4f;
-}
+  background: #4f4f4f; }
+
 .los {
-    background:#000000;
-}
-/* Team Colours */
-/* Ducks */
-.team-ANA .color-1-bg {
-    background:#B5985A !important;
-}
-.team-ANA .color-1-border-btm {
-    border-bottom:10px solid #B5985A !important;
-}
-.team-ANA .color-2-bg {
-    background:#F95602 !important;
-}
-.team-ANA .color-2-border-top {
-    border-top:3px solid #F95602 !important;
-}
-
-.team-ANA path.highcharts-point.highcharts-color-0  {
-    fill:#B5985A !important;
-}
-.team-ANA path.highcharts-point.highcharts-color-1 {
- fill:#F95602!important; 
-}
-.team-ANA path.highcharts-point.highcharts-color-2 {
-    fill:black!important;
-}
-.team-ANA .wins{
-    background:#B5985A;
-}
-.team-ANA .otw{
-    background:#F95602;
-}
-.team-ANA .los{
-    background:black;
-}
-/* Coyotes */
-.team-ARI .color-1-bg {
-    background:#8C2633 !important;
-}
-.team-ARI .color-1-border-btm {
-    border-bottom:10px solid #8C2633 !important;
-}
-.team-ARI .color-2-bg {
-    background:#E2D6B5 !important;
-}
-.team-ARI .color-2-border-top {
-    border-top:3px solid #E2D6B5 !important;
-}
-.team-ARI path.highcharts-point.highcharts-color-0  {
-    fill:#8C2633 !important;
-}
-.team-ARI path.highcharts-point.highcharts-color-1 {
- fill:#E2D6B5!important; 
-}
-.team-ARI path.highcharts-point.highcharts-color-2 {
-    fill:black!important;
-}
-.team-ARI .wins{
-    background:#8C2633;
-}
-.team-ARI .otw{
-    background:#E2D6B5;
-}
-.team-ARI .los{
-    background:black;
-}
-/* Bruins */
-.team-BOS .color-1-bg {
-    background:#FCB514 !important;
-}
-.team-BOS .color-1-border-btm {
-    border-bottom:10px solid #FCB514 !important;
-}
-.team-BOS .color-2-bg {
-    background:black !important;
-}
-.team-BOS .color-2-border-top {
-    border-top:3px solid black !important;
-}
-.team-BOS path.highcharts-point.highcharts-color-0  {
-    fill:#FCB514 !important;
-}
-.team-BOS path.highcharts-point.highcharts-color-1 {
-    fill:#fff!important; 
-    stroke:#ccc;
-}
-.team-BOS path.highcharts-point.highcharts-color-2 {
-    fill:black!important;
-}
-.team-BOS .wins{
-    background:#FCB514;
-}
-.team-BOS .otw{
-    background:#fff;
-    border:1px solid #ccc;
-}
-.team-BOS .los{
-    background:black;
-}
-/* Buffalo */
-.team-BUF .color-1-bg {
-    background:#002654 !important;
-}
-.team-BUF .color-1-border-btm {
-    border-bottom:10px solid #002654 !important;
-}
-.team-BUF .color-2-bg {
-    background:#FCB514 !important;
-}
-.team-BUF .color-2-border-top {
-    border-top:3px solid #FCB514 !important;
-}
-.team-BUF path.highcharts-point.highcharts-color-0  {
-    fill:#002654 !important;
-}
-.team-BUF path.highcharts-point.highcharts-color-1 {
- fill:#FCB514!important; 
-}
-.team-BUF path.highcharts-point.highcharts-color-2 {
-    fill:#fff!important;
-    stroke:#ccc;
-}
-.team-BUF .wins{
-    background:#002654;
-}
-.team-BUF .otw{
-    background:#FCB514;
-}
-.team-BUF .los{
-    background:#fff;
-    border:1px solid #ccc;    
-}
-/* Calgary */
-.team-CGY .color-1-bg {
-    background:#CE1126 !important;
-}
-.team-CGY .color-1-border-btm {
-    border-bottom:10px solid #CE1126 !important;
-}
-.team-CGY .color-2-bg {
-    background:#F3BC52 !important;
-}
-.team-CGY .color-2-border-top {
-    border-top:3px solid #F3BC52 !important;
-}
-.team-CGY path.highcharts-point.highcharts-color-0  {
-    fill:#CE1126 !important;
-}
-.team-CGY path.highcharts-point.highcharts-color-1 {
- fill:#F3BC52!important; 
-}
-.team-CGY path.highcharts-point.highcharts-color-2 {
-    fill:#000!important;
-}
-.team-CGY .wins{
-    background:#CE1126;
-}
-.team-CGY .otw{
-    background:#F3BC52;
-}
-.team-CGY .los{
-    background:#000;
-}
-/* Canes */
-.team-CAR .color-1-bg {
-    background:#CE1126 !important;
-}
-.team-CAR .color-1-border-btm {
-    border-bottom:10px solid #CE1126 !important;
-}
-.team-CAR .color-2-bg {
-    background:#000 !important;
-}
-.team-CAR .color-2-border-top {
-    border-top:3px solid #000 !important;
-}
-.team-CAR path.highcharts-point.highcharts-color-0  {
-    fill:#CE1126 !important;
-}
-.team-CAR path.highcharts-point.highcharts-color-1 {
- fill:#000!important; 
-}
-.team-CAR path.highcharts-point.highcharts-color-2 {
-    fill:#fff!important;
-    stroke:#ccc;
-}
-.team-CAR .wins{
-    background:#CE1126;
-}
-.team-CAR .otw{
-    background:#000;
-}
-.team-CAR .los{
-    background:#fff;
-}
-/* Blackhawks */
-.team-CHI .color-1-bg {
-    background:#CF0A2C !important;
-}
-.team-CHI .color-1-border-btm {
-    border-bottom:10px solid #CF0A2C !important;
-}
-.team-CHI .color-2-bg {
-    background:#000 !important;
-}
-.team-CHI .color-2-border-top {
-    border-top:3px solid #000 !important;
-}
-.team-CHI path.highcharts-point.highcharts-color-0  {
-    fill:#CF0A2C !important;
-}
-.team-CHI path.highcharts-point.highcharts-color-1 {
- fill:#000!important; 
-}
-.team-CHI path.highcharts-point.highcharts-color-2 {
-    fill:#fff!important;
-    stroke:#ccc;
-}
-.team-CHI .wins{
-    background:#CF0A2C;
-    border:1px solid #CF0A2C;
-}
-.team-CHI .otw{
-    background:#000;
-    border:1px solid #000;
-}
-.team-CHI .los{
-    background:#fff;
-    border:1px solid #000;
-}
-/* Colorado */
-.team-COL .color-1-bg {
-    background:#236192 !important;
-}
-.team-COL .color-1-border-btm {
-    border-bottom:10px solid #236192 !important;
-}
-.team-COL .color-2-bg {
-    background:#6F263D !important;
-}
-.team-COL .color-2-border-top {
-    border-top:3px solid #6F263D !important;
-}
-.team-COL path.highcharts-point.highcharts-color-0  {
-    fill:#6F263D !important;
-}
-.team-COL path.highcharts-point.highcharts-color-1 {
- fill:#236192!important; 
-}
-.team-COL path.highcharts-point.highcharts-color-2 {
-    fill:#fff!important;
-    stroke:#ccc;
-}
-.team-COL .wins{
-    background:#6F263D;
-}
-.team-COL .otw{
-    background:#236192;
-}
-.team-COL .los{
-    background:#fff;
-    border:1px solid #000;
-}
-/* Columbus */
-.team-CBJ .color-1-bg {
-    background:#002654 !important;
-}
-.team-CBJ .color-1-border-btm {
-    border-bottom:10px solid #002654 !important;
-}
-.team-CBJ .color-2-bg {
-    background:#CE1126 !important;
-}
-.team-CBJ .color-2-border-top {
-    border-top:3px solid #CE1126 !important;
-}
-.team-CBJ path.highcharts-point.highcharts-color-0  {
-    fill:#002654 !important;
-}
-.team-CBJ path.highcharts-point.highcharts-color-1 {
- fill:#CE1126!important; 
-}
-.team-CBJ path.highcharts-point.highcharts-color-2 {
-    fill:#fff!important;
-    stroke:#ccc;
-}
-.team-CBJ .wins{
-    background:#002654;
-}
-.team-CBJ .otw{
-    background:#CE1126;
-}
-.team-CBJ .los{
-    background:#fff;
-    border:1px solid #000;
-}
-/* Dalas */
-.team-DAL .color-1-bg {
-    background:#006847 !important;
-}
-.team-DAL .color-1-border-btm {
-    border-bottom:10px solid #006847 !important;
-}
-.team-DAL .color-2-bg {
-    background:#000 !important;
-}
-.team-DAL .color-2-border-top {
-    border-top:3px solid #000 !important;
-}
-.team-DAL path.highcharts-point.highcharts-color-0  {
-    fill:#006847 !important;
-}
-.team-DAL path.highcharts-point.highcharts-color-1 {
- fill:#000!important; 
-}
-.team-DAL path.highcharts-point.highcharts-color-2 {
-    fill:#fff!important;
-    stroke:#ccc;
-}
-.team-DAL .wins{
-    background:#006847;
-}
-.team-DAL .otw{
-    background:#000;
-}
-.team-DAL .los{
-    background:#fff;
-    border:1px solid #000;
-}
-/* Red Wings */
-.team-DET .color-1-bg {
-    background:#CE1126 !important;
-}
-.team-DET .color-1-border-btm {
-    border-bottom:10px solid #CE1126 !important;
-}
-.team-DET .color-2-bg {
-    background:#000 !important;
-}
-.team-DET .color-2-border-top {
-    border-top:3px solid #000 !important;
-}
-
-.team-DET path.highcharts-point.highcharts-color-0  {
-    fill:#CE1126 !important;
-}
-.team-DET path.highcharts-point.highcharts-color-1 {
-     fill:#fff!important;
-    stroke:#ccc;
-}
-.team-DET path.highcharts-point.highcharts-color-2 {
-    fill:#000!important; 
-
-}
-.team-DET .wins{
-    background:#CE1126;
-}
-.team-DET .otw{
-        background:#fff;
-    border:1px solid #000;  
-}
-.team-DET .los{
-  background:#000;
-}
-/* Edmonton */
-.team-EDM .color-1-bg {
-    background:#00205B !important;
-}
-.team-EDM .color-1-border-btm {
-    border-bottom:10px solid #00205B !important;
-}
-.team-EDM .color-2-bg {
-    background:#CF4520 !important;
-}
-.team-EDM .color-2-border-top {
-    border-top:3px solid #CF4520 !important;
-}
-.team-EDM path.highcharts-point.highcharts-color-0  {
-    fill:#00205B !important;
-}
-.team-EDM path.highcharts-point.highcharts-color-1 {
- fill:#CF4520!important; 
-}
-.team-EDM path.highcharts-point.highcharts-color-2 {
-    fill:#fff!important;
-    stroke:#ccc;
-}
-.team-EDM .wins{
-    background:#00205B;
-}
-.team-EDM .otw{
-    background:#CF4520;
-}
-.team-EDM .los{
-    background:#fff;
-    border:1px solid #000;
-}
-/* Panthers */
-.team-FLA .color-1-bg {
-    background:#CE1126 !important;
-}
-.team-FLA .color-1-border-btm {
-    border-bottom:10px solid #CE1126 !important;
-}
-.team-FLA .color-2-bg {
-    background:#BF910C !important;
-}
-.team-FLA .color-2-border-top {
-    border-top:3px solid #BF910C !important;
-}
-.team-FLA path.highcharts-point.highcharts-color-0  {
-    fill:#CE1126 !important;
-}
-.team-FLA path.highcharts-point.highcharts-color-1 {
- fill:#BF910C!important; 
-}
-.team-FLA path.highcharts-point.highcharts-color-2 {
-    fill:#475C6E!important;
-}
-.team-FLA .wins{
-    background:#CE1126;
-}
-.team-FLA .otw{
-    background:#BF910C;
-}
-.team-FLA .los{
-    background:#475C6E;
-}
-/* kings */
-.team-LAK .color-1-bg {
-    background:#000 !important;
-}
-.team-LAK .color-1-border-btm {
-    border-bottom:10px solid #000 !important;
-}
-.team-LAK .color-2-bg {
-    background:#ACAEA9 !important;
-}
-.team-LAK .color-2-border-top {
-    border-top:3px solid #ACAEA9 !important;
-}
-.team-LAK path.highcharts-point.highcharts-color-0  {
-    fill:#000 !important;
-}
-.team-LAK path.highcharts-point.highcharts-color-1 {
-     fill:#ACAEA9!important; 
-}
-.team-LAK path.highcharts-point.highcharts-color-2 {
-    fill:#fff!important;
-    stroke:#ccc;
-}
-.team-LAK .wins{
-    background:#000;
-}
-.team-LAK .otw{
-    background:#ACAEA9;
-}
-.team-LAK .los{
-    background:#fff;
-    border:1px solid #ccc;
-}
-/* Wild */
-.team-MIN .color-1-bg {
-    background:#024930 !important;
-}
-.team-MIN .color-1-border-btm {
-    border-bottom:10px solid #024930 !important;
-}
-.team-MIN .color-2-bg {
-    background:#E2D6B5 !important;
-}
-.team-MIN .color-2-border-top {
-    border-top:3px solid #E2D6B5 !important;
-}
-.team-MIN path.highcharts-point.highcharts-color-0  {
-    fill:#024930 !important;
-}
-.team-MIN path.highcharts-point.highcharts-color-1 {
- fill:#E2D6B5!important; 
-}
-.team-MIN path.highcharts-point.highcharts-color-2 {
-    fill:#AF1E24!important;
-}
-.team-MIN .wins{
-    background:#024930;
-}
-.team-MIN .otw{
-    background:#E2D6B5;
-}
-.team-MIN .los{
-    background:#AF1E24;    
-}
-/* Habs */
-.team-MTL .color-1-bg {
-    background:#fff !important;
-}
-.team-MTL .color-1-border-btm {
-    border-bottom:10px solid #fff !important;
-}
-.team-MTL .color-2-bg {
-    background:#AF1E2D !important;
-}
-.team-MTL .color-2-border-top {
-    border-top:3px solid #AF1E2D !important;
-}
-.team-MTL path.highcharts-point.highcharts-color-0  {
-    fill:#AF1E2D !important;
-}
-.team-MTL path.highcharts-point.highcharts-color-1 {
-   fill:#fff!important;
-    stroke:#ccc;}
-.team-MTL path.highcharts-point.highcharts-color-2 {
-    fill:#192168!important;
-}
-.team-MTL .wins{
-    background:#AF1E2D;
-}
-.team-MTL .otw{
-        background:#fff;
-    border:1px solid #000;
-}
-.team-MTL .los{
-    background:#192168;
-}
-/* Preds */
-.team-NSH .color-1-bg {
-    background:#FFB81C !important;
-}
-.team-NSH .color-1-border-btm {
-    border-bottom:10px solid #FFB81C !important;
-}
-.team-NSH .color-2-bg {
-    background:#041E42 !important;
-}
-.team-NSH .color-2-border-top {
-    border-top:3px solid #041E42 !important;
-}
-.team-NSH path.highcharts-point.highcharts-color-0  {
-    fill:#FFB81C !important;
-}
-.team-NSH path.highcharts-point.highcharts-color-1 {
-   fill:#fff!important;
-    stroke:#ccc;}
-.team-NSH path.highcharts-point.highcharts-color-2 {
-    fill:#041E42!important;
-}
-.team-NSH .wins{
-    background:#FFB81C;
-}
-.team-NSH .otw{
-        background:#fff;
-    border:1px solid #000;
-}
-.team-NSH .los{
-    background:#041E42;
-}
-/* Devils */
-.team-NJD .color-1-bg {
-    background:#CE1126 !important;
-}
-.team-NJD .color-1-border-btm {
-    border-bottom:10px solid #CE1126 !important;
-}
-.team-NJD .color-2-bg {
-    background:#000 !important;
-}
-.team-NJD .color-2-border-top {
-    border-top:3px solid #000 !important;
-}
-.team-NJD path.highcharts-point.highcharts-color-0  {
-    fill:#CE1126 !important;
-}
-.team-NJD path.highcharts-point.highcharts-color-1 {
-   fill:#fff!important;
-    stroke:#ccc;}
-.team-NJD path.highcharts-point.highcharts-color-2 {
-    fill:#000!important;
-}
-.team-NJD .wins{
-    background:#CE1126;
-}
-.team-NJD .otw{
-        background:#fff;
-    border:1px solid #000;
-}
-.team-NJD .los{
-    background:#000;
-}
-/* Islanders */
-.team-NYI .color-1-bg {
-    background:#003893 !important;
-}
-.team-NYI .color-1-border-btm {
-    border-bottom:10px solid #003893 !important;
-}
-.team-NYI .color-2-bg {
-    background:#F95602 !important;
-}
-.team-NYI .color-2-border-top {
-    border-top:3px solid #F95602 !important;
-}
-.team-NYI path.highcharts-point.highcharts-color-0  {
-    fill:#003893 !important;
-}
-.team-NYI path.highcharts-point.highcharts-color-1 {
-   fill:#fff!important;
-    stroke:#ccc;}
-.team-NYI path.highcharts-point.highcharts-color-2 {
-    fill:#F95602!important;
-}
-.team-NYI .wins{
-    background:#003893;
-}
-.team-NYI .otw{
-        background:#fff;
-    border:1px solid #000;
-}
-.team-NYI .los{
-    background:#F95602;
-}
-/* Rangers */
-.team-NYR .color-1-bg {
-    background:#0038A8 !important;
-}
-.team-NYR .color-1-border-btm {
-    border-bottom:10px solid #0038A8 !important;
-}
-.team-NYR .color-2-bg {
-    background:#CE1126 !important;
-}
-.team-NYR .color-2-border-top {
-    border-top:3px solid #CE1126 !important;
-}
-.team-NYR path.highcharts-point.highcharts-color-0  {
-    fill:#0038A8 !important;
-}
-.team-NYR path.highcharts-point.highcharts-color-1 {
-   fill:#fff!important;
-    stroke:#ccc;}
-.team-NYR path.highcharts-point.highcharts-color-2 {
-    fill:#CE1126!important;
-}
-.team-NYR .wins{
-    background:#0038A8;
-}
-.team-NYR .otw{
-        background:#fff;
-    border:1px solid #000;
-}
-.team-NYR .los{
-    background:#CE1126;
-}
-/* Ottawa */
-.team-OTT .color-1-bg {
-    background:#CE1126 !important;
-}
-.team-OTT .color-1-border-btm {
-    border-bottom:10px solid #CE1126 !important;
-}
-.team-OTT .color-2-bg {
-    background:#BF910C !important;
-}
-.team-OTT .color-2-border-top {
-    border-top:3px solid #BF910C !important;
-}
-.team-OTT path.highcharts-point.highcharts-color-0  {
-    fill:#CE1126 !important;
-}
-.team-OTT path.highcharts-point.highcharts-color-1 {
-   fill:#000!important;
-    }
-.team-OTT path.highcharts-point.highcharts-color-2 {
-    fill:#BF910C!important;
-}
-.team-OTT .wins{
-    background:#CE1126;
-}
-.team-OTT .otw{
-        background:#000;
-}
-.team-OTT .los{
-    background:#BF910C;
-}
-/* Flyers */
-.team-PHI .color-1-bg {
-    background:#F74902 !important;
-}
-.team-PHI .color-1-border-btm {
-    border-bottom:10px solid #F74902 !important;
-}
-.team-PHI .color-2-bg {
-    background:#000 !important;
-}
-.team-PHI .color-2-border-top {
-    border-top:3px solid #000 !important;
-}
-.team-PHI path.highcharts-point.highcharts-color-0  {
-    fill:#F74902 !important;
-}
-.team-PHI path.highcharts-point.highcharts-color-1 {
-   fill:#fff!important;
-    stroke:#ccc;
-    }
-.team-PHI path.highcharts-point.highcharts-color-2 {
-    fill:#000!important;
-}
-.team-PHI .wins{
-    background:#F74902;
-}
-.team-PHI .otw{
-        background:#fff;
-    border:1px solid #ccc;
-}
-.team-PHI .los{
-    background:#000;
-}
-/* Penguins */
-.team-PIT .color-1-bg {
-    background:#000 !important;
-}
-.team-PIT .color-1-border-btm {
-    border-bottom:10px solid #000 !important;
-}
-.team-PIT .color-2-bg {
-    background:#FCB514 !important;
-}
-.team-PIT .color-2-border-top {
-    border-top:3px solid #FCB514 !important;
-}
-.team-PIT path.highcharts-point.highcharts-color-0  {
-    fill:#000 !important;
-}
-.team-PIT path.highcharts-point.highcharts-color-1 {
-   fill:#fff!important;
-    stroke:#ccc;
-    }
-.team-PIT path.highcharts-point.highcharts-color-2 {
-    fill:#FCB514!important;
-}
-.team-PIT .wins{
-    background:#000;
-}
-.team-PIT .otw{
-        background:#fff;
-    border:1px solid #ccc;
-}
-.team-PIT .los{
-    background:#FCB514;
-}
-/* Sharks */
-.team-SJS .color-1-bg {
-    background:#006D75 !important;
-}
-.team-SJS .color-1-border-btm {
-    border-bottom:10px solid #006D75 !important;
-}
-.team-SJS .color-2-bg {
-    background:#000 !important;
-}
-.team-SJS .color-2-border-top {
-    border-top:3px solid #000 !important;
-}
-.team-SJS path.highcharts-point.highcharts-color-0  {
-    fill:#006D75 !important;
-}
-.team-SJS path.highcharts-point.highcharts-color-1 {
-   fill:#fff!important;
-    stroke:#ccc;
-    }
-.team-SJS path.highcharts-point.highcharts-color-2 {
-    fill:#000!important;
-}
-.team-SJS .wins{
-    background:#000;
-}
-.team-SJS .otw{
-        background:#fff;
-    border:1px solid #ccc;
-}
-.team-SJS .los{
-    background:#000;
-}
-/* Blues */
-.team-STL .color-1-bg {
-    background:#002F87 !important;
-}
-.team-STL .color-1-border-btm {
-    border-bottom:10px solid #002F87 !important;
-}
-.team-STL .color-2-bg {
-    background:#FCB514 !important;
-}
-.team-STL .color-2-border-top {
-    border-top:3px solid #FCB514 !important;
-}
-.team-STL path.highcharts-point.highcharts-color-0  {
-    fill:#002F87 !important;
-}
-.team-STL path.highcharts-point.highcharts-color-1 {
-   fill:#fff!important;
-    stroke:#ccc;
-    }
-.team-STL path.highcharts-point.highcharts-color-2 {
-    fill:#FCB514!important;
-}
-.team-STL .wins{
-    background:#002F87;
-}
-.team-STL .otw{
-        background:#fff;
-    border:1px solid #ccc;
-}
-.team-STL .los{
-    background:#FCB514;
-}
-/* Lightning */
-.team-TBL .color-1-bg {
-    background:#002868 !important;
-}
-.team-TBL .color-1-border-btm {
-    border-bottom:10px solid #002868 !important;
-}
-.team-TBL .color-2-bg {
-    background:#000 !important;
-}
-.team-TBL .color-2-border-top {
-    border-top:3px solid #000 !important;
-}
-.team-TBL path.highcharts-point.highcharts-color-0  {
-    fill:#002868 !important;
-}
-.team-TBL path.highcharts-point.highcharts-color-1 {
-   fill:#fff!important;
-    stroke:#ccc;
-    }
-.team-TBL path.highcharts-point.highcharts-color-2 {
-    fill:#000!important;
-}
-.team-TBL .wins{
-    background:#002868;
-}
-.team-TBL .otw{
-        background:#fff;
-    border:1px solid #ccc;
-}
-.team-TBL .los{
-    background:#000;
-}
-/* Leafs */
-.team-TOR .color-1-bg {
-    background:#00205B !important;
-}
-.team-TOR .color-1-border-btm {
-    border-bottom:10px solid #00205B !important;
-}
-.team-TOR .color-2-bg {
-    background:#fff !important;
-}
-.team-TOR .color-2-border-top {
-    border-top:3px solid #fff !important;
-}
-.team-TOR path.highcharts-point.highcharts-color-0  {
-    fill:#00205B !important;
-}
-.team-TOR path.highcharts-point.highcharts-color-1 {
-   fill:#fff!important;
-    stroke:#ccc;
-    }
-.team-TOR path.highcharts-point.highcharts-color-2 {
-    fill:#000!important;
-}
-.team-TOR .wins{
-    background:#002868;
-}
-.team-TOR .otw{
-        background:#fff;
-    border:1px solid #ccc;
-}
-.team-TOR .los{
-    background:#000;
-}
-/* Canucks */
-.team-VAN .color-1-bg {
-    background:#001F5B !important;
-}
-.team-VAN .color-1-border-btm {
-    border-bottom:10px solid #001F5B !important;
-}
-.team-VAN .color-2-bg {
-    background:#087138 !important;
-}
-.team-VAN .color-2-border-top {
-    border-top:3px solid #087138 !important;
-}
-.team-VAN path.highcharts-point.highcharts-color-0  {
-    fill:#001F5B !important;
-}
-.team-VAN path.highcharts-point.highcharts-color-1 {
-   fill:#fff!important;
-    stroke:#ccc;
-    }
-.team-VAN path.highcharts-point.highcharts-color-2 {
-    fill:#087138!important;
-}
-.team-VAN .wins{
-    background:#001F5B;
-}
-.team-VAN .otw{
-        background:#fff;
-    border:1px solid #ccc;
-}
-.team-VAN .los{
-    background:#087138;
-}
-/* Vegas */
-.team-VGK .color-1-bg {
-    background:#85714D !important;
-}
-.team-VGK .color-1-border-btm {
-    border-bottom:10px solid #85714D !important;
-}
-.team-VGK .color-2-bg {
-    background:#333F47 !important;
-}
-.team-VGK .color-2-border-top {
-    border-top:3px solid #333F47 !important;
-}
-.team-VGK path.highcharts-point.highcharts-color-0  {
-    fill:#85714D !important;
-}
-.team-VGK path.highcharts-point.highcharts-color-1 {
-   fill:#333F47!important;
-    }
-.team-VGK path.highcharts-point.highcharts-color-2 {
-    fill:#000!important;
-}
-.team-VGK .wins{
-    background:#85714D;
-}
-.team-VGK .otw{
-        background:#333F47;
-}
-.team-VGK .los{
-    background:#000;
-}
-/* Caps */
-.team-WSH .color-1-bg {
-    background:#CE1939 !important;
-}
-.team-WSH .color-1-border-btm {
-    border-bottom:10px solid #CE1939 !important;
-}
-.team-WSH .color-2-bg {
-    background:#041E41 !important;
-}
-.team-WSH .color-2-border-top {
-    border-top:3px solid #041E41 !important;
-}
-.team-WSH path.highcharts-point.highcharts-color-0  {
-    fill:#CE1939 !important;
-}
-.team-WSH path.highcharts-point.highcharts-color-1 {
-   fill:#fff!important;
-    stroke:#ccc;
-    }
-.team-WSH path.highcharts-point.highcharts-color-2 {
-    fill:#041E41!important;
-}
-.team-WSH .wins{
-    background:#CE1939;
-}
-.team-WSH .otw{
-        background:#fff;
-    border:1px solid #ccc;
-}
-.team-WSH .los{
-    background:#041E41;
-}
-/* Jets */
-.team-WPG .color-1-bg {
-    background:#041E41 !important;
-}
-.team-WPG .color-1-border-btm {
-    border-bottom:10px solid #041E41 !important;
-}
-.team-WPG .color-2-bg {
-    background:#8E9090 !important;
-}
-.team-WPG .color-2-border-top {
-    border-top:3px solid #8E9090 !important;
-}
-.team-WPG path.highcharts-point.highcharts-color-0  {
-    fill:#041E41 !important;
-}
-.team-WPG path.highcharts-point.highcharts-color-1 {
-   fill:#fff!important;
-    stroke:#ccc;
-    }
-.team-WPG path.highcharts-point.highcharts-color-2 {
-    fill:#8E9090!important;
-}
-.team-WPG .wins{
-    background:#041E41;
-}
-.team-WPG .otw{
-        background:#fff;
-    border:1px solid #ccc;
-}
-.team-WPG .los{
-    background:#8E9090;
-}
+  background: #000000; }

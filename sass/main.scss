@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@import 'teams.scss';
+
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+body {
+    font-size:10px;  
+    margin-top:135px;
+    background:url(../img/real_cf.png) repeat left top;
+}
+h1 {
+    font-size:20px;    
+}
+h3 {
+    font-size:12px;
+}
+h5 {font-size:11px;}
+
+.navbar {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    background: rgb(255, 255, 255);
+background: -moz-linear-gradient(90deg, rgb(255, 255, 255) 30%, rgb(232, 232, 232) 70%);
+background: -webkit-linear-gradient(90deg, rgb(255, 255, 255) 30%, rgb(232, 232, 232) 70%);
+background: -o-linear-gradient(90deg, rgb(255, 255, 255) 30%, rgb(232, 232, 232) 70%);
+background: -ms-linear-gradient(90deg, rgb(255, 255, 255) 30%, rgb(232, 232, 232) 70%);
+background: linear-gradient(180deg, rgb(255, 255, 255) 30%, rgb(232, 232, 232) 70%);
+}
+ .teamlogo {    height:85px;    }
+
+
+
+hr {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.nav.nav-pills {
+    width:100%;
+background: rgb(76, 76, 76);
+background: -moz-linear-gradient(90deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+background: -webkit-linear-gradient(90deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+background: -o-linear-gradient(90deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+background: -ms-linear-gradient(90deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+background: linear-gradient(180deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+}
+ .nav.nav-pills li {
+    width:25%;
+     margin:0px;
+}
+.nav.nav-pills li a {
+    text-align: center;
+    color:white;
+}
+.nav.nav-pills li a:focus, .nav.nav-pills li a.active{
+    background: rgb(76, 76, 76);
+background: -moz-linear-gradient(270deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+background: -webkit-linear-gradient(270deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+background: -o-linear-gradient(270deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+background: -ms-linear-gradient(270deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+background: linear-gradient(0deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+    border-radius:0px;
+}
+
+.nav.nav-pills li a:hover{
+    background: rgb(76, 76, 76);
+background: -moz-linear-gradient(180deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+background: -webkit-linear-gradient(180deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+background: -o-linear-gradient(180deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+background: -ms-linear-gradient(180deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+background: linear-gradient(90deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
+    border-radius:0px;
+}
+
+
+
+
+ @media(min-width:768px){
+     body {font-size:14px; margin-top:80px;}
+     h1{ font-size:30px;}    
+     h3 { font-size:20px;}    
+     h5 {font-size:14px;}
+     .teamlogo {    height:120px;    }
+     .mgn-btm {
+    margin-bottom:0px;
+}
+}
+.table-condensed.ultra-condenced td, .table-condensed.ultra-condenced th {
+    padding:3px;
+}
+.highcharts-title {
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    text-align: center!important;
+    font-size: 11px!important;
+}
+.zeroMargins {
+    margin:0px;
+}
+.highcharts-container {
+    margin:0px auto;
+}
+.legendBoxes {
+    display:inline-block;
+    width:10px; 
+    height: 10px;    
+    margin-right: 3px;
+}
+.wins {
+    background:#cccccc;
+}
+.otw {
+    background:#4f4f4f;
+}
+.los {
+    background:#000000;
+}
