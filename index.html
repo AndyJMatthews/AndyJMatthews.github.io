@@ -208,6 +208,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
+              
                <div class="table-responsive">
                     <table class="table table-bordered table-condensed ultra-condenced" ng-show="selectedPlayerData.people[0].primaryPosition.type != 'Goalie'">
                    <thead>
@@ -267,13 +268,17 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
-        </div>
-        <div class="col-xs-12">
-           <player-points id="player" ng-show="selectedPlayerData.people[0].primaryPosition.type != 'Goalie'">
+        
+            <div class="col-xs-12">
+              <div class="table-responsive">
+                  <player-points id="player" ng-show="selectedPlayerData.people[0].primaryPosition.type != 'Goalie'">
                
            </player-points>
+              </div>                      
         </div>
+        
     </div>
       </div>
       <div class="modal-footer">
