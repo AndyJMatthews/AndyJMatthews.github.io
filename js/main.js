@@ -3,7 +3,10 @@
 
 
 	var app = angular.module('rosters', ["ui.router"]);
-	app.controller('mainController', ['$http', '$scope', function($http, $scope){		
+	app.controller('mainController', ['$http', '$scope', function($http, $scope){	
+        
+        
+        
 		$scope.players = [];     
         
         
@@ -39,17 +42,19 @@
         });
         
         $scope.changeTeamStats = function(arg){
+            
             console.log(arg);
             $http.get("https://statsapi.web.nhl.com/api/v1/teams/"+arg+"?hydrate=record(teamRecords)&season=20182019").success(function(data){
                 console.log("got the team data....");
                 $scope.teamStatsData = data;              
-        
+                
             }).error(function(){
                 console.log("oh noes! Can't get team stats data!")
             });
             
             //http://statsapi.web.nhl.com/api/v1/teams/1?hydrate=record(teamRecords)&season=20182019
         };
+        
         
         
         
@@ -76,7 +81,9 @@
 			return this.tab === checkTab;
 		};
         
-        
+        $scope.getNumber = function(num) {            
+            return new Array(num);   
+        }
         
         // players
         $scope.selectedPlayer = "";
@@ -85,18 +92,59 @@
         $scope.theirTotals = [];
         $scope.theirSeasons =[];
         $scope.theirLeagues = [];
+        $scope.theirAvShifts = [];
         
         
-        $scope.getGoals = function(selectedPlayerData){            
+        $scope.theirAvHits = [];
+        $scope.theirAvShots = [];
+        $scope.theirAvBlocks = [];
+        $scope.theirAvGoals = [];
+        $scope.theirAvAssists = [];
+        $scope.theirAvIceTime = [];
+        
+        $scope.shiftWidth = null;
+        $scope.hitWidth = null;
+        $scope.shotWidth = null;
+        $scope.blocksWidth = null;
+        
+        $scope.shifts = null;
+        
+        
+        $scope.getGoals = function(selectedPlayerData){ 
+            
+            $('[data-toggle="tooltip"]').tooltip();
             angular.forEach(selectedPlayerData.people[0].stats[0].splits, function (value, key) {
-                $scope.theirSeasons.push(value.season);
+                $scope.theirSeasons.push(value.season.slice(0,4)+"/"+value.season.slice(4,8)+"<br> "+value.league.name);
                 $scope.theirGoals.push(value.stat.goals);
                 $scope.theirLeagues.push(value.league.name); 
                 $scope.theirAssists.push(value.stat.assists);
                 $scope.theirTotals.push(value.stat.points);
+                
+                //Shifts
+                $scope.theirAvShifts.push(value.stat.shifts/value.stat.games);
+                $scope.shifts = Math.round($scope.theirAvShifts.pop());
+                $scope.shiftWidth = 100/$scope.shifts;
+                //Hits                           
+                $scope.theirAvHits.push(value.stat.hits/value.stat.games);
+                $scope.hits = Math.round($scope.theirAvHits.pop());
+                $scope.hitWidth = 100/$scope.hits;
+                //Shots
+                $scope.theirAvShots.push(value.stat.shots/value.stat.games);
+                $scope.shots = Math.round($scope.theirAvShots.pop());
+                $scope.shotWidth = 100/$scope.shots;
+                //Blocks
+                $scope.theirAvBlocks.push(value.stat.blocked/value.stat.games);
+                $scope.blocks = Math.round($scope.theirAvBlocks.pop());
+                $scope.blockWidth = 100/$scope.blocks;
+                
+                $scope.theirAvGoals.push(value.stat.goals/value.stat.games);
+                $scope.theirAvAssists.push(value.stat.assists/value.stat.games);    
+                $scope.theirAvIceTime.push(value.stat.games*60/value.stat.timeOnIce); 
+                
             });
-            console.log($scope.theirLeagues);
-        
+            
+
+     
             
             Highcharts.chart(player, {
                 title: {
@@ -106,14 +154,20 @@
                     width:568
                 },
                 xAxis: {
-                    categories: $scope.theirSeasons                    
+                    categories: $scope.theirSeasons,
+                        labels: {
+                            formatter: function () {                            
+                                return this.value.slice(0, 9);                            
+                        }
+                    }
                 },
+                
                 series:[{
                     name: 'Goals',
                     data: $scope.theirGoals
                         
                 },{
-                    name: 'assists',
+                    name: 'Assists',
                     data: $scope.theirAssists
                 },{
                     name: 'total',
@@ -127,6 +181,21 @@
             $scope.theirAssists = [];
             $scope.theirTotals = [];
             $scope.theirSeasons =[];
+            $scope.theirLeagues = [];
+            $scope.theirAvShifts = [];
+            $scope.theirAvHits = [];
+            $scope.theirAvShots = [];
+            $scope.theirAvBlocks = [];
+            $scope.theirAvGoals = [];
+            $scope.theirAvAssists = [];
+            $scope.theirAvIceTime = [];
+            $scope.shiftWidth = null;
+            $scope.hitWidth = null;
+            $scope.shotWidth = null;
+            $scope.blocksWidth = null;
+            $scope.shifts = null;
+            $scope.hits = null;
+            $scope.shots = null;
         });   
         
         
@@ -135,30 +204,15 @@
                 $scope.selectedPlayerData = data;
                 $scope.getGoals($scope.selectedPlayerData);
                 $('#myModal').modal('show');
+                $('[data-toggle="tooltip"]').tooltip();
+                
+                
             }).error(function(){
                alert("unable to locate player data"); 
-            });            
-        }        
-	}]); 
-    app.directive("playerPoints", function(){        
-        return{
-            restrict : "E",
-            scope:{
-                id:"@",                
-                name:"="
+            });  
                 
-            },
-            controller : ["$scope", function($scope){
-                $scope.$watch("name", function(){
-                    
-                    //console.log(data);
-                    
-                    
-                });
-            }                
-            ]
-        }
-    });
+        }        
+	}]);     
     app.directive("teamstats", function() {
         return {
             restrict : "E",
@@ -248,4 +302,9 @@
     }
         };
     });
+    app.filter('num', function() {
+    return function(input) {
+       return parseInt(input, 10);
+    }
+});
 })();

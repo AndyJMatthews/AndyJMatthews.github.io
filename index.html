@@ -159,16 +159,16 @@
 
             </div>
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12" ng-cloak>
                     <hr>  
                        <div class="row">
-                           <div class="col-sm-3 col-xs-6" ng-repeat="skater in players.teams[0].roster.roster | filter:playerPosition | orderBy:'-position.type'">
+                           <div class="col-sm-3 col-xs-6" ng-repeat="skater in players.teams[0].roster.roster | filter:playerPosition | orderBy:'-position.type'" ng-cloak>
                                 <div class="panel panel-default">
                                     <div class="panel-heading color-1-border-btm">
                                         {{skater.person.fullName}} <span class="badge pull-right color-1-bg">{{skater.jerseyNumber}}</span>
                                     </div>
                                     <div class="panel-body color-2-border-top">
-                                        <img src="" ng-src="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="img-thumbnail img-responsive center-block">
+                                        <img src="" ng-src="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="img-thumbnail img-responsive center-block ng-cloak">
                                         <h5>{{skater.position.type}}</h5>   
                                         <a class="btn btn-sm btn-default" ng-click="getPlayer(skater.person.id)">More Info</a>                            
                                     </div>
@@ -207,8 +207,7 @@
             </div>            
         </div>
         <div class="row">
-            <div class="col-xs-12">
-              
+            <div class="col-xs-12">              
                <div class="table-responsive">
                     <table class="table table-bordered table-condensed ultra-condenced" ng-show="selectedPlayerData.people[0].primaryPosition.type != 'Goalie'">
                    <thead>
@@ -272,12 +271,99 @@
             </div>
         
             <div class="col-xs-12">
-              <div class="table-responsive">
-                  <player-points id="player" ng-show="selectedPlayerData.people[0].primaryPosition.type != 'Goalie'">
+                 <div class="table-responsive">
+                    <player-points id="player" ng-show="selectedPlayerData.people[0].primaryPosition.type != 'Goalie'">
                
-           </player-points>
-              </div>                      
-        </div>
+                    </player-points>
+                  </div>                      
+            </div>
+            
+            <div class="col-xs-12">
+                <div ng-show="selectedPlayerData.people[0].primaryPosition.type != 'Goalie'">
+                    <div ng-repeat="season in selectedPlayerData.people[0].stats[0].splits | limitTo:-1">
+                       
+                       
+                       
+                        <div class="row">
+                           <div class="col-xs-12 text-center">
+                               <h3>Shifts &amp; Game Time          {{season.season|limitTo:4}}/{{season.season|limitTo:4:4}}</h3> {{theirAvShifts[theirAvShifts.length - 1] | number:0}}                <hr>   
+                           </div>
+                           <div class="col-xs-12">
+                              <div class="statWrapper">
+                                    <div class="totalTime">
+                                       <div class="row">
+                                    <div class="col-xs-6 text-center">
+                                               Total Shifts  
+                                    <div class="clearfix"></div>
+                                    <h3 class="zeroMargins">{{season.stat.shifts}}</h3>
+                                    </div>
+                                    <div class="col-xs-6 text-center">
+                                               Total Ice Time (mins)    
+                                    <div class="clearfix"></div>
+                                    <h3 class="zeroMargins">{{season.stat.timeOnIce}}</h3>
+                                           </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <hr>  
+                                        </div>
+                                    </div>
+                                    <div class="row noMargin">
+                                        <div class="fourUp text-center">
+                                            <h3 class="zeroMargins">{{shifts}}</h3>
+                                        </div>
+                                        <div class="fourUp text-center">
+                                            <h3 class="zeroMargins">{{hits}}</h3>
+                                        </div>
+                                        <div class="fourUp text-center">
+                                            <h3 class="zeroMargins">{{shots}}</h3>
+                                        </div>
+                                        <div class="fourUp text-center">
+                                            <h3 class="zeroMargins">{{blocks}}</h3>
+                                        </div>
+                                    </div>
+                                    
+                                     
+                                 
+                                 
+                                 
+                                  <div class="gameStats">                                  
+                                   <div class="avIceTime shiftWrapper">
+                                       <div ng-repeat="i in getNumber(shifts) track by $index" class="shifts" data-toggle="tooltip" data-placement="top" title="Shifts" style="width:{{shiftWidth}}%">                                       
+                                       </div>
+                                   </div>
+                                   <div class="avIceTime hitWrapper">
+                                       <div ng-repeat="j in getNumber(hits) track by $index" class="hits"data-toggle="tooltip" data-placement="top" title="Hits" style="width:{{hitWidth}}%">
+                                           
+                                       </div>
+                                   </div>
+                                   <div class="avIceTime shotWrapper">
+                                       <div ng-repeat="i in getNumber(shots) track by $index" class="shots" data-toggle="tooltip" data-placement="top" title="Shots" style="width:{{shotWidth}}%">
+                                           
+                                       </div>
+                                   </div>
+                                  <div class="avIceTime blockWrapper">
+                                              <div ng-repeat="i in getNumber(blocks) track by $index" class="blocks" data-toggle="tooltip" data-placement="top" title="Blocks" style="width:{{blockWidth}}%">
+                                       </div>
+                                   </div>
+                                    <!--<div class="avIceTime">
+                                       <div ng-repeat="i in theirAvGoals track by $index" class="goals" data-toggle="tooltip" data-placement="top" title="Goals">
+                                           
+                                   </div>
+                                   </div>
+                                   <div class="avIceTime">
+                                       <div ng-repeat="i in theirAvAssists track by $index" class="assits" data-toggle="tooltip" data-placement="top" title="Assists">                                        
+                                       </div>
+                                   </div>-->
+                               </div>
+                              </div>
+                               
+                           </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
         
     </div>
       </div>
@@ -300,10 +386,13 @@
   crossorigin="anonymous"></script>
        
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/blockUI.js"></script>
         <script src="js/angular.js"></script> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>       
         
         <script src="js/main.js"></script> 
-            
+        <script type="text/javascript">
+            $(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
+        </script>  
     </body>
 </html>

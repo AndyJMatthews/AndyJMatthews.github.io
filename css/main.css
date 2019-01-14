@@ -2079,6 +2079,108 @@
 .team-WPG .highcharts-legend-item.highcharts-color-2 path {
   fill: #041E41 !important; }
 
+.row.noMargin {
+  margin: 0px; }
+
+.fourUp {
+  float: left;
+  width: 25%;
+  text-align: center; }
+
+.gameStats {
+  width: 100%;
+  padding-top: 40px; }
+  .gameStats .avIceTime {
+    width: 100%;
+    height: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    background: #cfcfcf;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    position: relative; }
+    .gameStats .avIceTime:last-child {
+      margin-bottom: 20px; }
+    .gameStats .avIceTime .shifts {
+      border-left: 1px solid white;
+      background: #1f2226; }
+    .gameStats .avIceTime .hits {
+      border-left: 1px solid white;
+      background: #d6231e; }
+    .gameStats .avIceTime .shots {
+      border-left: 1px solid white;
+      background: #f8b500; }
+    .gameStats .avIceTime .blocks {
+      border-left: 1px solid white;
+      background: #2e94b5; }
+    .gameStats .avIceTime:before {
+      font-size: 10px; }
+    .gameStats .avIceTime.shiftWrapper:after {
+      position: absolute;
+      left: 1px;
+      height: 40px;
+      border-left: 5px solid #1f2226;
+      width: 1px;
+      content: "";
+      top: -30px; }
+    .gameStats .avIceTime.shiftWrapper:before {
+      position: absolute;
+      top: -30px;
+      height: 10px;
+      width: 25%;
+      text-align: center;
+      content: "Average Shifts P/G"; }
+    .gameStats .avIceTime.hitWrapper:after {
+      position: absolute;
+      left: 25%;
+      height: 40px;
+      border-left: 5px solid #d6231e;
+      width: 1px;
+      content: "";
+      top: -40px; }
+    .gameStats .avIceTime.hitWrapper:before {
+      width: 25%;
+      left: 25%;
+      position: absolute;
+      content: "Average Hits P/G";
+      top: -40px;
+      text-align: center; }
+    .gameStats .avIceTime.shotWrapper:after {
+      position: absolute;
+      left: 50%;
+      height: 50px;
+      border-left: 5px solid #f8b500;
+      width: 1px;
+      content: "";
+      top: -50px; }
+    .gameStats .avIceTime.shotWrapper:before {
+      width: 25%;
+      left: 50%;
+      position: absolute;
+      content: "Average Shots P/G";
+      top: -50px;
+      text-align: center; }
+    .gameStats .avIceTime.blockWrapper:after {
+      position: absolute;
+      left: 75%;
+      height: 60px;
+      border-left: 5px solid #2e94b5;
+      width: 1px;
+      content: "";
+      top: -60px; }
+    .gameStats .avIceTime.blockWrapper:before {
+      width: 25%;
+      left: 75%;
+      position: absolute;
+      content: "Average Blocks P/G";
+      top: -60px;
+      text-align: center; }
+
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important; }
 
@@ -2204,3 +2306,8 @@ hr {
 
 .los {
   background: #000000; }
+
+.statWrapper {
+  width: 100%;
+  float: left;
+  height: auto; }

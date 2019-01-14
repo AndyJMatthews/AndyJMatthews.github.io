@@ -2,7 +2,7 @@
    Author's custom styles
    ========================================================================== */
 @import 'teams.scss';
-
+@import 'playerStats.scss';
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
@@ -117,4 +117,9 @@ background: linear-gradient(90deg, rgb(76, 76, 76) 13%, rgb(0, 0, 0) 70%);
 }
 .los {
     background:#000000;
+}
+.statWrapper {
+    width:100%;
+    float:left;
+    height:auto;
 }
