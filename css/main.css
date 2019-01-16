@@ -2218,6 +2218,14 @@ h5 {
 .teamlogo {
   height: 85px; }
 
+.linemate-logo {
+  margin-top: 10px;
+  max-height: 45px; }
+  @media (min-width: 768px) {
+    .linemate-logo {
+      max-height: 50px;
+      margin-top: 4px; } }
+
 hr {
   margin-top: 5px;
   margin-bottom: 5px; }
