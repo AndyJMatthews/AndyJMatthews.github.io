@@ -2211,6 +2211,9 @@ h5 {
   background: -webkit-linear-gradient(top, white 30%, #e8e8e8 70%);
   background: -o-linear-gradient(top, white 30%, #e8e8e8 70%);
   background: linear-gradient(180deg, white 30%, #e8e8e8 70%); }
+  .navbar.footer {
+    margin-bottom: 0px;
+    padding: 20px 0px; }
 
 .teamlogo {
   height: 85px; }
