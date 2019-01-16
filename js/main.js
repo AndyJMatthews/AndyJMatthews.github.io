@@ -5,12 +5,12 @@
 	var app = angular.module('rosters', ["ui.router"]);
 	app.controller('mainController', ['$http', '$scope', function($http, $scope){	
         
-        
+       
         
 		$scope.players = [];     
         
         
-        $scope.selectedTeam = 'https://statsapi.web.nhl.com/api/v1/teams/24?expand=team.roster&season=20182019';
+        $scope.selectedTeam = "https://statsapi.web.nhl.com/api/v1/teams/24?hydrate=roster(person(stats(splits=statsSingleSeason)))";
         
         $scope.selectedTeamStats = "https://statsapi.web.nhl.com/api/v1/teams/24?hydrate=record(teamRecords)&season=20182019";
         
@@ -23,6 +23,7 @@
         });
         
         $scope.playerPosition = " ";
+        
         
         $scope.playerPositionGroup = function(playerType){
             $scope.playerPosition = playerType;
@@ -59,16 +60,19 @@
         
         
         $scope.changeTeam = function(selectedTeam){
-            $http.get($scope.selectedTeam).success(function(data){
+            $http.get("https://statsapi.web.nhl.com/api/v1/teams/"+selectedTeam+"?hydrate=roster(person(stats(splits=statsSingleSeason)))").success(function(data){
 			 $scope.players = data;
                 console.log("fetched!");
+                //console.log($scope.players);
+                
+                
                 $scope.selectedPlayer = "";
                 $scope.playerPosition = "";
                 $scope.teamID = $scope.players.teams[0].id;
                 $scope.changeTeamStats($scope.teamID);
                 
 		      }).error(function(){
-			 alert("aint Loaing");
+			 alert("You are offline, you might be able to navigate to another team that you have already viewed though.");
 		      });
         }; 
         
@@ -266,7 +270,7 @@
                         series: [{
                             name:'2018/2019',
                             type: 'pie',                            
-                            innerSize: '60%',
+                            innerSize: '90%',
                             animation: {
                                 duration: 1000,
                                 easing: 'easeOutBounce'

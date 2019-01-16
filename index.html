@@ -9,16 +9,25 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-        <link rel="stylesheet" href="css/bootstrap.min.css">
         
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="apple-mobile-web-app-title" content="LineMate">
+        <meta name="application-name" content="LineMate">
+        <meta name="msapplication-TileColor" content="#2d89ef">
+        <meta name="theme-color" content="#ffffff">
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">        
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <link rel="manifest" href="/manifest.json">
     </head>
     <body ng-controller="mainController" class="team-{{players.teams[0].abbreviation}}">
 <nav class="navbar navbar-fixed-top color-1-border-btm color-2-border-top" role="navigation">
@@ -34,7 +43,7 @@
                
                 <div class="form-group"style="margin:10px;" >                     
                     <select ng-model="selectedTeam" ng-change="changeTeam(selectedTeam)" class="form-control">    
-                       <option value="https://statsapi.web.nhl.com/api/v1/teams/{{team.id}}?expand=team.roster&season=20182019" ng-repeat="team in teamsData.teams | orderBy:'name' ">{{team.name}}</option>
+                       <option value="{{team.id}}" ng-repeat="team in teamsData.teams | orderBy:'name' ">{{team.name}}</option>
                     </select>                
                 </div>
             </div>
@@ -155,23 +164,46 @@
                     <a href ng-click="playerPositionGroup('Forward')"ng-class="playerPosition == 'Forward' ? 'active' : ''">Forwards</a>
                 </li>
             </ul>
-                        </div>
+            </div>
 
             </div>
+            <!--<div class="row">               
+                <div class="col-sm-3" ng-repeat="skater in players.teams[0].roster.roster | orderBy:'-person.stats[0].splits[0].stat.goals' | limitTo: 3">
+                    <span style="color:white">{{skater.person.fullName}} {{skater.person.stats[0].splits[0].stat.goals}}</span>
+                </div>
+            </div>-->
             <div class="row">
                 <div class="col-sm-12" ng-cloak>
                     <hr>  
                        <div class="row">
-                           <div class="col-sm-3 col-xs-6" ng-repeat="skater in players.teams[0].roster.roster | filter:playerPosition | orderBy:'-position.type'" ng-cloak>
+                           <div class="col-sm-3 col-xs-12" ng-repeat="skater in players.teams[0].roster.roster | filter:playerPosition | orderBy:'-position.type'" ng-cloak>
+                               
+                               
+                               
                                 <div class="panel panel-default">
                                     <div class="panel-heading color-1-border-btm">
                                         {{skater.person.fullName}} <span class="badge pull-right color-1-bg">{{skater.jerseyNumber}}</span>
                                     </div>
                                     <div class="panel-body color-2-border-top">
-                                        <img src="" ng-src="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="img-thumbnail img-responsive center-block ng-cloak">
-                                        <h5>{{skater.position.type}}</h5>   
-                                        <a class="btn btn-sm btn-default" ng-click="getPlayer(skater.person.id)">More Info</a>                            
+                                       <div class="row">
+                                           <div class="col-xs-3 col-sm-12">
+                                               <img src="" ng-src="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="img-thumbnail img-responsive center-block ng-cloak">
+                                           </div>
+                                           <div class="col-xs-4 col-sm-12">
+                                               <h5>{{skater.position.type}}</h5>
+                                           </div>
+                                           <div class="col-xs-5 col-sm-12 text-right">
+                                               <a class="btn btn-sm btn-default btn-block" ng-click="getPlayer(skater.person.id)">More Info</a>
+                                           </div>
+                                       </div>                                      
+                                       
+                                       
+                                        
+                                                                   
                                     </div>
+                                    
+                                    
+                                    
                                     <!--<div class="panel-footer">
                                         <a class="btn btn-primary btn-xs" href="{{goalie.twitterURL}}" target="_blank"data-toggle="tooltip" data-placement="top" title="{{forwards.twitterHandle}}"><i class="fa fa-twitter"></i></a>
                                     </div>-->                            
@@ -390,9 +422,20 @@
         <script src="js/angular.js"></script> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>       
         
-        <script src="js/main.js"></script> 
+        
         <script type="text/javascript">
+            $(document).ready(function(){
+                  $('[data-toggle="tooltip"]').tooltip();
+            });
             $(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
+            
+            if('serviceWorker' in navigator){
+                navigator.serviceWorker
+                .register('sw.js')
+                .catch(err => console.error('theres a problem with the SW', err));
+            }
+            
         </script>  
+        <script src="js/main.js"></script> 
     </body>
 </html>

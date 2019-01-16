@@ -1,0 +1,14 @@
+{
+    "name":"LineMate",
+    "short_name":"LineMate",
+    "start_url":"/",
+    "background_color":"#666666",
+    "theme_color":"#666666",
+    "orientation":"portrait-primary",
+    "display":"standalone",
+    "icons": [{
+     "src":"/tile.png",
+        "type":"image/png",
+        "sizes":"558x558"
+    }]
+}
