@@ -5,21 +5,30 @@
 	var app = angular.module('rosters', ["ui.router"]);
 	app.controller('mainController', ['$http', '$scope', function($http, $scope){  
         
-        var myElement = document.getElementById('tray');
+        var tray = document.getElementById('tray');
+        var trayback = document.getElementById('trayback');
 
-        // create a simple instance
-        // by default, it only adds horizontal recognizers
-        var mc = new Hammer(myElement);
-
-        // listen to events...        
-        
+        var mc = new Hammer(tray);
         mc.on("swipeleft", function(ev, shutTray) {
             $scope.shutTray();
         });    
         
+        var md = new Hammer(trayback);
+        md.on("swipe", function(ev, shutTray) {
+            $scope.shutTray();
+        }); 
+        
         $scope.shutTray = function(){
             $("#tray, .trayback").toggleClass("closed");            
         }
+        
+        $scope.favs = function(){
+            alert("Favourites are pending development");
+        }
+        $scope.playersNav = function(){
+            alert("Top Players is pending development");
+        }     
+        
         
 		$scope.players = [];        
         

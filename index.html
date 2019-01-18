@@ -46,7 +46,7 @@
                </div>
             </div>
         </div>
-        <div class="trayback closed" ng-click="shutTray()">
+        <div class="trayback closed" ng-click="shutTray()" id="trayback">
             
         </div>
     
@@ -426,7 +426,12 @@
     </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       <div class="row">
+           <div class="col-xs-12 col-sm-4 col-sm-offset-8">
+                       <button type="button" class="btn btn-default btn-block " data-dismiss="modal">Close</button>
+
+           </div>
+       </div>
       </div>
     </div>
   </div>
@@ -437,7 +442,26 @@
 
 
     </div> <!-- /container -->
-       
+<div class="navbar-fixed-bottom color-1-border-btm color-2-border-top visible-xs">
+    <div class="flex">
+                    <div class="item">
+                       <a href="" ng-click="shutTray()" >
+                           <i class="fa fa-list" aria-hidden="true"></i>
+                       </a>                        
+                    </div>
+                    <div class="item">
+                       <a href="" ng-click="favs()">
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                       </a>
+                        
+                    </div>
+                    <div class="item">
+                       <a href="" ng-click="playersNav()"> 
+                          <i class="fa fa-user-plus" aria-hidden="true"></i>
+                       </a>                        
+                    </div>
+                </div>   
+</div>       
 <div class="navbar footer">
     <div class="container">
         <div class="row">
