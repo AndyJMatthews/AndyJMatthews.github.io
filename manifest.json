@@ -10,5 +10,10 @@
      "src":"/tile.png",
         "type":"image/png",
         "sizes":"558x558"
-    }]
+    }],
+    "dir":"ltr",
+    "lang": "en-GB",
+    "description": "Statistics from the NHL",
+    "scope": "/",
+    
 }

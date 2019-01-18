@@ -75,6 +75,10 @@
     $color-1 : #F95602!important; 
     $color-2 : black!important;
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-ANA {
+        border-left:5px solid $color-1; 
+    }
+    
 }
 /* Coyotes */
 .team-ARI {
@@ -82,6 +86,9 @@
     $color-1 : #8C2633 !important;
     $color-2 : #E2D6B5!important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-ARI {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Bruins */
 .team-BOS {
@@ -89,6 +96,9 @@
     $color-1 : #FCB514 !important;
     $color-2 : black !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-BOS {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Buffalo */
 .team-BUF {
@@ -96,6 +106,9 @@
     $color-1 : #002654 !important;
     $color-2 : #FCB514 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-BUF {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Calgary */
 .team-CGY {
@@ -103,6 +116,9 @@
     $color-1 : #CE1126 !important;
     $color-2 : #000 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-CGY {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Canes */
 .team-CAR {
@@ -110,6 +126,9 @@
     $color-1 : #CE1126 !important;
     $color-2 : #000 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-CAR {
+        border-left:5px solid $color-1; 
+    }    
 }
 /* Blackhawks */
 .team-CHI {
@@ -117,6 +136,9 @@
     $color-1 : #CF0A2C !important;
     $color-2 : #000 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-CHI {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Colorado */
 .team-COL {
@@ -124,6 +146,9 @@
     $color-1 : #236192 !important;
     $color-2 : #cfcfcf !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-COL {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Columbus */
 .team-CBJ {
@@ -131,6 +156,9 @@
     $color-1 : #002654 !important;
     $color-2 : #CE1126 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-CBJ {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Dalas */
 .team-DAL {
@@ -138,6 +166,9 @@
     $color-1 : #006847 !important;
     $color-2 : #cfcfcf !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-DAL {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Red Wings */
 .team-DET {
@@ -145,6 +176,9 @@
     $color-1 : #CE1126 !important;
     $color-2 : #cfcfcf !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-DET {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Edmonton */
 .team-EDM {
@@ -152,6 +186,9 @@
     $color-1 : #CF4520 !important;
     $color-2 : #cfcfcf !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-EDM {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Panthers */
 .team-FLA {
@@ -159,6 +196,9 @@
     $color-1 : #CE1126 !important;
     $color-2 : #475C6E !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-FLA {
+        border-left:5px solid $color-1; 
+    }    
 }
 /* kings */
 .team-LAK {
@@ -166,6 +206,9 @@
     $color-1 : #CFCFCF!important;
     $color-2 : #ACAEA9 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-LAK {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Wild */
 .team-MIN {
@@ -173,6 +216,9 @@
     $color-1 : #024930!important;
     $color-2 : #AF1E24 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-MIN {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Habs */
 .team-MTL {
@@ -180,6 +226,9 @@
     $color-1 : #AF1E2D !important;
     $color-2 : #192168 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-MTL {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Preds */
 .team-NSH {
@@ -187,6 +236,9 @@
     $color-1 : #FFB81C !important;
     $color-2 : #CFCFCF!important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-NSH {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Devils */
 .team-NJD {
@@ -194,6 +246,9 @@
     $color-1 : #000 !important;
     $color-2 : #CFCFCF!important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-NJD {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Islanders */
 .team-NYI {
@@ -201,6 +256,9 @@
     $color-1 : #003893 !important;
     $color-2 : #F95602 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-NYI {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Rangers */
 .team-NYR {
@@ -208,6 +266,9 @@
     $color-1 : #0038A8 !important;
     $color-2 : #CE1126 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-NYR {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Ottawa */
 .team-OTT {
@@ -215,6 +276,9 @@
     $color-1 : #CE1126 !important;
     $color-2 : #BF910C !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-OTT {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Flyers */
 .team-PHI {
@@ -222,6 +286,9 @@
     $color-1 : #F74902 !important;
     $color-2 : #000 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-PHI {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Penguins */
 .team-PIT {
@@ -229,6 +296,9 @@
     $color-1 : #FCB514 !important;
     $color-2 : #000 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-PIT {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Sharks */
 .team-SJS {
@@ -236,6 +306,9 @@
     $color-1 : #006D75 !important;
     $color-2 : #000 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-SJS {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Blues */
 .team-STL {
@@ -243,6 +316,9 @@
     $color-1 : #002F87 !important;
     $color-2 : #FCB514 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-STL {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Lightning */
 .team-TBL {
@@ -250,13 +326,19 @@
     $color-1 : #002868 !important;
     $color-2 : #000 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-TBL {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Leafs */
-.team-TBL {
+.team-TOR {
     $color-0 : #cfcfcf !important;
     $color-1 : #00205B !important;
     $color-2 : #000 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-TOR {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Canucks */
 .team-VAN {
@@ -264,6 +346,9 @@
     $color-1 : #001F5B !important;
     $color-2 : #087138 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-VAN {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Vegas */
 .team-VGK {
@@ -271,6 +356,9 @@
     $color-1 : #333F47 !important;
     $color-2 : #000 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-VGK {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Caps */
 .team-WSH {
@@ -278,6 +366,9 @@
     $color-1 : #CE1939 !important;
     $color-2 : #041E41 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-WSH {
+        border-left:5px solid $color-1; 
+    }
 }
 /* Jets */
 .team-WPG {
@@ -285,4 +376,7 @@
     $color-1 : #8E9090 !important;
     $color-2 : #041E41 !important; 
     @include team-colours($color-0, $color-1, $color-2);
+    .nav-team-list .team a.team-WPG {
+        border-left:5px solid $color-1; 
+    }
 }

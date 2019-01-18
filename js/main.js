@@ -1,20 +1,31 @@
 (function(){
-
+    
 
 
 	var app = angular.module('rosters', ["ui.router"]);
-	app.controller('mainController', ['$http', '$scope', function($http, $scope){	
+	app.controller('mainController', ['$http', '$scope', function($http, $scope){  
         
-       
+        var myElement = document.getElementById('tray');
+
+        // create a simple instance
+        // by default, it only adds horizontal recognizers
+        var mc = new Hammer(myElement);
+
+        // listen to events...        
         
-		$scope.players = [];     
+        mc.on("swipeleft", function(ev, shutTray) {
+            $scope.shutTray();
+        });    
         
+        $scope.shutTray = function(){
+            $("#tray, .trayback").toggleClass("closed");            
+        }
+        
+		$scope.players = [];        
         
         $scope.selectedTeam = "https://statsapi.web.nhl.com/api/v1/teams/24?hydrate=roster(person(stats(splits=statsSingleSeason)))";
         
         $scope.selectedTeamStats = "https://statsapi.web.nhl.com/api/v1/teams/24?hydrate=record(teamRecords)&season=20182019";
-        
-        
         
         $http.get("https://statsapi.web.nhl.com/api/v1/teams").success(function(data){
             $scope.teamsData = data;            
@@ -23,7 +34,6 @@
         });
         
         $scope.playerPosition = " ";
-        
         
         $scope.playerPositionGroup = function(playerType){
             $scope.playerPosition = playerType;
@@ -55,9 +65,6 @@
             
             //http://statsapi.web.nhl.com/api/v1/teams/1?hydrate=record(teamRecords)&season=20182019
         };
-        
-        
-        
         
         $scope.changeTeam = function(selectedTeam){
             $http.get("https://statsapi.web.nhl.com/api/v1/teams/"+selectedTeam+"?hydrate=roster(person(stats(splits=statsSingleSeason)))").success(function(data){
@@ -152,7 +159,7 @@
             
             Highcharts.chart(player, {
                 title: {
-                    text:selectedPlayerData.people[0].fullName+ " Season By Season Points Production"
+                    text:null
                 },
                 chart:{
                     width:568

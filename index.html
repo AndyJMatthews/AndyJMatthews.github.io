@@ -30,23 +30,44 @@
         <link rel="manifest" href="/manifest.json">
     </head>
     <body ng-controller="mainController" class="team-{{players.teams[0].abbreviation}}">
+        <div class="tray closed" id="tray" >
+            <div class="wrapper">
+               <div class="controls">
+                <a href="#" class="close" ng-click="shutTray()">
+                    <i class="fa fa-times"></i>
+                </a>
+               </div>
+               <div class="nav-team-list">
+                   <div ng-repeat="team in teamsData.teams | orderBy:'name' " class="team">
+                      <a ng-click="changeTeam(team.id);" class="team-{{team.abbreviation}}">
+                          <img src="https://www-league.nhlstatic.com/nhl.com/builds/site-core/a2d98717aeb7d8dfe2694701e13bd3922887b1f2_1542226749/images/logos/team/current/team-{{team.id}}-dark.svg" alt="{{team.name}}"> {{team.name}}
+                      </a>
+                  </div> 
+               </div>
+            </div>
+        </div>
+        <div class="trayback closed" ng-click="shutTray()">
+            
+        </div>
+    
 <nav class="navbar navbar-fixed-top color-1-border-btm color-2-border-top" role="navigation">
       <div class="container">
        <div class="row">
-           <div class="col-xs-12 col-sm-6">
-               
-                <img src="img/lineMateLogo.png" alt="LineMate" class="img-responsive linemate-logo">
+         
+           <div class="col-xs-12">     
+                <a class="navSwitch" ng-click="shutTray()">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </a>                             
+                <img src="img/lineMateLogo.png" alt="LineMate" class="img-responsive linemate-logo"> 
            </div>
-            <div class="col-xs-12 col-sm-3 col-sm-offset-3">
-               
-               
+            <!--<div class="col-xs-12 col-sm-3 col-sm-offset-3" >
                
                 <div class="form-group"style="margin:10px;" >                     
                     <select ng-model="selectedTeam" ng-change="changeTeam(selectedTeam)" class="form-control">    
                        <option value="{{team.id}}" ng-repeat="team in teamsData.teams | orderBy:'name' ">{{team.name}}</option>
                     </select>                
                 </div>
-            </div>
+            </div>-->
        </div>
         
       </div>
@@ -303,6 +324,11 @@
             </div>
         
             <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12">
+                       <h3>Season by Season Points Production</h3>
+                    </div>
+                </div>
                  <div class="table-responsive">
                     <player-points id="player" ng-show="selectedPlayerData.people[0].primaryPosition.type != 'Goalie'">
                
@@ -317,7 +343,7 @@
                        
                        
                         <div class="row">
-                           <div class="col-xs-12 text-center">
+                           <div class="col-xs-12">
                                <h3>Shifts &amp; Game Time          {{season.season|limitTo:4}}/{{season.season|limitTo:4:4}}</h3> {{theirAvShifts[theirAvShifts.length - 1] | number:0}}                <hr>   
                            </div>
                            <div class="col-xs-12">
@@ -432,6 +458,7 @@
        
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/blockUI.js"></script>
+        <script src="js/vendor/hammer.js"></script>
         <script src="js/angular.js"></script> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>       
         
