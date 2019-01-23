@@ -2,7 +2,7 @@
     
 
 
-	var app = angular.module('rosters', ["ui.router"]);
+	var app = angular.module('rosters', ["ngAnimate"]);
 	app.controller('mainController', ['$http', '$scope', function($http, $scope){  
         
         var tray = document.getElementById('tray');
@@ -171,7 +171,7 @@
                     text:null
                 },
                 chart:{
-                    width:568
+                    width:538
                 },
                 xAxis: {
                     categories: $scope.theirSeasons,

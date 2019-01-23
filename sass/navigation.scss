@@ -8,12 +8,7 @@
     bottom:0px;
     z-index: 1032;
     overflow-y: auto;
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+0,ffffff+100 */
-background: rgb(232,232,232); /* Old browsers */
-background: -moz-linear-gradient(left, rgba(232,232,232,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left, rgba(232,232,232,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right, rgba(232,232,232,1) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+    background: #eceff1;
     -webkit-box-shadow: 0px 0px 31px -2px rgba(0,0,0,0.87);
 -moz-box-shadow: 0px 0px 31px -2px rgba(0,0,0,0.87);
 box-shadow: 0px 0px 31px -2px rgba(0,0,0,0.87);
@@ -41,13 +36,9 @@ box-shadow: 0px 0px 31px -2px rgba(0,0,0,0.87);
         position: fixed;
         left:0px;
         top:0px;        
-        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8e8e8+0,ffffff+100 */
-        background: rgb(232,232,232); /* Old browsers */
-        background: -moz-linear-gradient(left, rgba(232,232,232,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, rgba(232,232,232,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, rgba(232,232,232,1) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
-        border-bottom:1px solid #e3dfe3;
+        
+        
+        border-bottom:1px solid #eceff1;
         
         @media(min-width:768px){
             width:40vw;
@@ -74,6 +65,7 @@ box-shadow: 0px 0px 31px -2px rgba(0,0,0,0.87);
                 line-height: 35px;
                 font-size: 15px;
                 border-left:5px solid rgba(232,232,232,1);
+                color:#263238;
             }
         }
         
@@ -101,5 +93,30 @@ box-shadow: 0px 0px 31px -2px rgba(0,0,0,0.87);
         opacity: 0;
         pointer-events: none;
         touch-action: none;
+    }
+}
+.navbar-fixed-bottom {
+    .flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap:nowrap;
+        .item {
+            width:33.333333333%;
+            background:white;
+            a {
+                text-align: center;
+                display: block;
+                padding:10px;
+                font-size: 20px;
+                    color: grey;
+                border-left:1px solid #ccc;
+                
+            }
+            &:first-child {
+                a {
+                    border-left:0px none;
+                }
+            }
+        }
     }
 }

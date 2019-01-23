@@ -22,19 +22,19 @@
         }
         .shifts{
             border-left:1px solid white;
-            background:#1f2226;
+            background:#263238;
         }
         .hits {
             border-left:1px solid white;
-            background:#d6231e;
+            background:#cfd8dc;
         }
         .shots {
             border-left:1px solid white;
-            background: #f8b500;
+            background: #37474f;
         }
         .blocks {            
             border-left:1px solid white;
-            background:#2e94b5;
+            background:#78909c;
         }
         &:before {
             font-size:10px;
@@ -46,7 +46,7 @@
                 position:absolute;
                 left:1px;
                 height:40px;
-                border-left:5px solid #1f2226;
+                border-left:5px solid #263238;
                 width:1px;
                 content:"";
                 top:-30px;
@@ -66,7 +66,7 @@
                 position:absolute;
                 left: 25%;
                 height:40px;
-                border-left:5px solid #d6231e;
+                border-left:5px solid #cfd8dc;
                 width:1px;
                 content:"";
                 top:-40px;
@@ -85,7 +85,7 @@
                 position:absolute;
                 left: 50%;
                 height:50px;
-                border-left:5px solid #f8b500;
+                border-left:5px solid #37474f;
                 width:1px;
                 content:"";
                 top:-50px;
@@ -104,7 +104,7 @@
                 position:absolute;
                 left: 75%;
                 height:60px;
-                border-left:5px solid #2e94b5;
+                border-left:5px solid #78909c;
                 width:1px;
                 content:"";
                 top:-60px;
