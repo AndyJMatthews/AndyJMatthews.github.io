@@ -2,7 +2,7 @@
     
 
 
-	var app = angular.module('rosters', ["ngAnimate"]);
+	var app = angular.module('rosters', []);
 	app.controller('mainController', ['$http', '$scope', function($http, $scope){  
         
         var tray = document.getElementById('tray');
@@ -25,10 +25,10 @@
         $scope.favs = function(){
             alert("Favourites are pending development");
         }
+        
         $scope.playersNav = function(){
             alert("Top Players is pending development");
-        }     
-        
+        }   
         
 		$scope.players = [];        
         
@@ -39,7 +39,7 @@
         $http.get("https://statsapi.web.nhl.com/api/v1/teams").success(function(data){
             $scope.teamsData = data;            
         }).error(function(){
-            console.log("Can't get it!");
+            console.log("There is an issue getting the data, you might be offline. You might be able to navigate to another team that you have already viewed though.");
         });
         
         $scope.playerPosition = " ";
@@ -49,16 +49,18 @@
             console.log($scope.playerPosition);
         };
         
+        
+                
         $http.get($scope.selectedTeam).success(function(data){
 			 $scope.players = data;            
 		}).error(function(){
-			 alert("Selected Team Data ");
+			 alert("There is an issue getting the data, you might be offline. You might be able to navigate to another team that you have already viewed though.");
 		});
         
         $http.get($scope.selectedTeamStats).success(function(data){
             $scope.teamStatsData = data;    
         }).error(function(){
-            console.log("Team Stats not loading");
+            console.log("There is an issue getting the data, you might be offline. You might be able to navigate to another team that you have already viewed though.");
         });
         
         $scope.changeTeamStats = function(arg){
@@ -69,7 +71,7 @@
                 $scope.teamStatsData = data;              
                 
             }).error(function(){
-                console.log("oh noes! Can't get team stats data!")
+                console.log("There is an issue getting the data, you might be offline. You might be able to navigate to another team that you have already viewed though.")
             });
             
             //http://statsapi.web.nhl.com/api/v1/teams/1?hydrate=record(teamRecords)&season=20182019
@@ -77,20 +79,21 @@
         
         $scope.changeTeam = function(selectedTeam){
             $http.get("https://statsapi.web.nhl.com/api/v1/teams/"+selectedTeam+"?hydrate=roster(person(stats(splits=statsSingleSeason)))").success(function(data){
-			 $scope.players = data;
-                console.log("fetched!");
-                //console.log($scope.players);
                 
-                
+                $scope.players = data;
                 $scope.selectedPlayer = "";
                 $scope.playerPosition = "";
                 $scope.teamID = $scope.players.teams[0].id;
                 $scope.changeTeamStats($scope.teamID);
                 
 		      }).error(function(){
-			 alert("You are offline, you might be able to navigate to another team that you have already viewed though.");
+			     
+                alert("There is an issue getting the data, you might be offline. You might be able to navigate to another team that you have already viewed though.");
+                
 		      });
         }; 
+        
+        
         
         $scope.panel = this;
         this.tab =  1;
@@ -163,15 +166,12 @@
                 
             });
             
-
-     
-            
             Highcharts.chart(player, {
                 title: {
                     text:null
                 },
                 chart:{
-                    width:538
+                    width:538,                    
                 },
                 xAxis: {
                     categories: $scope.theirSeasons,
@@ -181,22 +181,34 @@
                         }
                     }
                 },
-                
+                plotOptions: {
+                area: {
+                    
+                    marker: {
+                        radius: 1
+                    },
+                    lineWidth: 0.5,
+                }
+            },
                 series:[{
                     name: 'Goals',
+                    step: 'right',
                     data: $scope.theirGoals
                         
                 },{
                     name: 'Assists',
+                    step: 'right',
                     data: $scope.theirAssists
                 },{
                     name: 'total',
+                    step: 'right',
                     data: $scope.theirTotals
                 }]
             });
             
         };
         $('#myModal').on('hidden.bs.modal', function (e) {
+            
             $scope.theirGoals = [];
             $scope.theirAssists = [];
             $scope.theirTotals = [];
@@ -216,22 +228,22 @@
             $scope.shifts = null;
             $scope.hits = null;
             $scope.shots = null;
-        });   
-        
+            
+        });
         
         $scope.getPlayer = function(selectedPlayer){
             $http.get("https://statsapi.web.nhl.com/api/v1/people/" + selectedPlayer + "?expand=person.stats&stats=yearByYear").success(function(data){
                 $scope.selectedPlayerData = data;
                 $scope.getGoals($scope.selectedPlayerData);
                 $('#myModal').modal('show');
-                $('[data-toggle="tooltip"]').tooltip();
-                
+                $('[data-toggle="tooltip"]').tooltip();                
                 
             }).error(function(){
-               alert("unable to locate player data"); 
+               alert("There is an issue getting the data, you might be offline. You might be able to navigate to another team that you have already viewed though."); 
             });  
                 
-        }        
+        } 
+        
 	}]);     
     app.directive("teamstats", function() {
         return {
@@ -301,30 +313,26 @@
     }); 
     app.filter("ordinal", function(){
         return function(number) {
-               if(isNaN(number) || number < 1) {
-      return number;
-
-    } else {
-
-      var lastDigit = number % 10,
-          lastDigit2 = number % 100;
-
-      if (lastDigit == 1 && lastDigit2 != 11) {
-        return number + "st";
-    }
-    if (lastDigit == 2 && lastDigit2 != 12) {
-        return number + "nd";
-    }
-    if (lastDigit == 3 && lastDigit2 != 13) {
-        return number + "rd";
-    }
-    return number + "th";
-    }
+            if(isNaN(number) || number < 1) {
+                return number;
+            } else {
+                var lastDigit = number % 10,
+                    lastDigit2 = number % 100;
+                if (lastDigit == 1 && lastDigit2 != 11) {
+                    return number + "st";
+                }                
+                if (lastDigit == 2 && lastDigit2 != 12) {
+                    return number + "nd";
+                }                
+                if (lastDigit == 3 && lastDigit2 != 13) {
+                    return number + "rd";
+                }                
+                return number + "th";                
+            }
         };
-    });
+    }); 
     app.filter('num', function() {
     return function(input) {
        return parseInt(input, 10);
-    }
-});
+    }});    
 })();

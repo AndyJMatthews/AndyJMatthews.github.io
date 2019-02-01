@@ -21,6 +21,8 @@
         <meta name="theme-color" content="#ffffff">
         
         <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
         <link rel="stylesheet" href="css/bootstrap.min.css">        
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/animate.css">
@@ -31,7 +33,7 @@
         <link rel="manifest" href="/manifest.json">
         
     </head>
-    <body ng-controller="mainController" class="team-{{players.teams[0].abbreviation}}">
+    <body ng-controller="mainController" class="team-{{players.teams[0].abbreviation}}" ng-cloak>
         <div class="tray closed" id="tray" >
             <div class="wrapper">
                <div class="controls">
@@ -41,8 +43,8 @@
                </div>
                <div class="nav-team-list">
                    <div ng-repeat="team in teamsData.teams | orderBy:'name' " class="team">
-                      <a ng-click="changeTeam(team.id);" class="team-{{team.abbreviation}}">
-                          <img src="https://www-league.nhlstatic.com/nhl.com/builds/site-core/a2d98717aeb7d8dfe2694701e13bd3922887b1f2_1542226749/images/logos/team/current/team-{{team.id}}-dark.svg" alt="{{team.name}}"> {{team.name}}
+                      <a ng-click="changeTeam(team.id);" class="team-{{team.abbreviation}}" ng-cloak>
+                         <img src="https://www-league.nhlstatic.com/nhl.com/builds/site-core/a2d98717aeb7d8dfe2694701e13bd3922887b1f2_1542226749/images/logos/team/current/team-{{team.id}}-dark.svg" alt="{{team.name}}"  ng-cloak>{{team.name}}
                       </a>
                   </div> 
                </div>
@@ -52,7 +54,7 @@
             
         </div>
     
-<nav class="navbar navbar-fixed-top color-1-border-btm color-2-border-top" role="navigation">
+<nav class="navbar navbar-fixed-top color-1-border-btm color-2-border-top" role="navigation" ng-cloak>
     <div class="container">
         <div class="row">         
            <div class="col-xs-12">     
@@ -74,7 +76,7 @@
                          <div class="row">
                             <div class="col-sm-2 col-xs-4 text-center">
                                 <div style="padding:10px;" ng-cloak>
-                                   <img ng-src="https://www-league.nhlstatic.com/nhl.com/builds/site-core/a2d98717aeb7d8dfe2694701e13bd3922887b1f2_1542226749/images/logos/team/current/team-{{players.teams[0].id}}-dark.svg" alt="{{players.teams[0].name}}" class="img-responsive center-block teamlogo" style="">
+                                   <img ng-src="https://www-league.nhlstatic.com/nhl.com/builds/site-core/a2d98717aeb7d8dfe2694701e13bd3922887b1f2_1542226749/images/logos/team/current/team-{{players.teams[0].id}}-dark.svg" alt="{{players.teams[0].name}}" class="img-responsive center-block teamlogo" style="" ng-cloak>
                                 </div>
                                 <h5 ng-cloak>
                                   EST {{players.teams[0].firstYearOfPlay}}  
@@ -87,8 +89,7 @@
                                  ng-cloak >Official Website</a>
 
                             </div>
-                            <div class="clearfix visible-xs"></div>
-                            
+                            <div class="clearfix visible-xs"style="margin-bottom:20px;"></div>
                             
                             <div class="col-sm-4 col-xs-8 text-center">
                                 <teamstats id="stats" wins="teamStatsData.teams[0].record.leagueRecord.wins" otw="teamStatsData.teams[0].record.leagueRecord.ot" losses="teamStatsData.teams[0].record.leagueRecord.losses" class="center-block team-{{players.teams[0].abbreviation}}" ng-class=""></teamstats>   
@@ -98,52 +99,63 @@
                                     <li ng-cloak><span class="legendBoxes los"></span>L:{{teamStatsData.teams[0].record.leagueRecord.losses}}</li>
                                 </ul>
                             </div>
-                            
+                                                        <div class="clearfix visible-sm"style="margin-bottom:20px;"></div>
+
                             
                                    <div class="col-xs-4 col-md-2">
-                                        <div class="well well-sm text-center mgn-btm" ng-cloak>                                  
-                                           NHL <br>Overall
+                                        <div class="well well-sm text-center mgn-btm" ng-cloak>
+                                          <span class="uppercase tenPx">
+                                              NHL <br>Overall
+                                          </span>                                 
+                                           
                                            <div class="clearfix"></div>
                                            <h1 class="zeroMargins">{{teamStatsData.teams[0].record.leagueRank | ordinal}}</h1>
                                         </div>
                                     </div> 
                                     <div class="col-xs-4 col-md-2">
                                         <div class="well well-sm text-center mgn-btm" ng-cloak>  
-                                                      {{players.teams[0].conference.name}} <br>                    
-                                           Conference
+                                            <span class="uppercase tenPx">
+                                                {{players.teams[0].conference.name}}<br>Conference
+                                            </span>  
                                            <div class="clearfix"></div>
                                            <h1 class="zeroMargins">{{teamStatsData.teams[0].record.conferenceRank | ordinal}}</h1>
                                         </div>
                                     </div> 
                                     <div class="col-xs-4 col-md-2">
-                                        <div class="well well-sm text-center mgn-btm" ng-cloak> 
-                                          {{players.teams[0].division.name}}<br>                                 
-                                           Division
+                                        <div class="well well-sm text-center mgn-btm" ng-cloak>
+                                            <span class="uppercase tenPx">
+                                                {{players.teams[0].division.name}}<br>Division
+                                            </span> 
+                                          
                                            <div class="clearfix"></div>
                                            <h1 class="zeroMargins">{{teamStatsData.teams[0].record.divisionRank | ordinal}}</h1>
                                         </div>
                                     </div> 
                                     <div class="clearfix visible-xs"></div>
-                                    
+                                    <div class="clearfix visible-sm" style="margin-bottom:20px;">
+                                        
+                                    </div>
                                     <div class="col-xs-4 col-md-2">
                                         <div class="well well-sm text-center mgn-btm" ng-cloak> 
-                                              Goals<br>                                 
-                                           Scored 
-                                           <div class="clearfix"></div>
+                                             <span class="uppercase tenPx">Goals<br>Scored </span>
+                                            <div class="clearfix"></div>
                                            <h1 class="zeroMargins">{{teamStatsData.teams[0].record.goalsScored}}</h1>
                                         </div>
                                     </div> 
                                     <div class="col-xs-4 col-md-2">
                                         <div class="well well-sm text-center mgn-btm" ng-cloak> 
-                                              Goals<br>                                 
-                                           Conceeded 
+                                             <span class="uppercase tenPx">
+                                                 Goals<br>Conceeded 
+                                             </span>                                              
                                            <div class="clearfix"></div>
                                            <h1 class="zeroMargins">{{teamStatsData.teams[0].record.goalsAgainst}}</h1>
                                         </div>
                                     </div> 
                                     <div class="col-xs-4 col-md-2">
-                                        <div class="well well-sm text-center mgn-btm" ng-cloak> 
-                                              Team<br>Streak 
+                                        <div class="well well-sm text-center mgn-btm" ng-cloak>
+                                             <span class="uppercase tenPx">
+                                                 Team<br>Streak 
+                                             </span>                                              
                                            <div class="clearfix"></div>
                                            <h1 class="zeroMargins">{{teamStatsData.teams[0].record.streak.streakCode}}</h1>
                                         </div>
@@ -161,37 +173,109 @@
             </div>
         <div>
             <div class="row">
-                <div class="col-sm-12">
-            <ul class="nav nav-pills">
-               <li>
-                   <a href="" ng-click="playerPositionGroup(' ')" ng-class="playerPosition == ' ' ? 'active' : ''" class="active" ng-cloak>All Players</a>
-               </li>
-                <li>
-                    <a href ng-click="playerPositionGroup('Goalie')" ng-class="playerPosition == 'Goalie' ? 'active' : ''" ng-cloak>Goalies</a>
-                </li>
-                <li>
-                    <a href ng-click="playerPositionGroup('Defenseman')" ng-class="playerPosition == 'Defenseman' ? 'active' : ''"  ng-cloak>Defensemen</a>
-                </li>
-                <li>
-                    <a href ng-click="playerPositionGroup('Forward')"ng-class="playerPosition == 'Forward' ? 'active' : ''" ng-cloak>Forwards</a>
-                </li>
-            </ul>
-            </div>
-
-            </div>
-            <!--<div class="row">               
-                <div class="col-sm-3" ng-repeat="skater in players.teams[0].roster.roster | orderBy:'-person.stats[0].splits[0].stat.goals' | limitTo: 3">
-                    <span style="color:white">{{skater.person.fullName}} {{skater.person.stats[0].splits[0].stat.goals}}</span>
-                </div>
-            </div>-->
+               <div class="col-sm-4">
+                  <h4><i class="material-icons titleIcon">
+gps_fixed
+</i> TOP GOAL SCORERS</h4>
+                   <ul class="list-unstyled topScores">
+                       <li ng-repeat="skater in players.teams[0].roster.roster | orderBy:'-person.stats[0].splits[0].stat.goals'" ng-if="skater.person.stats[0].splits[0].stat.goals > 0"  ng-click="getPlayer(skater.person.id)">
+                          <div class="details" ng-click="getPlayer(skater.person.id)">
+                              <div class="playerImage">                                 
+                                  <img src="" ng-src="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="img-circle img-responsive center-block ng-cloak playerMugShots mugshotSml" alt="{{skater.person.fullName}}">
+                              </div>
+                              <div class="textDetails">
+                                  <div class="name">                                  
+                                    {{skater.person.firstName}}<br>
+                                    {{skater.person.lastName}}
+                                  </div>
+                                  <div class="score">
+                                     {{skater.person.stats[0].splits[0].stat.goals}}
+                                  </div>
+                              </div>
+                          </div>
+                       </li>                       
+                   </ul>
+               </div> 
+               <div class="col-sm-4">
+                  <h4><i class="material-icons titleIcon">merge_type</i> TOP ASSISTS</h4>
+                   <ul class="list-unstyled topScores">
+                       <li ng-repeat="skater in players.teams[0].roster.roster | orderBy:'-person.stats[0].splits[0].stat.assists'" ng-if="skater.person.stats[0].splits[0].stat.assists > 0"   ng-click="getPlayer(skater.person.id)">
+                          <div class="details" ng-click="getPlayer(skater.person.id)">
+                             <div class="playerImage">
+                                <a ng-click="getPlayer(skater.person.id)">
+                                 <img src="" ng-src="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="img-circle img-responsive center-block ng-cloak playerMugShots mugshotSml" alt="{{skater.person.fullName}}">
+                                 </a>
+                                </div>
+                              <div class="textDetails">                              
+                                  <div class="name">
+                                    {{skater.person.firstName}}<br>
+                                    {{skater.person.lastName}}
+                                  </div>
+                                  <div class="score">
+                                     {{skater.person.stats[0].splits[0].stat.assists}}
+                                  </div>
+                              </div>
+                          </div>
+                       </li>                       
+                   </ul>
+               </div>
+               <div class="col-sm-4">
+                  <h4><i class="material-icons titleIcon">report</i> TOP PENALTY MINUTES</h4>
+                   <ul class="list-unstyled topScores">
+                       <li ng-repeat="skater in players.teams[0].roster.roster | orderBy:'-person.stats[0].splits[0].stat.pim'" ng-if="skater.person.stats[0].splits[0].stat.pim > 0"  ng-click="getPlayer(skater.person.id)">
+                          <div class="details" ng-click="getPlayer(skater.person.id)">
+                              <div class="playerImage">                                  
+                                  <img src="" ng-src="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="img-circle img-responsive center-block ng-cloak playerMugShots mugshotSml" alt="{{skater.person.fullName}}">                                  
+                              </div>
+                              <div class="textDetails">
+                                  <div class="name">
+                                    {{skater.person.firstName}}<br>
+                                    {{skater.person.lastName}}
+                                  </div>
+                                  <div class="score">
+                                     {{skater.person.stats[0].splits[0].stat.pim}}
+                                  </div>
+                              </div>
+                          </div>
+                       </li>                       
+                   </ul>
+               </div> 
+                          
+            </div>        
             <div class="row">
-                <div class="col-sm-12" ng-cloak>
-                    
+                <div class="col-sm-12">
+                    <ul class="nav nav-pills">
+                       <li>
+                           <a href="" ng-click="playerPositionGroup(' ')" ng-class="playerPosition == ' ' ? 'active' : ''" class="active" ng-cloak>
+                               <span class="visible-xs">All</span>
+                               <span class="hidden-xs">All Players</span>
+                           </a>
+                       </li>
+                        <li>
+                            <a href ng-click="playerPositionGroup('Goalie')" ng-class="playerPosition == 'Goalie' ? 'active' : ''" ng-cloak>
+                                <span class="visible-xs">NM</span>
+                                <span class="hidden-xs">Goalies</span>                    
+                            </a>
+                        </li>
+                        <li>
+                            <a href ng-click="playerPositionGroup('Defenseman')" ng-class="playerPosition == 'Defenseman' ? 'active' : ''"  ng-cloak>
+                                <span class="visible-xs">DEF</span>
+                                <span class="hidden-xs">Defensemen</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href ng-click="playerPositionGroup('Forward')"ng-class="playerPosition == 'Forward' ? 'active' : ''" ng-cloak>
+                                 <span class="visible-xs">FWD</span>
+                                <span class="hidden-xs">Forwards</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>            
+            <div class="row">
+                <div class="col-sm-12" ng-cloak>                    
                        <div class="row">
-                           <div class="col-sm-3 col-xs-12 skaters" ng-repeat="skater in players.teams[0].roster.roster | filter:playerPosition | orderBy:'-position.type'" ng-cloak>
-                               
-                               
-                               
+                           <div class="col-sm-3 col-xs-6 skaters" ng-repeat="skater in players.teams[0].roster.roster | filter:playerPosition | orderBy:'-position.type'" ng-cloak>
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                        <span class="badge pull-right color-1-bg">{{skater.jerseyNumber}}</span>
@@ -199,29 +283,18 @@
                                     </div>
                                     <div class="panel-body">
                                        <div class="row">
-                                           <div class="col-xs-3 col-sm-12">
+                                           <div class="col-xs-12">
                                                <img src="" ng-src="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="img-circle img-responsive center-block ng-cloak playerMugShots" alt="{{skater.person.fullName}}">
                                            </div>
-                                           <div class="col-xs-4 col-sm-12 text-center">
+                                           <div class="col-xs-12 text-center">
                                                <h5>{{skater.position.type}}</h5>
                                            </div>
-                                           <div class="col-xs-5 col-sm-12 text-right">
+                                           <div class="col-xs-12 text-right">
                                                <a class="btn btn-sm btn-default btn-block" ng-click="getPlayer(skater.person.id)">More Info</a>
                                            </div>
-                                       </div>                                      
-                                       
-                                       
-                                        
-                                                                   
-                                    </div>
-                                    
-                                    
-                                    
-                                    <!--<div class="panel-footer">
-                                        <a class="btn btn-primary btn-xs" href="{{goalie.twitterURL}}" target="_blank"data-toggle="tooltip" data-placement="top" title="{{forwards.twitterHandle}}"><i class="fa fa-twitter"></i></a>
-                                    </div>-->                            
+                                       </div>       
+                                    </div>                    
                                 </div>
-                                
                              </div>
                         </div>
                 </div>
@@ -249,8 +322,6 @@
                   <li class="list-group-item">
                   
                       <ul class="list-unstyled list-inline">
-                         
-                         
                          
                           <li><strong>Age:</strong> {{selectedPlayerData.people[0].currentAge}}</li>
                           <li><strong>Weight:</strong> {{selectedPlayerData.people[0].weight}}</li>
@@ -514,8 +585,7 @@
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/blockUI.js"></script>
         <script src="js/vendor/hammer.js"></script>
-        <script src="js/angular.js"></script> 
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.js"></script>
+        <script src="js/angular.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>       
         
         

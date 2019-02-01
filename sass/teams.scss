@@ -67,6 +67,8 @@
     .highcharts-legend-item.highcharts-color-2 path {
         fill:$c3; 
     }
+    
+    
 }
 
 /* Ducks */
@@ -76,7 +78,7 @@
     $color-2 : black!important;
     @include team-colours($color-0, $color-1, $color-2);
     .nav-team-list .team a.team-ANA {
-        border-left:5px solid $color-1; 
+        border-left:5px solid $color-1;         
     }
     
 }
