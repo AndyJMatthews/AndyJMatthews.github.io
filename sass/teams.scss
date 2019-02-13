@@ -47,15 +47,15 @@
         stroke-width:2;    
     }
     .wins{
-        background:$c1;
+        background:#cfd8dc;
         border:1px solid #ccc;
     }
     .otw{
-        background:$c2;
+        background:#607d8b;
         border:1px solid #ccc;
     }
     .los{
-        background:$c3;
+        background:#263238;
         border:1px solid #ccc;
     }
     .highcharts-legend-item.highcharts-color-0 path {
@@ -67,8 +67,6 @@
     .highcharts-legend-item.highcharts-color-2 path {
         fill:$c3; 
     }
-    
-    
 }
 
 /* Ducks */

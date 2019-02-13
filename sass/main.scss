@@ -53,13 +53,17 @@ ng\:form {
 }
 body {
     font-family: 'Arimo', sans-serif;
+    color:#37474f;
     font-size:10px;  
     margin-top:80px;
-    //background:url(../img/real_cf.png) repeat left top;
+    //background:url(../img/_real_cf.png) repeat left top #CFD8DC;
     background:#CFD8DC;  
-    
-    
-    
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#455a64+0,cfd8dc+15 */
+    background: rgb(69,90,100); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(69,90,100,1) 0%, rgba(207,216,220,1) 15%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(69,90,100,1) 0%,rgba(207,216,220,1) 15%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(69,90,100,1) 0%,rgba(207,216,220,1) 15%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#455a64', endColorstr='#cfd8dc',GradientType=0 ); /* IE6-9 */     
 }
 .linemate-logo {
     margin-top: 4px;
@@ -75,13 +79,25 @@ h1 {
     font-size:30px;   
     font-weight: 700;
     letter-spacing: -1.5px;
+    small {
+        font-size: 100%;
+        color:white;
+    }
 }
 h3 {
     font-size:12px;
 }
 h5 {font-size:11px;}
+
+    .venueWrapper {
+         padding-left:80px;
+     }
+
  @media(min-width:768px){
-     body {font-size:14px; margin-top:80px;}
+     body {
+         font-size:14px; 
+         margin-top:100px;
+    }
      h1{ 
     font-size: 40px;
 
@@ -89,12 +105,30 @@ h5 {font-size:11px;}
      }    
      h3 { font-size:20px;}    
      h5 {font-size:14px;}
-     .teamlogo {    height:120px;    }
+     .teamlogo {     }
      .mgn-btm {
     margin-bottom:0px;
 }
+     
+     .team-heading {
+         padding-left:240px;
+     }
+     .venueWrapper {
+         padding-left:240px;
+     }
+     
 }
- .teamlogo {    height:85px;    }
+@media(min-width:1200px){
+    body {
+         font-size:14px; 
+         margin-top:45px;
+    }
+}
+
+
+
+
+ .teamlogo {   }
 .navSwitch {
     font-size:30px;
     float: left;
@@ -148,6 +182,10 @@ hr {
     width:25%;
     margin:0px;
     background: #78909C;
+    border-left: 1px solid #90a4ae;
+    border-right: 1px solid #607d8b;
+    border-top: 1px solid #90a4ae;
+    border-bottom: 1px solid #607d8b;
 }
 .nav.nav-pills li a {
     text-align: center;
@@ -190,6 +228,20 @@ hr {
     height: 10px;    
     margin-right: 3px;
 }
+.legendList {
+    width:100%;
+    display: flex;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    margin: 0px;
+    padding-left: 30px;
+    li {
+        width:33.3333%;
+        text-align: center;
+    }
+}
+
 .wins {
     background:#cccccc;
 }
@@ -259,9 +311,11 @@ hr {
 
 .panel.panel-default {
     border:0px none;
-    box-shadow: 0 0 0 rgba(0,0,0,0);
+    box-shadow: 0 0 10px rgba(100,100,100,0.3);
     position: relative;
     border-bottom:1px solid #dfdfdf;
+    transition: all 300ms ease-in-out;
+    
     &:before {
         position: absolute;
         left: 14px;
@@ -272,6 +326,7 @@ hr {
         transform: rotate(-1deg);
         height: 97px;
         z-index: -79;
+        transition: all 300ms ease-in-out;
     }
     &:after {
         position: absolute;
@@ -283,19 +338,41 @@ hr {
         transform: rotate(1deg);
         height: 97px;
         z-index: -79;
+        transition: all 300ms ease-in-out;
     }
-    
-    
-    
     .panel-heading {
-    background:#455a64; 
-    border-radius:0px;
-    border:0px none;
-    background-image:none;
+        background:#455a64; 
+        border-radius:0px;
+        border:0px none;
+        background-image:none;
         color:#ffffff;
         text-transform: uppercase;
-        font-weight: 700;
-}
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #78909c;
+        strong {
+            font-weight: 700;
+        }
+    }
+    &:hover {        
+        &:after {
+            bottom:15px;
+        }
+        &:before {
+            bottom:15px;
+        }
+    }
+    .panel-body {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+45,dbdbdb+100 */
+        background: rgb(255,255,255); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(255,255,255,1) 45%, rgba(240,240,240,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(255,255,255,1) 45%,rgba(240,240,240,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(255,255,255,1) 45%,rgba(240,240,240,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbdbdb',GradientType=0 ); /* IE6-9 */   
+        border-bottom: 1px solid #dedede;
+    }
+    
 }
 .btn.btn-default {
     border:2px solid #455a64;
@@ -338,7 +415,7 @@ hr {
 .table-responsive {
     position:relative;
     z-index: 1;
-    &:before {
+/*    &:before {
         position: absolute;
         left: 14px;
         bottom: 27px;
@@ -359,7 +436,7 @@ hr {
         transform: rotate(1deg);
         height: 97px;
         z-index: -79;
-    }
+    }*/
 }
 table.table.table-bordered {
     background: #ffffff;
@@ -401,9 +478,6 @@ table.table.table-bordered {
     }
 }
 
-
-
-
 .skaters.ng-enter,
 .skaters.ng-leave,
 .skaters.ng-move {
@@ -439,4 +513,105 @@ table.table.table-bordered {
 }
 .tenPx {
     font-size: 10px;
+}
+.relative {
+    position:relative;
+}
+.logoWrapper {
+    position: absolute;    
+    background: white;    
+    width: auto;
+    height: auto;    
+    box-shadow: 0px 0px 17px rgba(000,000,000, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left:17px;
+    bottom:-55px;
+    padding:10px;
+    width:70px;
+    height:70px;
+    
+    img {
+        max-height:50px;
+    }
+    
+    
+    @media(min-width:768px){
+        left: 25px;
+        top: -25px;
+        height: 200px;
+        width: 200px;
+        padding: 20px;
+        img {
+            max-height:160px;
+        }
+    }
+    
+    
+    
+    
+}
+.trayLogo {    
+    margin: 5px;
+    max-width: 90%; 
+}
+.detailsRow {
+    background:#f0f0f0;
+    padding:0px;
+    width:100%;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .detail {        
+        padding:5px;  
+        width:33.3333%;
+        border-top:1px solid #fff;
+        border-left:1px solid #dedede;
+        border-bottom:1px solid #dedede;
+        border-right:1px
+    }
+    
+}
+.mgn-top-0px {
+    margin-top: 0px;
+}
+.mgn-top-20px {
+    margin-top:20px;
+}
+.mgn-btm-30px {
+    margin-bottom:30px;
+}
+.teamStatsWrapper {
+    width: 100%;
+    min-height: 182px;
+    background: #f0f0f0;
+    border-top: 1px solid white;
+    border-left: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    padding: 10px;
+}
+.noGutter {
+    @media(min-width:768px){
+        .pad-sm-rgt-0px {
+            padding-right:0px;
+        }
+        .pad-sm-lft-0px {
+            padding-left:0px;
+        }
+    }
+}
+.disclaimer {
+    padding-left:12vw;
+}
+.modalNav {
+    width:100%;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-wrap: nowrap; 
+    a, button {
+        width:33.3333%;
+    }
 }

@@ -22,6 +22,9 @@
             $("#tray, .trayback").toggleClass("closed");            
         }
         
+        
+        
+        
         $scope.favs = function(){
             alert("Favourites are pending development");
         }
@@ -49,22 +52,29 @@
             console.log($scope.playerPosition);
         };
         
-        
+        $scope.playerIDs = [];
                 
         $http.get($scope.selectedTeam).success(function(data){
-			 $scope.players = data;            
+			 $scope.players = data; 
+                angular.forEach($scope.players.teams[0].roster.roster, function (value, key) {
+                    $scope.playerIDs.push(value.person.id);
+                     
+                });
+                console.log($scope.playerIDs);
+            
 		}).error(function(){
 			 alert("There is an issue getting the data, you might be offline. You might be able to navigate to another team that you have already viewed though.");
 		});
         
         $http.get($scope.selectedTeamStats).success(function(data){
-            $scope.teamStatsData = data;    
+            $scope.teamStatsData = data; 
+            
         }).error(function(){
             console.log("There is an issue getting the data, you might be offline. You might be able to navigate to another team that you have already viewed though.");
         });
         
         $scope.changeTeamStats = function(arg){
-            
+            $scope.playerIDs = [];
             console.log(arg);
             $http.get("https://statsapi.web.nhl.com/api/v1/teams/"+arg+"?hydrate=record(teamRecords)&season=20182019").success(function(data){
                 console.log("got the team data....");
@@ -77,14 +87,22 @@
             //http://statsapi.web.nhl.com/api/v1/teams/1?hydrate=record(teamRecords)&season=20182019
         };
         
+        
+        
         $scope.changeTeam = function(selectedTeam){
             $http.get("https://statsapi.web.nhl.com/api/v1/teams/"+selectedTeam+"?hydrate=roster(person(stats(splits=statsSingleSeason)))").success(function(data){
-                
+                $scope.playerIDs = [];
                 $scope.players = data;
                 $scope.selectedPlayer = "";
                 $scope.playerPosition = "";
                 $scope.teamID = $scope.players.teams[0].id;
                 $scope.changeTeamStats($scope.teamID);
+                
+                angular.forEach($scope.players.teams[0].roster.roster, function (value, key) {
+                    $scope.playerIDs.push(value.person.id);
+                     
+                });
+                console.log($scope.playerIDs);
                 
 		      }).error(function(){
 			     
@@ -171,7 +189,7 @@
                     text:null
                 },
                 chart:{
-                    width:538,                    
+                                
                 },
                 xAxis: {
                     categories: $scope.theirSeasons,
@@ -182,6 +200,7 @@
                     }
                 },
                 plotOptions: {
+                    colors:["#cfd8dc","#607d8b","#263238"],
                 area: {
                     
                     marker: {
@@ -208,7 +227,7 @@
             
         };
         $('#myModal').on('hidden.bs.modal', function (e) {
-            
+            $scope.selectedPlayerData = null;
             $scope.theirGoals = [];
             $scope.theirAssists = [];
             $scope.theirTotals = [];
@@ -228,21 +247,53 @@
             $scope.shifts = null;
             $scope.hits = null;
             $scope.shots = null;
-            
-        });
+            $scope.nextPlayer = null;
+            $scope.prevPlayer = null;
+            $scope.rosterLength = null;
+        });        
+        
+        $scope.nextPlayer = null;
+        $scope.prevPlayer = null;
+        $scope.rosterLength = null;
         
         $scope.getPlayer = function(selectedPlayer){
             $http.get("https://statsapi.web.nhl.com/api/v1/people/" + selectedPlayer + "?expand=person.stats&stats=yearByYear").success(function(data){
-                $scope.selectedPlayerData = data;
-                $scope.getGoals($scope.selectedPlayerData);
+                
+                $scope.selectedPlayerData = data;                
                 $('#myModal').modal('show');
-                $('[data-toggle="tooltip"]').tooltip();                
+                $('[data-toggle="tooltip"]').tooltip(); 
+                
+                
+                
+                //$scope.getGoals($scope.selectedPlayerData);
                 
             }).error(function(){
-               alert("There is an issue getting the data, you might be offline. You might be able to navigate to another team that you have already viewed though."); 
-            });  
                 
-        } 
+               alert("There is an issue getting the data, you might be offline. You might be able to navigate to another team that you have already viewed though."); 
+                
+            });  
+            
+            var thisPlayer = $scope.playerIDs.indexOf(selectedPlayer);
+            var rosterLength = $scope.playerIDs.length;
+            
+            if(thisPlayer === 0){
+                $scope.nextPlayer = $scope.playerIDs[thisPlayer+1];
+                $scope.prevPlayer = selectedPlayer;
+                console.log($scope.playerIDs[thisPlayer+1]);
+                
+            }else {                
+                if(thisPlayer === rosterLength-1){                    
+                    $scope.nextPlayer = $scope.playerIDs[thisPlayer];
+                    $scope.prevPlayer = $scope.playerIDs[thisPlayer-1];                    
+                }else{                    
+                    $scope.nextPlayer = $scope.playerIDs[thisPlayer+1];
+                    $scope.prevPlayer = $scope.playerIDs[thisPlayer-1];
+                }
+            }           
+            
+            console.log("Roster is " +rosterLength+ " long " + thisPlayer + " (" +selectedPlayer+")" +" is the current player " + $scope.nextPlayer + " is next " + $scope.prevPlayer + " is previous");
+            
+        }
         
 	}]);     
     app.directive("teamstats", function() {
@@ -263,42 +314,44 @@
                     ];
                     Highcharts.chart($scope.id, {
                        chart: {
+                            backgroundColor:"rgba(255,255,255,0)",
+                            borderWidth: 0,
                             plotBackgroundColor: null,
                             plotBorderWidth: null,
                             plotShadow: false,
-                            type: 'pie',
-                            height:200,
-                            width:200
+                            type: 'column',
+                            height:170,
+                            //width:700,
+                            margin: [20, 0, 20, 30]
                            
                         },
                         credits: {
                             enabled: false 
                         },
                         legend: {
-                            align: 'center',
-                            verticalAlign: 'bottom'
+                            enabled: false
                         },
                         title: {
-                            text: 'Team<br>Performance',
-                            align: 'center',
-                            verticalAlign: 'middle',
-                            y: 0,
-                            useHTML: true
+                            text:null                            
+                        },
+                         xAxis: {
+                            categories: ['Wins', 'OTL', 'Losses']
                         },
                         plotOptions: {
-                            pie: {
-                                allowPointSelect: true,
-                                cursor: 'pointer',
-                                colors: ["#cccccc", "#4f4f4f", "#000000"],
-                                dataLabels: {
-                                    enabled: false
-                                },
+                            series:{
+                                pointPadding: 0,
+                                groupPadding: 0,
+                                borderWidth: 0,
+                                shadow: false
+                            },
+                            column:{
+                                colors:["#cfd8dc","#607d8b","#263238"]
                             }
                         },
                         series: [{
                             name:'2018/2019',
-                            type: 'pie',                            
-                            innerSize: '90%',
+                            type: 'column',                            
+                            
                             animation: {
                                 duration: 1000,
                                 easing: 'easeOutBounce'
