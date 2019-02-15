@@ -8,7 +8,7 @@
     bottom:0px;
     z-index: 1032;
     overflow-y: auto;
-    background:#B0BEC5;
+    background:white;
     -webkit-box-shadow: 0px 0px 31px -2px rgba(0,0,0,0.87);
     -moz-box-shadow: 0px 0px 31px -2px rgba(0,0,0,0.87);
     box-shadow: 0px 0px 31px -2px rgba(0,0,0,0.87);
@@ -56,14 +56,15 @@
         }
     }
     .nav-team-list {
-        padding-bottom:50px;
+        padding-bottom: 50px;
         width: 100%;
         float: left;
+        background: #B0BEC5;
         .team {
             width:100%;
             clear: both;
             float: left;
-            border-top:1px solid #CFD8DC;
+            border-top:1px solid $A2;
             border-bottom:1px solid #90A4AE;
             
             a {
@@ -81,6 +82,7 @@
                 overflow: hidden;
                 z-index: 2;
                 align-items: center;
+                text-transform:uppercase;
                 &:hover {
                     color:white;
                     text-decoration:none;
@@ -124,7 +126,7 @@
 .trayback {
     width:100vw;
     height:100vh;
-    background:rgba(000,000,000,0.5);
+    background:rgba(000,000,000,0.8);
     position: fixed;
     z-index: 1031;
     left: 0px;

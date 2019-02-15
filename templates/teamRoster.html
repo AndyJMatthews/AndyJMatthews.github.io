@@ -1,0 +1,59 @@
+<div class="row  mgn-top-20px">
+                    <div class="col-sm-12">
+                        <ul class="nav nav-pills">
+                            <li>
+                                <a href="" ng-click="playerPositionGroup(' ')" ng-class="playerPosition == ' ' ? 'active' : ''" class="active" ng-cloak>
+                                    <span class="visible-xs">All</span>
+                                    <span class="hidden-xs">All Players</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href ng-click="playerPositionGroup('Goalie')" ng-class="playerPosition == 'Goalie' ? 'active' : ''" ng-cloak>
+                                    <span class="visible-xs">NM</span>
+                                    <span class="hidden-xs">Goalies</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href ng-click="playerPositionGroup('Defenseman')" ng-class="playerPosition == 'Defenseman' ? 'active' : ''" ng-cloak>
+                                    <span class="visible-xs">DEF</span>
+                                    <span class="hidden-xs">Defensemen</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href ng-click="playerPositionGroup('Forward')" ng-class="playerPosition == 'Forward' ? 'active' : ''" ng-cloak>
+                                    <span class="visible-xs">FWD</span>
+                                    <span class="hidden-xs">Forwards</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12" ng-cloak>
+                        <div class="row">
+                            <div class="col-sm-3 col-xs-6 skaters" ng-repeat="skater in players.teams[0].roster.roster | filter:playerPosition | orderBy:'-position.type'" ng-cloak>
+                                <div class="panel panel-default" ng-click="getPlayer(skater.person.id)">
+                                    <div class="panel-heading" ng-click="getPlayer(skater.person.id)">
+                                        <span>
+                                            {{skater.person.firstName}}<br><strong>{{skater.person.lastName}}</strong>
+                                        </span>
+                                        <span class="badge pull-right color-1-bg">{{skater.jerseyNumber}}</span>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <img src="" ng-src="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="img-circle img-responsive center-block ng-cloak playerMugShots" alt="{{skater.person.fullName}}">
+                                            </div>
+                                            <div class="col-xs-12 text-center">
+                                                <h5>{{skater.position.type}}</h5>
+                                            </div>
+                                            <div class="col-xs-12 text-right">
+                                                <a class="btn btn-sm btn-default btn-block">More Info</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>

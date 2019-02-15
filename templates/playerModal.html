@@ -1,0 +1,246 @@
+<div class="modal-content">
+   <div class="forwards" ng-click="getPlayer(prevPlayer)">
+        <i class="material-icons">arrow_back_ios</i>       
+   </div>
+   <div class="backwards" ng-click="getPlayer(nextPlayer)">
+       <i class="material-icons">arrow_forward_ios</i>
+   </div>
+   
+   
+   
+   
+   
+    <div class="modal-body">
+        <!--<div class="swipeLeft">
+
+         </div>
+          <div class="swipeRight" >
+
+          </div>-->
+
+        <div class="playerActionShot">
+            <div class="shotWrapper">
+                <img ng-src="https://nhl.bamcontent.com/images/actionshots/{{selectedPlayerData.people[0].id}}.jpg" alt="{{skater.person.fullName}}" class="img-responsive">
+            </div>
+
+            <div class="nameNumber">
+
+                {{selectedPlayerData.people[0].firstName}} <strong>{{selectedPlayerData.people[0].lastName}}</strong> | {{selectedPlayerData.people[0].primaryNumber}}
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-4">
+                <img src="" ng-src="https://nhl.bamcontent.com/images/headshots/current/168x168/{{selectedPlayerData.people[0].id}}.jpg" class="img-circle playerMugShots img-responsive center-block" alt="{{skater.person.fullName}}">
+            </div>
+            <div class="col-xs-8">
+
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>Position:</strong> {{selectedPlayerData.people[0].primaryPosition.name}}
+                    </li>
+                    <li class="list-group-item">
+
+                        <ul class="list-unstyled list-inline">
+
+                            <li><strong>Age:</strong> {{selectedPlayerData.people[0].currentAge}}</li>
+                            <li><strong>Weight:</strong> {{selectedPlayerData.people[0].weight}}</li>
+                            <li><strong>Height:</strong> {{selectedPlayerData.people[0].height}}</li>
+
+                        </ul>
+                    </li>
+                    <li class="list-group-item"><strong>Home Town:</strong> {{selectedPlayerData.people[0].birthCity}}, {{selectedPlayerData.people[0].birthStateProvince}}, {{selectedPlayerData.people[0].birthCountry}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Career Points Table
+                        </a>
+                      </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table score-table table-condensed ultra-condenced" ng-show="selectedPlayerData.people[0].primaryPosition.type != 'Goalie'">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">SEASON</th>
+                                                <th>TEAM</th>
+                                                <th>LEAGUE</th>
+                                                <th class="text-center">GP</th>
+                                                <th class="text-center">G</th>
+                                                <th class="text-center">A</th>
+                                                <th class="text-center">TP</th>
+                                                <th class="text-center">PIM</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="season in selectedPlayerData.people[0].stats[0].splits | limitTo:-8">
+                                                <td class="text-center">{{season.season|limitTo:4}}/{{season.season|limitTo:4:4}}</td>
+                                                <td>{{season.team.name}}</td>
+                                                <td>
+                                                    <span ng-if="season.league.name == 'National Hockey League'">NHL</span>
+                                                    <span ng-if="season.league.name != 'National Hockey League'">{{season.league.name}}</span>
+                                                </td>
+                                                <td class="text-center">{{season.stat.games}}</td>
+                                                <td class="text-center">{{season.stat.goals}}</td>
+                                                <td class="text-center">{{season.stat.assists}}</td>
+                                                <td class="text-center">{{season.stat.points}}</td>
+                                                <td class="text-center">{{season.stat.penaltyMinutes}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table table-bordered table-condensed ultra-condenced " ng-show="selectedPlayerData.people[0].primaryPosition.type == 'Goalie'">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">SEASON</th>
+                                                <th>TEAM</th>
+                                                <th>LEAGUE</th>
+                                                <th class="text-center">GP</th>
+                                                <th class="text-center">SO</th>
+                                                <th class="text-center">W</th>
+                                                <th class="text-center">GAA</th>
+                                                <th class="text-center">SV%</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="season in selectedPlayerData.people[0].stats[0].splits | limitTo:-8">
+                                                <td class="text-center">{{season.season|limitTo:4}}/{{season.season|limitTo:4:4}}</td>
+                                                <td>{{season.team.name}}</td>
+                                                <td>
+                                                    <span ng-if="season.league.name == 'National Hockey League'">NHL</span>
+                                                    <span ng-if="season.league.name != 'National Hockey League'">{{season.league.name}}</span>
+                                                </td>
+                                                <td class="text-center">{{season.stat.games}}</td>
+                                                <td class="text-center">{{season.stat.shutouts}}</td>
+                                                <td class="text-center">{{season.stat.wins}}</td>
+                                                <td class="text-center">{{season.stat.goalAgainstAverage}}</td>
+                                                <td class="text-center">{{season.stat.savePercentage}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default" ng-if="selectedPlayerData.people[0].primaryPosition.type != 'Goalie'">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Season by Season Points Production
+                        </a>
+                      </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <player-points id="player">
+
+                                    </player-points>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default" ng-if="selectedPlayerData.people[0].primaryPosition.type != 'Goalie'" ng-repeat="season in selectedPlayerData.people[0].stats[0].splits | limitTo:-1">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
+                          Shifts &amp; Game Time          {{season.season|limitTo:4}}/{{season.season|limitTo:4:4}}
+                        </a>
+                      </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <div>
+
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            {{theirAvShifts[theirAvShifts.length - 1] | number:0}}
+                                            <hr>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <div class="statWrapper">
+                                                <div class="totalTime">
+                                                    <div class="row">
+                                                        <div class="col-xs-6 text-center">
+                                                            Total Shifts
+                                                            <div class="clearfix"></div>
+                                                            <h3 class="zeroMargins">{{season.stat.shifts}}</h3>
+                                                        </div>
+                                                        <div class="col-xs-6 text-center">
+                                                            Total Ice Time (mins)
+                                                            <div class="clearfix"></div>
+                                                            <h3 class="zeroMargins">{{season.stat.timeOnIce}}</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <hr>
+                                                    </div>
+                                                </div>
+                                                <div class="row noMargin">
+                                                    <div class="fourUp text-center">
+                                                        <h3 class="zeroMargins">{{shifts}}</h3>
+                                                    </div>
+                                                    <div class="fourUp text-center">
+                                                        <h3 class="zeroMargins">{{hits}}</h3>
+                                                    </div>
+                                                    <div class="fourUp text-center">
+                                                        <h3 class="zeroMargins">{{shots}}</h3>
+                                                    </div>
+                                                    <div class="fourUp text-center">
+                                                        <h3 class="zeroMargins">{{blocks}}</h3>
+                                                    </div>
+                                                </div>
+
+                                                <div class="gameStats">
+                                                    <div class="avIceTime shiftWrapper">
+                                                        <div ng-repeat="i in getNumber(shifts) track by $index" class="shifts" data-toggle="tooltip" data-placement="top" title="Shifts" style="width:{{shiftWidth}}%">
+                                                        </div>
+                                                    </div>
+                                                    <div class="avIceTime hitWrapper">
+                                                        <div ng-repeat="j in getNumber(hits) track by $index" class="hits" data-toggle="tooltip" data-placement="top" title="Hits" style="width:{{hitWidth}}%">
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="avIceTime shotWrapper">
+                                                        <div ng-repeat="i in getNumber(shots) track by $index" class="shots" data-toggle="tooltip" data-placement="top" title="Shots" style="width:{{shotWidth}}%">
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="avIceTime blockWrapper">
+                                                        <div ng-repeat="i in getNumber(blocks) track by $index" class="blocks" data-toggle="tooltip" data-placement="top" title="Blocks" style="width:{{blockWidth}}%">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="modalNav">                    
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

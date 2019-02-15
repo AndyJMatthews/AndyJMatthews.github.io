@@ -1,0 +1,12 @@
+ <div class="panel panel-default">
+                   <div class="panel-heading">
+                       NHL OVERALL
+                   </div>
+                   <div class="panel-body pad-0px">
+                        <div ng-repeat="team in teamsData.teams | orderBy:sorterFunc" class="leagueList"> 
+                           <div class="rank"><span class="badge">{{$index+1}}</span></div>
+                           <div class="teamName">{{team.locationName}} <strong>{{team.teamName}}</strong></div>
+                           <div class="teamPoints"><strong>{{team.record.points}}pts</strong></div>
+                         </div>
+                   </div>
+               </div>

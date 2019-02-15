@@ -3,6 +3,12 @@
    ========================================================================== */
 
 //https://cdn-images-1.medium.com/max/800/1*UNjp6kVHfXwA_LNRbStArQ.png
+
+
+
+
+
+@import 'variables.scss';
 @import 'teams.scss';
 @import 'playerStats.scss';
 @import 'navigation.scss';
@@ -11,7 +17,7 @@
     margin-left:-5px;
     margin-right:-5px;
     
-    @media(min-width:768px){
+    @media(min-width:$screen-sm){
         margin-left:-15px;
         margin-right:-15px;
     }   
@@ -22,7 +28,7 @@
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
         padding-right:5px;
     padding-left:5px;
-    @media(min-width:768px){
+    @media(min-width:$screen-sm){
             padding-right:15px;
     padding-left:15px;
     }
@@ -56,20 +62,14 @@ body {
     color:#37474f;
     font-size:10px;  
     margin-top:80px;
-    //background:url(../img/_real_cf.png) repeat left top #CFD8DC;
-    background:#CFD8DC;  
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#455a64+0,cfd8dc+15 */
-    background: rgb(69,90,100); /* Old browsers */
-    background: -moz-linear-gradient(top, rgba(69,90,100,1) 0%, rgba(207,216,220,1) 15%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(69,90,100,1) 0%,rgba(207,216,220,1) 15%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(69,90,100,1) 0%,rgba(207,216,220,1) 15%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#455a64', endColorstr='#cfd8dc',GradientType=0 ); /* IE6-9 */     
+    //background:url(../img/_real_cf.png) repeat left top $A2;
+    background:$A1;
 }
 .linemate-logo {
     margin-top: 4px;
     max-height:45px;
     float: right;
-    @media(min-width:768px){
+    @media(min-width:$screen-sm){
         max-height:50px;
         margin-top: 4px;    
     }
@@ -93,7 +93,7 @@ h5 {font-size:11px;}
          padding-left:80px;
      }
 
- @media(min-width:768px){
+ @media(min-width:$screen-sm){
      body {
          font-size:14px; 
          margin-top:100px;
@@ -118,7 +118,7 @@ h5 {font-size:11px;}
      }
      
 }
-@media(min-width:1200px){
+@media(min-width:$screen-lg){
     body {
          font-size:14px; 
          margin-top:45px;
@@ -149,7 +149,7 @@ hr {
 }
 .nav.nav-pills {
     width:100%;
-    background: #78909C;
+    background: $A5;
     margin-bottom: 20px;
     position: relative;
     z-index: 1;
@@ -181,7 +181,7 @@ hr {
  .nav.nav-pills li {
     width:25%;
     margin:0px;
-    background: #78909C;
+    background: $A5;
     border-left: 1px solid #90a4ae;
     border-right: 1px solid #607d8b;
     border-top: 1px solid #90a4ae;
@@ -267,7 +267,7 @@ hr {
     
     margin-bottom: 10px;
     
-    @media(min-width:768px){
+    @media(min-width:$screen-sm){
       margin-bottom:0px;
     }
 }
@@ -350,7 +350,7 @@ hr {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-top: 1px solid #78909c;
+        border-top: 1px solid $A5;
         strong {
             font-weight: 700;
         }
@@ -438,17 +438,14 @@ hr {
         z-index: -79;
     }*/
 }
-table.table.table-bordered {
+table.table.score-table {
     background: #ffffff;
-    th {
-        background:#455a64;
-        color:white;
-        border:1px solid #455a64;
+    border-collapse: inherit;
+    th {            
+        @include slickHeading;
     }
-    td {
-        background:white;
-        border:1px solid #cccccc;
-        padding: 5px 3px;
+    td {        
+        @include slickList;
     }
     
 }
@@ -456,32 +453,67 @@ table.table.table-bordered {
     -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.75);
     box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.75);
-    background:#eceff1;
+    background:$A1;
     &.footer {
         margin-bottom:60px;
         padding:20px 0px;
-        @media (min-width:768px){
+        @media (min-width:$screen-sm){
             margin-bottom:0px;
         }
     }
 }
 
 .playerMugShots {
-    border:5px solid #eceff1;    
-    @media(min-width:1024px){
+    border:5px solid $A1;    
+    @media(min-width:$screen-md){
         width:178px;
         height:178px; 
     }
     
     .modal-body & {
-        margin-top: -65px;
+        margin-top: -45px;
     }
 }
+
+
+.topScores li.ng-enter,
+.topScores li.ng-leave,
+.topScores li.ng-move {
+  transition: 0.2s linear all;
+}
+
+.topScores li.ng-enter,
+.topScores li.ng-move {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.topScores li.ng-enter.ng-enter-active,
+.topScores li.ng-move.ng-move-active {
+  height:auto;
+  opacity: 1;
+}
+
+.topScores li.ng-leave {
+  opacity: 1;
+  overflow: hidden;
+}
+
+.topScores li.ng-leave.ng-leave-active {
+  height: 0;
+  opacity: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+
+
 
 .skaters.ng-enter,
 .skaters.ng-leave,
 .skaters.ng-move {
-  transition: 0.5s linear all;
+  transition: 0.2s linear all;
 }
 
 .skaters.ng-enter,
@@ -493,7 +525,7 @@ table.table.table-bordered {
 
 .skaters.ng-enter.ng-enter-active,
 .skaters.ng-move.ng-move-active {
-  height: 120px;
+  height:auto;
   opacity: 1;
 }
 
@@ -537,7 +569,7 @@ table.table.table-bordered {
     }
     
     
-    @media(min-width:768px){
+    @media(min-width:$screen-sm){
         left: 25px;
         top: -25px;
         height: 200px;
@@ -593,7 +625,7 @@ table.table.table-bordered {
     padding: 10px;
 }
 .noGutter {
-    @media(min-width:768px){
+    @media(min-width:$screen-sm){
         .pad-sm-rgt-0px {
             padding-right:0px;
         }
@@ -613,5 +645,140 @@ table.table.table-bordered {
     flex-wrap: nowrap; 
     a, button {
         width:33.3333%;
+    }
+}
+
+.leagueList {
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 5px;
+    @include slickList;
+    
+    
+    .rank{
+        text-align: center;
+        padding:5px;
+        width:60px;
+    }    
+    .teamName {
+        text-align: left;
+        width:80%;
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 0.5px;
+    }
+    .teamPoints {
+        text-align: right;
+        padding:5px;
+        width:40px;
+        font-size:10px;
+    }
+}
+.pad-0px {
+    padding:0px;
+}
+
+.playerActionShot {
+    margin:-15px;    
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    position:relative;
+    .shotWrapper {
+        position:relative;
+        z-index: 0;
+        &:after {
+            width:100%;
+            height:100%;
+            left:0px;
+            top:0px;
+            right:0px;
+            bottom:0px;
+            z-index: 1;
+            position: absolute;
+            content:"";
+            -webkit-box-shadow: inset 0px 0px 130px 20px rgba(50, 50, 50, 0.5);
+            -moz-box-shadow:    inset 0px 0px 130px 20px rgba(50, 50, 50, 0.5);
+            box-shadow:         inset 0px 0px 130px 20px rgba(50, 50, 50, 0.5);
+        }
+    }
+    img {
+        //filter: grayscale(1);
+    }
+    .nameNumber {
+        
+        
+        color: white;        
+        z-index: 2;        
+        padding: 0px 10px;
+        text-transform: uppercase;
+        width:100%;
+        margin-bottom: 20px;
+        z-index: 0;        
+        background: #455a64;
+        text-align: right;
+        font-size: 14px;
+        padding-left:34%;
+        
+        @media(min-width:$screen-sm){
+            font-size: 25px;
+        }
+        
+        
+        @media(min-width:$screen-md){
+            font-size: 40px;
+        }
+        
+        
+    }
+    
+}
+.panel-group {
+    .panel.panel-default .panel-heading {
+        @include lightSlickHeading;
+    }
+}
+.modal-backdrop.in {
+    opacity: 0.8;
+}
+.modal-content {
+    .forwards {
+        position: absolute;
+        
+        
+        
+        width: 55px;
+        left: -55px;
+        top: 0px;
+        bottom: 0px;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        i.material-icons {
+            font-size:50px;
+            color:white;
+        } 
+        
+        
+    }
+    .backwards {
+        position: absolute;
+        width: 55px;
+        right: -55px;
+        top: 0px;
+        bottom: 0px;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        i.material-icons {
+            font-size:50px;
+            color:white;
+        } 
     }
 }
