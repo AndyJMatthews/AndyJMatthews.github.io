@@ -31,18 +31,33 @@
                 <div class="row">
                     <div class="col-sm-12" ng-cloak>
                         <div class="row">
-                            <div class="col-sm-3 col-xs-6 skaters" ng-repeat="skater in players.teams[0].roster.roster | filter:playerPosition | orderBy:'-position.type'" ng-cloak>
-                                <div class="panel panel-default" ng-click="getPlayer(skater.person.id)">
+                            <div class="col-md-3 col-sm-4 col-xs-6 skaters" ng-repeat="skater in players.teams[0].roster.roster | filter:playerPosition | orderBy:'-position.type'" ng-cloak>
+                                <div class="panel panel-default" ng-click="getPlayer(skater.person.id)">                                   
+                                   
+                                   
                                     <div class="panel-heading" ng-click="getPlayer(skater.person.id)">
                                         <span>
                                             {{skater.person.firstName}}<br><strong>{{skater.person.lastName}}</strong>
                                         </span>
-                                        <span class="badge pull-right color-1-bg">{{skater.jerseyNumber}}</span>
+                                        <span class="badge pull-right">{{skater.jerseyNumber}}</span>
                                     </div>
-                                    <div class="panel-body">
+                                    <div class="panel-body relative">
+                                        <div class="leaders">
+                                            <div ng-if="skater.person.captain">
+                                               Captain
+                                            </div>
+                                            <div ng-if="skater.person.alternateCaptain">
+                                               Alt Captain
+                                            </div>
+                                            <div ng-if="skater.person.rookie">
+                                               Rookie
+                                            </div>
+                                       </div>
+                                       
+                                       
                                         <div class="row">
                                             <div class="col-xs-12">
-                                                <img src="" ng-src="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="img-circle img-responsive center-block ng-cloak playerMugShots" alt="{{skater.person.fullName}}">
+                                                <img src="" image="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="centered img-circle img-responsive center-block ng-cloak playerMugShots" alt="{{skater.person.fullName}}" lazy-load>
                                             </div>
                                             <div class="col-xs-12 text-center">
                                                 <h5>{{skater.position.type}}</h5>

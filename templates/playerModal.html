@@ -24,8 +24,7 @@
             </div>
 
             <div class="nameNumber">
-
-                {{selectedPlayerData.people[0].firstName}} <strong>{{selectedPlayerData.people[0].lastName}}</strong> | {{selectedPlayerData.people[0].primaryNumber}}
+                {{selectedPlayerData.people[0].firstName}} <strong>{{selectedPlayerData.people[0].lastName}}</strong> | {{selectedPlayerData.people[0].primaryNumber}} <span class="flag flag-1x flag-{{selectedPlayerData.people[0].nationality | lowercase}}"></span>
             </div>
 
         </div>
@@ -50,7 +49,9 @@
 
                         </ul>
                     </li>
-                    <li class="list-group-item"><strong>Home Town:</strong> {{selectedPlayerData.people[0].birthCity}}, {{selectedPlayerData.people[0].birthStateProvince}}, {{selectedPlayerData.people[0].birthCountry}}</li>
+                    <li class="list-group-item"><strong>Home Town:</strong> {{selectedPlayerData.people[0].birthCity}}, {{selectedPlayerData.people[0].birthStateProvince}}, {{selectedPlayerData.people[0].birthCountry}}                    
+                    
+                    </li>
                 </ul>
             </div>
         </div>
@@ -237,9 +238,7 @@
     <div class="modal-footer">
         <div class="row">
             <div class="col-xs-12">
-                <div class="modalNav">                    
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>                    
-                </div>
+                <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

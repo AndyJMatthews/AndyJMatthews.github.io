@@ -3,7 +3,7 @@ i.titleIcon {
     float: left;
     margin-top: -4px;
     margin-right: 10px;
-    color: #78909c;
+    color: $A5;
 }
 
 .topScores {
@@ -15,7 +15,7 @@ i.titleIcon {
     box-shadow: 0 0 10px rgba(100,100,100,0.3);
     margin-top:10px;
     min-height: 120px;
-    &:before {
+   /* &:before {
         position: absolute;
         left: 14px;
         bottom: 2px;
@@ -36,7 +36,7 @@ i.titleIcon {
         transform: rotate(1deg);
         height: 97px;
         z-index: -79;
-    }
+    }*/
     li {
         display: none;
         padding: 10px;
@@ -60,8 +60,8 @@ i.titleIcon {
             
             background: #B0BEC5;
             display: block;
-            border-top: 1px solid #CFD8DC;
-            border-bottom: 1px solid #78909c;
+            border-top: 1px solid $A2;
+            border-bottom: 1px solid $A5;
             color: #37474f;            
             
             .details {
@@ -82,7 +82,7 @@ i.titleIcon {
                     float: left; 
                     img.mugshotSml {
                         height:auto;
-                        border: 5px solid #cfd8dc;                        
+                        border: 5px solid $A2;                        
                     }
                     @media(min-width:1024px){
                         width: 33.3333%;                        
@@ -195,5 +195,8 @@ i.titleIcon {
         
     }
 }
-
+.division h3 {
+    padding:5px;
+    margin:0px 10px;
+}
 

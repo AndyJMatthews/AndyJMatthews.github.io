@@ -26,7 +26,7 @@
         }
         .hits {
             border-left:1px solid white;
-            background:#cfd8dc;
+            background:$A2;
         }
         .shots {
             border-left:1px solid white;
@@ -34,7 +34,7 @@
         }
         .blocks {            
             border-left:1px solid white;
-            background:#78909c;
+            background:$A5;
         }
         &:before {
             font-size:10px;
@@ -66,7 +66,7 @@
                 position:absolute;
                 left: 25%;
                 height:40px;
-                border-left:5px solid #cfd8dc;
+                border-left:5px solid $A2;
                 width:1px;
                 content:"";
                 top:-40px;
@@ -104,7 +104,7 @@
                 position:absolute;
                 left: 75%;
                 height:60px;
-                border-left:5px solid #78909c;
+                border-left:5px solid $A5;
                 width:1px;
                 content:"";
                 top:-60px;

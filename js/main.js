@@ -1,9 +1,7 @@
 (function(){
-    
-
-
-	var app = angular.module('rosters', []);
-	app.controller('mainController', ['$http', '$scope', function($http, $scope){  
+	var app = angular.module('rosters', ['ngAnimate']);
+	app.controller('mainController', ['$http', '$scope', function($http, $scope){      
+            
         
         var tray = document.getElementById('tray');
         var trayback = document.getElementById('trayback');
@@ -19,7 +17,7 @@
         }); 
         
         $scope.shutTray = function(){
-            $("#tray, .trayback").toggleClass("closed");            
+            $("#tray, .trayback , #mainSection").toggleClass("closed");            
         }
         
         
@@ -39,11 +37,18 @@
         
         $scope.selectedTeamStats = "https://statsapi.web.nhl.com/api/v1/teams/24?hydrate=record(teamRecords)&season=20182019";
         
-        $http.get("https://statsapi.web.nhl.com/api/v1/teams").success(function(data){
-            $scope.teamsData = data;            
+        $http.get("https://statsapi.web.nhl.com/api/v1/teams?hydrate=record(teamRecords)&season=20182019").success(function(data){
+            $scope.teamsData = data; 
+            
         }).error(function(){
             console.log("There is an issue getting the data, you might be offline. You might be able to navigate to another team that you have already viewed though.");
         });
+        $scope.sorterFunc = function(team){
+            return parseInt(team.record.leagueRank);
+        };       
+        $scope.sorterFuncConf = function(team){
+            return parseInt(team.record.conferenceRank);
+        };
         
         $scope.playerPosition = " ";
         
@@ -61,7 +66,6 @@
                      
                 });
                 console.log($scope.playerIDs);
-            
 		}).error(function(){
 			 alert("There is an issue getting the data, you might be offline. You might be able to navigate to another team that you have already viewed though.");
 		});
@@ -153,8 +157,9 @@
         
         $scope.getGoals = function(selectedPlayerData){ 
             
-            $('[data-toggle="tooltip"]').tooltip();
-            angular.forEach(selectedPlayerData.people[0].stats[0].splits, function (value, key) {
+            if(selectedPlayerData.people[0].primaryPosition.type != 'Goalie'){
+                $('[data-toggle="tooltip"]').tooltip();
+                angular.forEach(selectedPlayerData.people[0].stats[0].splits, function (value, key) {
                 $scope.theirSeasons.push(value.season.slice(0,4)+"/"+value.season.slice(4,8)+"<br> "+value.league.name);
                 $scope.theirGoals.push(value.stat.goals);
                 $scope.theirLeagues.push(value.league.name); 
@@ -200,7 +205,7 @@
                     }
                 },
                 plotOptions: {
-                    colors:["#cfd8dc","#607d8b","#263238"],
+                    colors:["$A2","#607d8b","#263238"],
                 area: {
                     
                     marker: {
@@ -224,6 +229,11 @@
                     data: $scope.theirTotals
                 }]
             });
+            }else {
+                console.log("Goalie?");
+                
+                
+            }
             
         };
         $('#myModal').on('hidden.bs.modal', function (e) {
@@ -257,15 +267,38 @@
         $scope.rosterLength = null;
         
         $scope.getPlayer = function(selectedPlayer){
+            $scope.selectedPlayerData = null;
+            $scope.theirGoals = [];
+            $scope.theirAssists = [];
+            $scope.theirTotals = [];
+            $scope.theirSeasons =[];
+            $scope.theirLeagues = [];
+            $scope.theirAvShifts = [];
+            $scope.theirAvHits = [];
+            $scope.theirAvShots = [];
+            $scope.theirAvBlocks = [];
+            $scope.theirAvGoals = [];
+            $scope.theirAvAssists = [];
+            $scope.theirAvIceTime = [];
+            $scope.shiftWidth = null;
+            $scope.hitWidth = null;
+            $scope.shotWidth = null;
+            $scope.blocksWidth = null;
+            $scope.shifts = null;
+            $scope.hits = null;
+            $scope.shots = null;
+            
+            
+            
             $http.get("https://statsapi.web.nhl.com/api/v1/people/" + selectedPlayer + "?expand=person.stats&stats=yearByYear").success(function(data){
                 
                 $scope.selectedPlayerData = data;                
                 $('#myModal').modal('show');
                 $('[data-toggle="tooltip"]').tooltip(); 
                 
+                $scope.getGoals($scope.selectedPlayerData);
                 
                 
-                //$scope.getGoals($scope.selectedPlayerData);
                 
             }).error(function(){
                 
@@ -345,7 +378,7 @@
                                 shadow: false
                             },
                             column:{
-                                colors:["#cfd8dc","#607d8b","#263238"]
+                                colors:["$A2","#607d8b","#263238"]
                             }
                         },
                         series: [{
@@ -363,6 +396,27 @@
                 });  
             }]
         };
+    }); 
+    app.directive('lazyLoad', function(){
+        return {
+            restrict: 'A',
+            scope: {
+                image:"@"
+            },
+            link: function(scope, element, attrs){
+                const observer = new IntersectionObserver(loadImg)
+                const img = angular.element(element)[0];
+                observer.observe(img);                
+                function loadImg(changes){                    
+                    changes.forEach(change => {
+                        if(change.intersectionRatio > 0){
+                            change.target.src = scope.image;
+                            change.target.classList.remove('img-blur');
+                        }
+                    })
+                }
+            }
+        }
     }); 
     app.filter("ordinal", function(){
         return function(number) {

@@ -58,14 +58,14 @@
     .nav-team-list {
         padding-bottom: 50px;
         width: 100%;
-        float: left;
-        background: #B0BEC5;
+        float: left;        
         .team {
             width:100%;
             clear: both;
             float: left;
-            border-top:1px solid $A2;
-            border-bottom:1px solid #90A4AE;
+            
+            @include slickList;
+            
             
             a {
                 display: flex;
@@ -181,3 +181,107 @@
     top:0px;
     bottom:0px;
 }
+.nav.nav-pills {
+    width:100%;
+    background: $A5;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    float: left;
+    
+   /* &:before {
+        position: absolute;
+        left: 14px;
+        bottom: 7px;
+        width: 33.3333%;
+        content: " ";
+        box-shadow: 0px 0px 40px 0px #323232, 0px 0px 30px 0px #000000;
+        transform: rotate(-1deg);
+        height: 5px;
+        z-index: -79;
+    }
+    &:after {
+        position: absolute;
+        right: 14px;
+        bottom: 7px;
+        width: 33.3333%;
+        content: " ";
+        box-shadow: 0px 0px 40px 0px #323232, 0px 0px 30px 0px #000000;
+        transform: rotate(1deg);
+        height: 5px;
+        z-index: -79;
+    }*/
+}
+ .nav.nav-pills li {
+    width:25%;
+    margin:0px;
+    background: $A5;
+    border-left: 1px solid #90a4ae;
+    border-right: 1px solid #607d8b;
+    border-top: 1px solid #90a4ae;
+    border-bottom: 1px solid #607d8b;
+}
+.nav.nav-pills li a {
+    text-align: center;
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.nav.nav-pills li a:focus, .nav.nav-pills li a.active{
+    background: #455a64;
+    border-radius:0px;
+}
+
+.nav.nav-pills li a:hover{
+    background: #607d8b;
+    border-radius:0px;
+}
+
+.navbar {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    background:$A1;
+    &.footer {
+        margin-bottom:60px;
+        padding:20px 0px;
+        @media (min-width:$screen-sm){
+            margin-bottom:0px;
+        }
+    }
+}
+.flexLinks {
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    width:100%;
+    margin-bottom:0px;
+    
+    li {
+        @include slickList;
+        width:33.3333%; 
+        &:nth-child(1){            
+            border-right: 1px solid #dedede;
+        }
+        &:nth-child(2){
+            border-left: 1px solid #fff;
+            border-right: 1px solid #dedede;
+        }
+        &:nth-child(3){
+            border-left: 1px solid #fff;            
+        }
+        a {
+            display: block;
+            text-align: center;
+            padding:10px;
+            text-transform: uppercase;
+            color:$A9;
+        }
+        &.active {
+            @include lightSlickHeading;
+        }
+        
+        
+    }
+}
+

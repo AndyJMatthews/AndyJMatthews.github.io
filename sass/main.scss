@@ -3,16 +3,14 @@
    ========================================================================== */
 
 //https://cdn-images-1.medium.com/max/800/1*UNjp6kVHfXwA_LNRbStArQ.png
-
-
-
-
-
 @import 'variables.scss';
 @import 'teams.scss';
 @import 'playerStats.scss';
 @import 'navigation.scss';
 @import 'topScores.scss';
+@import 'modalStyles.scss';
+@import 'tableStyles.scss';
+@import 'panelStyles.scss';
 .row   {
     margin-left:-5px;
     margin-right:-5px;
@@ -23,8 +21,6 @@
     }   
 
 }
-
-
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
         padding-right:5px;
     padding-left:5px;
@@ -45,15 +41,12 @@
 .ng-hide:not(.ng-hide-animate) {
   display: none !important;
 }
-
 ng\:form {
   display: block;
 }
-
 .ng-animate-shim {
   visibility:hidden;
 }
-
 .ng-anchor {
   position:absolute;
 }
@@ -135,82 +128,12 @@ h5 {font-size:11px;}
     margin-top:7px;
     color:grey;
 }
-
-
-
-
-
-
-
-
 hr {
     margin-top:5px;
     margin-bottom:5px;
 }
-.nav.nav-pills {
-    width:100%;
-    background: $A5;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-    float: left;
-    
-    &:before {
-        position: absolute;
-        left: 14px;
-        bottom: 7px;
-        width: 33.3333%;
-        content: " ";
-        box-shadow: 0px 0px 40px 0px #323232, 0px 0px 30px 0px #000000;
-        transform: rotate(-1deg);
-        height: 5px;
-        z-index: -79;
-    }
-    &:after {
-        position: absolute;
-        right: 14px;
-        bottom: 7px;
-        width: 33.3333%;
-        content: " ";
-        box-shadow: 0px 0px 40px 0px #323232, 0px 0px 30px 0px #000000;
-        transform: rotate(1deg);
-        height: 5px;
-        z-index: -79;
-    }
-}
- .nav.nav-pills li {
-    width:25%;
-    margin:0px;
-    background: $A5;
-    border-left: 1px solid #90a4ae;
-    border-right: 1px solid #607d8b;
-    border-top: 1px solid #90a4ae;
-    border-bottom: 1px solid #607d8b;
-}
-.nav.nav-pills li a {
-    text-align: center;
-    color:white;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-.nav.nav-pills li a:focus, .nav.nav-pills li a.active{
-    background: #455a64;
-    border-radius:0px;
-}
-
-.nav.nav-pills li a:hover{
-    background: #607d8b;
-    border-radius:0px;
-}
 
 
-
-
-
-
-.table-condensed.ultra-condenced td, .table-condensed.ultra-condenced th {
-    padding:3px;
-}
 .highcharts-title {
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif !important;
     text-align: center!important;
@@ -256,9 +179,7 @@ hr {
     float:left;
     height:auto;
 }
-.panel {
-    border-radius:0px;
-}
+
 .btn, .btn-sm {
     border-radius:0px;
 }
@@ -276,12 +197,7 @@ hr {
     border:0px none;
 }
 
-.modal-header {
-    padding-left:33.3333333%;
-    .modal-title {
-       margin-left: 15px; 
-    }
-}
+
 .hiddenOverflow {
     overflow: hidden;
 }
@@ -309,71 +225,7 @@ hr {
     color:white;
 }
 
-.panel.panel-default {
-    border:0px none;
-    box-shadow: 0 0 10px rgba(100,100,100,0.3);
-    position: relative;
-    border-bottom:1px solid #dfdfdf;
-    transition: all 300ms ease-in-out;
-    
-    &:before {
-        position: absolute;
-        left: 14px;
-        bottom: 7px;
-        width: 33.3333%;
-        content: " ";
-        box-shadow: 0px 0px 40px 0px #323232, 0px 0px 30px 0px #000000;
-        transform: rotate(-1deg);
-        height: 97px;
-        z-index: -79;
-        transition: all 300ms ease-in-out;
-    }
-    &:after {
-        position: absolute;
-        right: 14px;
-        bottom: 7px;
-        width: 33.3333%;
-        content: " ";
-        box-shadow: 0px 0px 40px 0px #323232, 0px 0px 30px 0px #000000;
-        transform: rotate(1deg);
-        height: 97px;
-        z-index: -79;
-        transition: all 300ms ease-in-out;
-    }
-    .panel-heading {
-        background:#455a64; 
-        border-radius:0px;
-        border:0px none;
-        background-image:none;
-        color:#ffffff;
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-top: 1px solid $A5;
-        strong {
-            font-weight: 700;
-        }
-    }
-    &:hover {        
-        &:after {
-            bottom:15px;
-        }
-        &:before {
-            bottom:15px;
-        }
-    }
-    .panel-body {
-        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+45,dbdbdb+100 */
-        background: rgb(255,255,255); /* Old browsers */
-        background: -moz-linear-gradient(top, rgba(255,255,255,1) 45%, rgba(240,240,240,1) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, rgba(255,255,255,1) 45%,rgba(240,240,240,1) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, rgba(255,255,255,1) 45%,rgba(240,240,240,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbdbdb',GradientType=0 ); /* IE6-9 */   
-        border-bottom: 1px solid #dedede;
-    }
-    
-}
+
 .btn.btn-default {
     border:2px solid #455a64;
     color:#455a64;
@@ -382,23 +234,7 @@ hr {
         font-weight: 700;
     
 }
-.modal {
-    .modal-content {
-        border-radius:0px;
-        .modal-header {
-            background: #455a64;
-            border-radius: 0px;
-            border: 0px none;
-            background-image: none;
-            color: #ffffff;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-        .modal-body {
-            background:#F5F5F5;
-        }
-    }
-}
+
 .list-group {
     box-shadow: 0 0 0 rgba(0,0,0,0);
     background:transparent;
@@ -412,56 +248,9 @@ hr {
         }
     }
 }
-.table-responsive {
-    position:relative;
-    z-index: 1;
-/*    &:before {
-        position: absolute;
-        left: 14px;
-        bottom: 27px;
-        width: 33.3333%;
-        content: " ";
-        box-shadow: 0px 0px 30px 0px #323232;
-        transform: rotate(-1deg);
-        height: 97px;
-        z-index: -79;
-    }
-    &:after {
-        position: absolute;
-        right: 14px;
-        bottom: 27px;
-        width: 33.3333%;
-        content: " ";
-        box-shadow: 0px 0px 30px 0px #323232;
-        transform: rotate(1deg);
-        height: 97px;
-        z-index: -79;
-    }*/
-}
-table.table.score-table {
-    background: #ffffff;
-    border-collapse: inherit;
-    th {            
-        @include slickHeading;
-    }
-    td {        
-        @include slickList;
-    }
-    
-}
-.navbar {
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.75);
-    box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.75);
-    background:$A1;
-    &.footer {
-        margin-bottom:60px;
-        padding:20px 0px;
-        @media (min-width:$screen-sm){
-            margin-bottom:0px;
-        }
-    }
-}
+
+
+
 
 .playerMugShots {
     border:5px solid $A1;    
@@ -637,16 +426,7 @@ table.table.score-table {
 .disclaimer {
     padding-left:12vw;
 }
-.modalNav {
-    width:100%;
-    display: flex;
-    align-content: space-between;
-    justify-content: space-between;
-    flex-wrap: nowrap; 
-    a, button {
-        width:33.3333%;
-    }
-}
+
 
 .leagueList {
     width:100%;
@@ -680,105 +460,42 @@ table.table.score-table {
     padding:0px;
 }
 
-.playerActionShot {
-    margin:-15px;    
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    position:relative;
-    .shotWrapper {
-        position:relative;
-        z-index: 0;
-        &:after {
-            width:100%;
-            height:100%;
-            left:0px;
-            top:0px;
-            right:0px;
-            bottom:0px;
-            z-index: 1;
-            position: absolute;
-            content:"";
-            -webkit-box-shadow: inset 0px 0px 130px 20px rgba(50, 50, 50, 0.5);
-            -moz-box-shadow:    inset 0px 0px 130px 20px rgba(50, 50, 50, 0.5);
-            box-shadow:         inset 0px 0px 130px 20px rgba(50, 50, 50, 0.5);
-        }
+
+
+
+#mainSection {
+    transform: scale(1);
+     transition: all 300ms ease-in-out;
+    transform-origin: center top;
+    &.closed {
+        transform: scale(0.9);
     }
-    img {
-        //filter: grayscale(1);
-    }
-    .nameNumber {
-        
-        
-        color: white;        
-        z-index: 2;        
-        padding: 0px 10px;
+}
+
+.leaders {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    div {
+        position: absolute;
+        transform: rotate(-45deg);
+        transform-origin: center;
+        top: 50%;
+        left: 50%;
+        width: 150px;
+        height: 30px;
+        margin-left: -91px;
+        margin-top: -31px;
+        text-align: center;  
+        color: white;
+        line-height: 30px;
         text-transform: uppercase;
-        width:100%;
-        margin-bottom: 20px;
-        z-index: 0;        
-        background: #455a64;
-        text-align: right;
-        font-size: 14px;
-        padding-left:34%;
-        
-        @media(min-width:$screen-sm){
-            font-size: 25px;
-        }
-        
-        
-        @media(min-width:$screen-md){
-            font-size: 40px;
-        }
-        
-        
-    }
-    
-}
-.panel-group {
-    .panel.panel-default .panel-heading {
-        @include lightSlickHeading;
-    }
-}
-.modal-backdrop.in {
-    opacity: 0.8;
-}
-.modal-content {
-    .forwards {
-        position: absolute;
-        
-        
-        
-        width: 55px;
-        left: -55px;
-        top: 0px;
-        bottom: 0px;
-        z-index: 10000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        i.material-icons {
-            font-size:50px;
-            color:white;
-        } 
-        
-        
-    }
-    .backwards {
-        position: absolute;
-        width: 55px;
-        right: -55px;
-        top: 0px;
-        bottom: 0px;
-        z-index: 10000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        i.material-icons {
-            font-size:50px;
-            color:white;
-        } 
+        font-size: 11px;
+        letter-spacing: .8px;
+        @include slickHeading;
+
     }
 }

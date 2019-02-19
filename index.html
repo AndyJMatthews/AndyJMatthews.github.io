@@ -25,12 +25,10 @@
 
     <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" rel="preload">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/main.css">
-
+    <link rel="stylesheet" href="css/main.css" rel="preload">
+    <link rel="stylesheet" href="css/flag-css.min.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <link rel="manifest" href="/manifest.json">
 
@@ -60,7 +58,7 @@
         </div>
 
         <!-- Example row of columns -->
-        <div class="row">
+        <div class="row" id="mainSection">
             <div class="col-xs-12 col-lg-8 col-lg-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading relative team-heading">
@@ -213,9 +211,7 @@
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>-->
 
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
+       
         $(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
 
         if ('serviceWorker' in navigator) {
@@ -226,7 +222,17 @@
         
     </script>
     <script src="js/main.js"></script>
-    
+    <script>
+     var io = new IntersectionObserver(
+                      entries => {
+                        console.log(entries);
+                      },
+                      {
+                        /* Using default options. Details below */
+                      }
+                    );
+                    // Start observing an element
+                    io.observe("mainSection"); </script>
 </body>
 
 </html>

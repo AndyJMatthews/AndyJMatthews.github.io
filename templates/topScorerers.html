@@ -4,7 +4,7 @@
                             <li ng-repeat="skater in players.teams[0].roster.roster | orderBy:'-person.stats[0].splits[0].stat.goals'" ng-if="skater.person.stats[0].splits[0].stat.goals > 0" ng-click="getPlayer(skater.person.id)" ng-cloak>
                                 <div class="details" ng-click="getPlayer(skater.person.id)" ng-cloak>
                                     <div class="playerImage">
-                                        <img src="" ng-src="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="img-circle img-responsive center-block ng-cloak playerMugShots mugshotSml" alt="{{skater.person.fullName}}">
+                                        <img src="" image="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="img-circle img-responsive center-block ng-cloak playerMugShots mugshotSml" alt="{{skater.person.fullName}}" lazy-load>
                                     </div>
                                     <div class="textDetails">
                                         <div class="name">
@@ -27,7 +27,7 @@
                                 <div class="details" ng-click="getPlayer(skater.person.id)"  ng-cloak>
                                     <div class="playerImage">
                                         <a ng-click="getPlayer(skater.person.id)">
-                                            <img src="" ng-src="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="img-circle img-responsive center-block ng-cloak playerMugShots mugshotSml" alt="{{skater.person.fullName}}">
+                                            <img src="" image="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="img-circle img-responsive center-block ng-cloak playerMugShots mugshotSml" alt="{{skater.person.fullName}}" lazy-load>
                                         </a>
                                     </div>
                                     <div class="textDetails">
@@ -50,7 +50,7 @@
                             <li ng-repeat="skater in players.teams[0].roster.roster | orderBy:'-person.stats[0].splits[0].stat.pim'" ng-if="skater.person.stats[0].splits[0].stat.pim > 0" ng-click="getPlayer(skater.person.id)" ng-cloak>
                                 <div class="details" ng-click="getPlayer(skater.person.id)" >
                                     <div class="playerImage">
-                                        <img src="" ng-src="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="img-circle img-responsive center-block ng-cloak playerMugShots mugshotSml" alt="{{skater.person.fullName}}">
+                                        <img src="" image="https://nhl.bamcontent.com/images/headshots/current/168x168/{{skater.person.id}}.jpg" class="img-circle img-responsive center-block ng-cloak playerMugShots mugshotSml" alt="{{skater.person.fullName}}" lazy-load>
                                     </div>
                                     <div class="textDetails">
                                         <div class="name">
