@@ -23,18 +23,15 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="theme-color" content="#ffffff">
 
-    <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" href="css/bootstrap.min.css" rel="preload">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css" rel="preload">
     <link rel="stylesheet" href="css/flag-css.min.css">
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <link rel="manifest" href="/manifest.json">
 
 </head>
 
-<body ng-controller="mainController" class="team-{{players.teams[0].abbreviation}}" ng-cloak>
+<body ng-controller="mainController" class="team-{{players.teams[0].abbreviation}}" ng-cloak id="top">
     
     <nav class="navbar navbar-fixed-top hidden-lg" role="navigation" ng-cloak>
         <div class="container-fluid">
@@ -233,6 +230,9 @@
                     );
                     // Start observing an element
                     io.observe("mainSection"); </script>
+                    
+                        <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </body>
 
 </html>
