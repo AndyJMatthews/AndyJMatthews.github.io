@@ -1,0 +1,127 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a role="button" data-toggle="collapse" href="#east" aria-expanded="true" aria-controls="EASTERN CONFERENCE" ng-class="{collapsed : players.teams[0].conference.name != 'Eastern'}">EASTERN CONFERENCE
+            <i class="material-icons">
+                add
+            </i>
+        </a>
+    </div>
+    <div class="panel-body pad-0px" >
+      <div class="collapse wrapper" id="east" ng-class="{in : players.teams[0].conference.name === 'Eastern'}">
+          <ul class="flexLinks list-unstyled">
+           <li class="active">
+               <a  href="#econf" aria-controls="Overall" role="tab" data-toggle="tab">
+                   Overall
+               </a>
+               
+           </li>
+           <li>
+              <a href="#metro" aria-controls="Metro" role="tab" data-toggle="tab">
+                  Metro
+              </a>
+               
+           </li>
+           <li>
+              <a href="#atl" aria-controls="Atlantic" role="tab" data-toggle="tab">Atlantic</a>               
+           </li>
+       </ul>
+       
+       <div class="division active" id="econf">
+           <div ng-repeat="team in teamsData.teams | orderBy:sorterFuncConf" class="leagueList team-{{team.abbreviation}}" ng-if="team.conference.name === 'Eastern'"> 
+                <div class="rank"><span class="badge">{{team.record.conferenceRank}}</span></div>
+                <div class="teamName">{{team.locationName}} <strong>{{team.teamName}}</strong></div>
+                <div class="teamPoints"><strong>{{team.record.points}}pts</strong></div>
+            </div>
+       </div>
+        
+        <div class="division" id="metro">            
+            <div ng-repeat="team in teamsData.teams | orderBy:sorterFuncConf" class="leagueList team-{{team.abbreviation}}" ng-if="team.conference.name === 'Eastern' && team.division.name === 'Metropolitan' "> 
+                <div class="rank"><span class="badge">{{team.record.divisionRank}}</span></div>
+                <div class="teamName">{{team.locationName}} <strong>{{team.teamName}}</strong></div>
+                <div class="teamPoints"><strong>{{team.record.points}}pts</strong></div>
+            </div>
+        </div>
+        <div class="division" id="atl">            
+            <div ng-repeat="team in teamsData.teams | orderBy:sorterFuncConf" class="leagueList team-{{team.abbreviation}}" ng-if="team.conference.name === 'Eastern' && team.division.name === 'Atlantic' "> 
+                <div class="rank"><span class="badge">{{team.record.divisionRank}}</span></div>
+                <div class="teamName">{{team.locationName}} <strong>{{team.teamName}}</strong></div>
+                <div class="teamPoints"><strong>{{team.record.points}}pts</strong></div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="panel panel-default">
+       <div class="panel-heading">
+            <a role="button" data-toggle="collapse" href="#west" aria-expanded="true" aria-controls="WESTERN CONFERENCE" ng-class="{collapsed : players.teams[0].conference.name != 'Western'}">WESTERN CONFERENCE
+            <i class="material-icons">
+                add
+            </i>
+        </a>
+       </div>
+      
+            
+
+    
+    
+    <div class="panel-body pad-0px">
+        <div class="collapse wrapper" id="west" ng-class="{in : players.teams[0].conference.name === 'Western'}">
+                <ul class="flexLinks list-unstyled">
+           <li class="active">
+               <a  href="#wconf" aria-controls="Overall" role="tab" data-toggle="tab">
+                   Overall
+               </a>
+               
+           </li>
+           <li>
+              <a href="#central" aria-controls="Central" role="tab" data-toggle="tab">
+                  Central
+              </a>
+               
+           </li>
+           <li>
+              <a href="#pacific" aria-controls="Pacific" role="tab" data-toggle="tab">Pacific</a>               
+           </li>
+       </ul>
+       
+       <div class="division active" id="wconf">
+           <div ng-repeat="team in teamsData.teams | orderBy:sorterFuncConf" class="leagueList team-{{team.abbreviation}}" ng-if="team.conference.name === 'Western'"> 
+                <div class="rank"><span class="badge">{{team.record.conferenceRank}}</span></div>
+                <div class="teamName">{{team.locationName}} <strong>{{team.teamName}}</strong></div>
+                <div class="teamPoints"><strong>{{team.record.points}}pts</strong></div>
+            </div>
+       </div>
+        
+        <div class="division" id="central">            
+            <div ng-repeat="team in teamsData.teams | orderBy:sorterFuncConf" class="leagueList team-{{team.abbreviation}}" ng-if="team.conference.name === 'Western' && team.division.name === 'Central' "> 
+                <div class="rank"><span class="badge">{{team.record.divisionRank}}</span></div>
+                <div class="teamName">{{team.locationName}} <strong>{{team.teamName}}</strong></div>
+                <div class="teamPoints"><strong>{{team.record.points}}pts</strong></div>
+            </div>
+        </div>
+        <div class="division" id="pacific">            
+            <div ng-repeat="team in teamsData.teams | orderBy:sorterFuncConf" class="leagueList team-{{team.abbreviation}}" ng-if="team.conference.name === 'Western' && team.division.name === 'Pacific' "> 
+                <div class="rank"><span class="badge">{{team.record.divisionRank}}</span></div>
+                <div class="teamName">{{team.locationName}} <strong>{{team.teamName}}</strong></div>
+                <div class="teamPoints"><strong>{{team.record.points}}pts</strong></div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div> 
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a role="button" data-toggle="collapse" href="#league" aria-expanded="false" aria-controls="league" class="collapsed">NHL OVERALL
+            <i class="material-icons">
+                add
+            </i>
+        </a>
+    </div>
+    <div class="panel-body pad-0px collapse" id="league">
+        <div ng-repeat="team in teamsData.teams | orderBy:sorterFunc" class="leagueList team-{{team.abbreviation}}"> 
+            <div class="rank"><span class="badge">{{team.record.leagueRank}}</span></div>
+            <div class="teamName">{{team.locationName}} <strong>{{team.teamName}}</strong></div>
+            <div class="teamPoints"><strong>{{team.record.points}}pts</strong></div>
+        </div>
+    </div>
+</div>
