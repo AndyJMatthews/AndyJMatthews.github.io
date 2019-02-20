@@ -1,14 +1,16 @@
 <div class="wrapper">
                 <div class="controls hidden-lg">
                     <a href="#" class="close" ng-click="shutTray()">
-                        <i class="fa fa-times"></i>
+                        <i class="material-icons">
+                        close
+                        </i>
                     </a>
                 </div>
                 <img src="img/lineMateLogo.png" alt="LineMate" class="img-responsive trayLogo visible-lg">
                 <div class="nav-team-list">
                     <div ng-repeat="team in teamsData.teams | orderBy:'name' " class="team">
                         <a ng-click="changeTeam(team.id);" class="team-{{team.abbreviation}}" ng-cloak>
-                            <img src="https://www-league.nhlstatic.com/nhl.com/builds/site-core/a2d98717aeb7d8dfe2694701e13bd3922887b1f2_1542226749/images/logos/team/current/team-{{team.id}}-dark.svg" alt="{{team.name}}" ng-cloak><span>{{team.locationName}}<strong> {{team.teamName}}</strong></span>
+                            <img src="" image="https://www-league.nhlstatic.com/nhl.com/builds/site-core/a2d98717aeb7d8dfe2694701e13bd3922887b1f2_1542226749/images/logos/team/current/team-{{team.id}}-dark.svg" alt="{{team.name}}" ng-cloak lazy-load><span>{{team.locationName}}<strong> {{team.teamName}}</strong></span>
                         </a>
                     </div>
                 </div>
